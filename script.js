@@ -388,12 +388,14 @@
       var data = new FormData(form);
       var name = (data.get('name') || '').toString().trim();
       var org = (data.get('organisation') || '').toString().trim();
+      var email = (data.get('email') || '').toString().trim();
       var purpose = (data.get('purpose') || '').toString().trim();
       var timeline = (data.get('timeline') || '').toString().trim();
       var message = (data.get('message') || '').toString().trim();
 
       var missing = [];
       if (!name) missing.push('intake-name');
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) missing.push('intake-email');
       if (!purpose) missing.push('intake-purpose');
       if (!message) missing.push('intake-message');
       if (missing.length) {
@@ -419,10 +421,12 @@
         var payload = new FormData();
         payload.set('name', name);
         if (org) payload.set('organisation', org);
+        payload.set('email', email);
         payload.set('purpose', purpose);
         if (timeline) payload.set('timeline', timeline);
         payload.set('message', message);
         payload.set('_subject', subject);
+        payload.set('_replyto', email);
 
         setStatus(fT.sending);
         if (submit) submit.disabled = true;
@@ -440,7 +444,7 @@
             }
           } else {
             return response.json().then(function (body) {
-              var err = (body && body.errors && body.errors.map(function (x) { return x.message; }).join(', ')) || fT.sendFail;
+              var err = (body && body.errors && body.errors.map(function (x) { return x.message; }).join(', ')) || (body && body.error) || fT.sendFail;
               setStatus(err + fT.retry, 'error');
             }).catch(function () {
               setStatus(fT.sendFail + fT.retry, 'error');

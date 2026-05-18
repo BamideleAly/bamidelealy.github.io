@@ -8,7 +8,7 @@
 
 <p align="center">
   A static personal site for Bamidele Aly, covering AI model risk
-  governance, applied AI in finance, West African economic history,
+  governance, applied AI in finance, British West African economic history,
   and creative practice.
 </p>
 
