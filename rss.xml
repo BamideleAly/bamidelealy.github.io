@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bamidele Aly</title>
+    <link>https://bamidelealy.com/</link>
+    <description>AI governance, Product Control, applied AI, credit risk, economic history and creative practice by Bamidele Aly.</description>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 18 May 2026 11:22:00 GMT</lastBuildDate>
+    <atom:link href="https://bamidelealy.com/rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://bamidelealy.com/fr/rss.xml" rel="alternate" type="application/rss+xml" hreflang="fr-FR" title="Bamidele Aly (FR)" />
+    <atom:link href="https://bamidelealy.com/de/rss.xml" rel="alternate" type="application/rss+xml" hreflang="de-DE" title="Bamidele Aly (DE)" />
+    <item>
+      <title>Engineering Trustworthy AI for Global Finance</title>
+      <link>https://bamidelealy.com/</link>
+      <guid isPermaLink="true">https://bamidelealy.com/</guid>
+      <pubDate>Sat, 16 May 2026 11:22:00 GMT</pubDate>
+      <description>Bamidele Aly works at the intersection of financial controls, applied AI and economic history, with a focus on AI model risk governance in regulated finance.</description>
+    </item>
+    <item>
+      <title>Ile Owo: An Eight-Agent IFRS Advisory System</title>
+      <link>https://bamidelealy.com/projects.html#ile-owo-heading</link>
+      <guid isPermaLink="true">https://bamidelealy.com/projects.html#ile-owo-heading</guid>
+      <pubDate>Sat, 16 May 2026 11:22:00 GMT</pubDate>
+      <description>Ile Owo is a multi-agent accounting policy advisor built on the Anthropic Claude API and designed to mirror a professional accounting policy team.</description>
+    </item>
+    <item>
+      <title>Economic History Research</title>
+      <link>https://bamidelealy.com/historian.html</link>
+      <guid isPermaLink="true">https://bamidelealy.com/historian.html</guid>
+      <pubDate>Sat, 16 May 2026 11:22:00 GMT</pubDate>
+      <description>Research on West African monetary systems, colonial financial infrastructure, central banking and the Nigerian diaspora in Europe.</description>
+    </item>
+    <item>
+      <title>Studio Practice</title>
+      <link>https://bamidelealy.com/studio.html</link>
+      <guid isPermaLink="true">https://bamidelealy.com/studio.html</guid>
+      <pubDate>Sat, 16 May 2026 11:22:00 GMT</pubDate>
+      <description>Watercolour, printmaking, Chinese painting, acrylics and gouache as a parallel creative discipline.</description>
+    </item>
+    <item>
+      <title>Why eight agents, and not one chatbot</title>
+      <link>https://bamidelealy.com/notes/ile-owo-design.html</link>
+      <guid isPermaLink="true">https://bamidelealy.com/notes/ile-owo-design.html</guid>
+      <pubDate>Sat, 16 May 2026 14:00:00 GMT</pubDate>
+      <description>The single-chatbot pattern fails the specific tests an accounting policy team puts a junior member through. Eight agents pass them.</description>
+    </item>
+    <item>
+      <title>Governance is the road, not the speed bump</title>
+      <link>https://bamidelealy.com/notes/ai-governance-as-road.html</link>
+      <guid isPermaLink="true">https://bamidelealy.com/notes/ai-governance-as-road.html</guid>
+      <pubDate>Sat, 16 May 2026 14:00:00 GMT</pubDate>
+      <description>The most common failure mode in regulated AI adoption is treating governance as friction. The framing flip that makes it work.</description>
+    </item>
+    <item>
+      <title>Emergency money and counter-money, 1967–1970</title>
+      <link>https://bamidelealy.com/notes/bank-of-biafra-project.html</link>
+      <guid isPermaLink="true">https://bamidelealy.com/notes/bank-of-biafra-project.html</guid>
+      <pubDate>Sat, 16 May 2026 14:00:00 GMT</pubDate>
+      <description>Research project page on the Bank of Biafra, the Central Bank of Nigeria, and contested currency issuance during the Nigerian Civil War.</description>
+    </item>
+  </channel>
+</rss>
