@@ -85,7 +85,7 @@
           <span class="search-shortcut" aria-hidden="true">Ctrl+K</span>
         </button>
         <div class="lang-switch" data-lang-switch data-open="false">
-          <button class="lang-switch-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu" aria-label="Changer de langue">
+          <button class="lang-switch-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="langMenu" aria-label="Langue : FR — changer">
             <svg class="lang-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg>
             <span class="lang-switch-current">FR</span>
             <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
@@ -166,12 +166,12 @@
       <div class="search-input-row">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
         <label for="searchInput" class="sr-only">Rechercher sur le site</label>
-        <input id="searchInput" class="search-input" type="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Rechercher sur le site…" aria-label="Rechercher sur le site">
+        <input id="searchInput" class="search-input" type="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Rechercher sur le site…">
         <button type="button" class="search-cancel" aria-label="Fermer la recherche">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
       </div>
-      <div id="searchResults" class="search-results" role="region" aria-live="polite" aria-label="Résultats de recherche"></div>
+      <section id="searchResults" class="search-results" aria-live="polite" aria-label="Résultats de recherche"></section>
       <div class="search-footer">
         <span><kbd>↑</kbd><kbd>↓</kbd> Naviguer</span>
         <span><kbd>↵</kbd> Ouvrir</span>

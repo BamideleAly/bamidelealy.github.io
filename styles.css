@@ -68,9 +68,9 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
     --ink-muted: #545458;
     --line: #c7c7cc;
     --line-soft: #e8e8ed;
-    --accent: #0071e3;
-    --accent-hover: #0077ed;
-    --accent-press: #006edb;
+    --accent: #0066c8;
+    --accent-hover: #0070d8;
+    --accent-press: #005db5;
     --accent-soft: #e8f1fd;
     --accent-ink: #ffffff;
     --dark: #1d1d1f;
@@ -184,6 +184,14 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+  }
+
+  .honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
   }
 
   .container {

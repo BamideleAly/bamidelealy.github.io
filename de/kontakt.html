@@ -86,7 +86,7 @@
           <span class="search-shortcut" aria-hidden="true">Strg+K</span>
         </button>
         <div class="lang-switch" data-lang-switch data-open="false">
-          <button class="lang-switch-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu" aria-label="Sprache wechseln">
+          <button class="lang-switch-trigger" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="langMenu" aria-label="Sprache: DE — wechseln">
             <svg class="lang-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg>
             <span class="lang-switch-current">DE</span>
             <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
@@ -144,7 +144,7 @@
           <input type="hidden" name="_next" value="https://bamidelealy.com/de/danke/">
           <input type="hidden" name="_subject" value="Bamidele Aly — Anfrage über die Website (DE)">
           <input type="hidden" name="_language" value="de">
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Leer lassen" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" aria-label="Leer lassen" class="honeypot">
           <div class="field-row">
             <div class="field">
               <label for="intake-name">Name <span class="required-mark" aria-hidden="true">erforderlich</span></label>
@@ -165,7 +165,7 @@
             <div class="field">
               <label for="intake-purpose">Anliegen <span class="required-mark" aria-hidden="true">erforderlich</span></label>
               <select id="intake-purpose" name="purpose" required aria-required="true">
-                <option value="" disabled selected>Bitte wählen…</option>
+                <option value="" selected hidden>Bitte wählen…</option>
                 <option value="Speaking">Vortrag oder Panel</option>
                 <option value="Advisory">Beratungsgespräch</option>
                 <option value="Academic">Akademische Zusammenarbeit</option>
@@ -176,7 +176,7 @@
             <div class="field">
               <label for="intake-timeline">Zeitraum</label>
               <select id="intake-timeline" name="timeline">
-                <option value="" disabled selected>Wann?</option>
+                <option value="" selected hidden>Wann?</option>
                 <option value="This quarter">Dieses Quartal</option>
                 <option value="Next quarter">Nächstes Quartal</option>
                 <option value="Within 6 months">Innerhalb von 6 Monaten</option>
@@ -210,12 +210,12 @@
       <div class="search-input-row">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
         <label for="searchInput" class="sr-only">Auf der Website suchen</label>
-        <input id="searchInput" class="search-input" type="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Auf der Website suchen…" aria-label="Auf der Website suchen">
+        <input id="searchInput" class="search-input" type="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Auf der Website suchen…">
         <button type="button" class="search-cancel" aria-label="Suche schließen">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
       </div>
-      <div id="searchResults" class="search-results" role="region" aria-live="polite" aria-label="Suchergebnisse"></div>
+      <section id="searchResults" class="search-results" aria-live="polite" aria-label="Suchergebnisse"></section>
       <div class="search-footer">
         <span><kbd>↑</kbd><kbd>↓</kbd> Navigieren</span>
         <span><kbd>↵</kbd> Öffnen</span>
