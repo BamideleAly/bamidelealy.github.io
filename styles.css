@@ -1993,11 +1993,31 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
     details {
       display: block !important;
     }
+    summary {
+      display: block !important;
+      cursor: default !important;
+      list-style: none !important;
+    }
+    summary::-webkit-details-marker {
+      display: none !important;
+    }
+    .faq-list summary::after,
+    .apple-faq .faq-list summary::after {
+      display: none !important;
+      content: "" !important;
+    }
     details > * {
       display: block !important;
     }
     details:not([open]) > :not(summary) {
       display: block !important;
+    }
+    .faq-list p,
+    .apple-faq .faq-list p {
+      display: block !important;
+      max-inline-size: none !important;
+      padding: 0 0 10pt !important;
+      color: #000 !important;
     }
   }
 }

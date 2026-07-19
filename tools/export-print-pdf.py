@@ -40,6 +40,9 @@ def main() -> int:
             "--headless",
             "--no-sandbox",
             "--disable-gpu",
+            "--force-renderer-accessibility",
+            "--export-tagged-pdf",
+            "--enable-features=AccessibilityPDFExport",
             f"--print-to-pdf={args.output}",
             args.url,
         ],
@@ -48,6 +51,12 @@ def main() -> int:
     output = Path(args.output)
     if not output.exists() or output.stat().st_size < 10_000:
         raise SystemExit(f"PDF export failed or produced a suspiciously small file: {output}")
+    pdf_bytes = output.read_bytes()
+    if b"/StructTreeRoot" not in pdf_bytes:
+        raise SystemExit(
+            "PDF was exported, but Chrome did not include a structure tree. "
+            "Tagged PDF output is required for a PDF/UA remediation workflow."
+        )
     print(f"Wrote {output} ({output.stat().st_size} bytes)")
     return 0
 

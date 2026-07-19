@@ -49,9 +49,14 @@ Use this checklist for every production release and every new long-form report.
 ## 6. Print
 
 - Run PDF export with `npm run print:report`.
+- Confirm FAQ/disclosure answers are visible in print preview and exported PDF.
 - Confirm header navigation, search, language selector, share controls, and CTAs are hidden.
 - Confirm A4 pagination, no clipped text, readable type, and preserved figure captions.
 - Confirm report images carry 300 DPI metadata.
+- Confirm the exported PDF contains a structure tree; `tools/export-print-pdf.py`
+  enforces this.
+- Validate formal PDF/UA compliance with a dedicated PDF/UA checker before
+  external distribution.
 
 ## 7. Internationalisation
 

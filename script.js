@@ -7,6 +7,39 @@
     el.textContent = new Date().getFullYear();
   });
 
+  // Print: make FAQ/disclosure answers visible, then restore the screen state.
+  var printOpenedDetails = [];
+  var openDetailsForPrint = function () {
+    printOpenedDetails = [];
+    document.querySelectorAll('details').forEach(function (details) {
+      if (!details.open) {
+        printOpenedDetails.push(details);
+        details.open = true;
+        details.setAttribute('data-print-opened', 'true');
+      }
+    });
+  };
+  var restoreDetailsAfterPrint = function () {
+    printOpenedDetails.forEach(function (details) {
+      details.open = false;
+      details.removeAttribute('data-print-opened');
+    });
+    printOpenedDetails = [];
+  };
+  if ('onbeforeprint' in window) {
+    window.addEventListener('beforeprint', openDetailsForPrint);
+    window.addEventListener('afterprint', restoreDetailsAfterPrint);
+  }
+  if (window.matchMedia) {
+    var printMedia = window.matchMedia('print');
+    var onPrintMediaChange = function (event) {
+      if (event.matches) openDetailsForPrint();
+      else restoreDetailsAfterPrint();
+    };
+    if (printMedia.addEventListener) printMedia.addEventListener('change', onPrintMediaChange);
+    else if (printMedia.addListener) printMedia.addListener(onPrintMediaChange);
+  }
+
   // Lightweight i18n labels for header controls (mirrors the page's lang attr)
   var hLang = (document.documentElement.getAttribute('lang') || 'en').slice(0, 2).toLowerCase();
   var L = hLang === 'fr' ? {

@@ -375,6 +375,8 @@ Reader-mode and print support are first-class release requirements:
   Chrome Reading Mode.
 - The print stylesheet hides navigation, header controls, share controls,
   search, language controls, CTAs, and footer chrome.
+- FAQ and disclosure answers are automatically opened for print and restored
+  afterward for screen use.
 - Print output uses A4 page sizing, inch/point units, high-contrast serif body
   text, sans-serif headings, widow/orphan protection, and forced exact colour
   adjustment where supported.
@@ -382,6 +384,10 @@ Reader-mode and print support are first-class release requirements:
   point to the 2048×1365 master WebP assets.
 - Commercialising Quantum image files carry 300 DPI metadata and remain in
   sRGB for modern printer and browser compatibility.
+- PDF export requests Chrome tagged-PDF output and fails if no PDF structure
+  tree is produced. Formal PDF/UA certification still requires a specialist
+  validator such as PAC because browser-generated PDFs can expose tags without
+  guaranteeing every PDF/UA rule.
 
 Chrome PDF print validation:
 

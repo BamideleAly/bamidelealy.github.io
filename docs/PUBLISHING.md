@@ -72,6 +72,8 @@ Required fields:
 - Embed 300 DPI metadata for print assets.
 - Add `<source media="print">` pointing to the master WebP.
 - Use SVG for icons and interface marks wherever possible.
+- Make FAQ and disclosure content meaningful when expanded because print export
+  opens all `<details>` answers.
 
 ## Template Rules
 
@@ -82,6 +84,8 @@ Required fields:
 - Pages must include `reader-content`.
 - Pages with navigation must include the language selector.
 - Footer must include RSS, sitemap, `llms.txt`, accessibility/privacy, and maker credit where applicable.
+- Printable pages must keep FAQ answers, figure captions, and source notes in
+  the document flow so tagged PDF export can include them.
 
 ## Generation Roadmap
 
