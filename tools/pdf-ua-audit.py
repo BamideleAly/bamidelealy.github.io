@@ -39,11 +39,23 @@ def verapdf_status(path: Path, verapdf: str, flavour: str) -> dict[str, object]:
         data = json.loads(result.stdout)
         validation = data["report"]["jobs"][0]["validationResult"][0]
         details = validation.get("details", {})
+        failed_summaries = [
+            {
+                "specification": summary.get("specification", ""),
+                "clause": summary.get("clause", ""),
+                "test_number": summary.get("testNumber", ""),
+                "failed_checks": summary.get("failedChecks", 0),
+                "description": summary.get("description", ""),
+            }
+            for summary in details.get("ruleSummaries", [])
+            if summary.get("ruleStatus") == "FAILED" or summary.get("status") == "failed"
+        ]
         return {
             f"verapdf_{flavour}_exit_code": result.returncode,
-            f"{flavour}_compliant": bool(validation.get("isCompliant")),
+            f"{flavour}_compliant": bool(validation.get("isCompliant", validation.get("compliant"))),
             f"{flavour}_failed_rules": details.get("failedRules", 0),
             f"{flavour}_failed_checks": details.get("failedChecks", 0),
+            f"{flavour}_failed_summaries": failed_summaries,
         }
     except Exception:
         return {

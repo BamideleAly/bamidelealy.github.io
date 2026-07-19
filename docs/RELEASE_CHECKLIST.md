@@ -58,7 +58,8 @@ Use this checklist for every production release and every new long-form report.
 - Confirm report images carry 300 DPI metadata.
 - Confirm exported and static article PDFs contain a structure tree.
 - Run `npm run pdf:audit`.
-- Run `npm run pdf:ua2-a4f` before describing any PDF as PDF/UA-2 or PDF/A-4f.
+- Run `npm run pdf:a4f` before describing any PDF as PDF/A-4f.
+- Run `npm run pdf:ua2-a4f` before describing any PDF as PDF/UA-2.
 
 ## 7. Internationalisation
 

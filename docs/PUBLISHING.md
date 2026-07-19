@@ -100,9 +100,10 @@ Required fields:
   `tools/build-conference-report.py`.
 - After publishing or changing an article, run `npm run assets:articles` while
   the local server is running to refresh PDF, QR, and social-preview QA assets.
-- Run `npm run pdf:audit` for committed tagged-PDF structure checks. Run
-  `npm run pdf:ua2-a4f` only when a PDF 2.0 remediation toolchain has produced
-  candidate PDF/UA-2 + PDF/A-4f files.
+- Run `npm run pdf:audit` for committed tagged-PDF structure checks.
+- Run `npm run pdf:a4f` before describing committed PDFs as PDF/A-4f.
+- Run `npm run pdf:ua2-a4f` only when a PDF remediation toolchain has produced
+  candidate PDF/UA-2 files.
 
 ## Generation Roadmap
 

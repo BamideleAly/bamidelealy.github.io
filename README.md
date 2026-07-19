@@ -575,13 +575,19 @@ Audit committed article PDFs:
 npm run pdf:audit
 ```
 
-Strict PDF/UA-2 + PDF/A-4f validation is available when `verapdf` is installed:
+Strict PDF/A-4f validation is available when `verapdf` is installed:
+
+```bash
+npm run pdf:a4f
+```
+
+Strict combined PDF/UA-2 + PDF/A-4f validation is also available:
 
 ```bash
 npm run pdf:ua2-a4f
 ```
 
-Current article PDFs are tagged, structurally checked, and rewritten as `%PDF-2.0` containers. They must not be described as PDF/UA-2 or PDF/A-4f compliant until `npm run pdf:ua2-a4f` passes.
+Current article PDFs are tagged, structurally checked, rewritten as `%PDF-2.0` containers, and pass strict `PDF/A-4f` validation in `veraPDF`. They must not be described as `PDF/UA-2` compliant until `npm run pdf:ua2-a4f` passes; remaining failures are semantic tag-tree issues from browser PDF generation.
 
 GitHub Actions runs the v0.0.3 release gate via
 `.github/workflows/static-quality.yml`.
@@ -620,6 +626,7 @@ Release-critical tools:
 | `npm run print:report` | Headless Chrome PDF export for print verification. |
 | `npm run assets:articles` | Generates per-article tagged PDFs, QR SVGs, and social-preview QA. |
 | `npm run pdf:audit` | Fast structural audit for committed article PDFs. |
+| `npm run pdf:a4f` | Strict veraPDF target check for PDF/A-4f. |
 | `npm run pdf:ua2-a4f` | Strict veraPDF target check for PDF/UA-2 and PDF/A-4f. |
 | `npm run content:example` | Renders the structured conference-report example. |
 

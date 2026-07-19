@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -20,6 +21,7 @@ except Exception:  # pragma: no cover - dependency guidance is tested via CLI us
     qrcode = None
 try:
     import pikepdf
+    from pikepdf import Array, Dictionary, Name, String
 except Exception:  # pragma: no cover - dependency guidance is tested via CLI use.
     pikepdf = None
 
@@ -28,6 +30,12 @@ PDF_DIR = ROOT / "assets" / "pdfs"
 QR_DIR = ROOT / "assets" / "qr"
 QA_PATH = ROOT / "docs" / "SOCIAL_PREVIEW_QA.json"
 CANONICAL_HOST = "https://bamidelealy.com"
+SRGB_PROFILE_CANDIDATES = [
+    Path("/System/Library/ColorSync/Profiles/sRGB Profile.icc"),
+    Path("/Library/ColorSync/Profiles/sRGB Profile.icc"),
+    Path("/usr/share/color/icc/sRGB.icc"),
+    Path("/usr/share/color/icc/colord/sRGB.icc"),
+]
 CHROME_CANDIDATES = [
     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
     "google-chrome",
@@ -135,7 +143,7 @@ def generate_qr(url: str, output: Path) -> None:
     image.save(output)
 
 
-def generate_pdf(chrome: str, base_url: str, page: Path, output: Path) -> None:
+def generate_pdf(chrome: str, base_url: str, page: Path, output: Path, article: ArticleParser) -> None:
     output.parent.mkdir(parents=True, exist_ok=True)
     url = base_url.rstrip("/") + "/" + page.relative_to(ROOT).as_posix()
     command = [
@@ -164,19 +172,90 @@ def generate_pdf(chrome: str, base_url: str, page: Path, output: Path) -> None:
         raise SystemExit(f"PDF export is suspiciously small: {output}")
     if b"/StructTreeRoot" not in data:
         raise SystemExit(f"PDF lacks a structure tree: {output}")
-    rewrite_pdf_2(output)
+    rewrite_pdf_2(output, article.title)
 
 
-def rewrite_pdf_2(output: Path) -> None:
+def rewrite_pdf_2(output: Path, title: str) -> None:
     if pikepdf is None:
         raise SystemExit("Install pikepdf with `python3 -m pip install -r requirements-dev.txt` to write PDF 2.0 assets.")
+    srgb_profile = find_srgb_profile()
     with pikepdf.Pdf.open(output, allow_overwriting_input=True) as pdf:
+        root = pdf.Root
+        metadata = pdf.make_stream(xmp_metadata(title))
+        metadata.Type = Name("/Metadata")
+        metadata.Subtype = Name("/XML")
+        root.Metadata = metadata
+        icc = pdf.make_stream(srgb_profile.read_bytes())
+        icc.N = 3
+        root.OutputIntents = Array(
+            [
+                Dictionary(
+                    {
+                        "/Type": Name("/OutputIntent"),
+                        "/S": Name("/GTS_PDFA1"),
+                        "/OutputConditionIdentifier": String("sRGB IEC61966-2.1"),
+                        "/Info": String("sRGB IEC61966-2.1"),
+                        "/DestOutputProfile": icc,
+                    }
+                )
+            ]
+        )
+        default_rgb = Array([Name("/ICCBased"), icc])
+        for page in pdf.pages:
+            resources = page.get("/Resources", Dictionary())
+            page.Resources = resources
+            resources.DefaultRGB = default_rgb
+        names = root.get("/Names", Dictionary())
+        root.Names = names
+        names.EmbeddedFiles = Dictionary({"/Names": Array([])})
+        try:
+            del pdf.trailer["/Info"]
+        except KeyError:
+            pass
         pdf.save(output, force_version="2.0")
     data = output.read_bytes()
     if not data.startswith(b"%PDF-2.0"):
         raise SystemExit(f"PDF 2.0 rewrite failed: {output}")
     if b"/StructTreeRoot" not in data:
         raise SystemExit(f"PDF 2.0 rewrite removed the structure tree: {output}")
+
+
+def xmp_metadata(title: str) -> bytes:
+    safe_title = (
+        title.replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+        .replace("'", "&apos;")
+    )
+    return f'''<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="bamidelealy-pdf-remediation">
+ <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="" xmlns:pdfaid="http://www.aiim.org/pdfa/ns/id/" xmlns:pdfuaid="http://www.aiim.org/pdfua/ns/id/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/">
+   <pdfaid:part>4</pdfaid:part>
+   <pdfaid:rev>2020</pdfaid:rev>
+   <pdfaid:conformance>F</pdfaid:conformance>
+   <pdfuaid:part>2</pdfuaid:part>
+   <pdfuaid:rev>2024</pdfuaid:rev>
+   <dc:title><rdf:Alt><rdf:li xml:lang="x-default">{safe_title}</rdf:li></rdf:Alt></dc:title>
+   <dc:creator><rdf:Seq><rdf:li>Bamidele Aly</rdf:li></rdf:Seq></dc:creator>
+   <xmp:CreatorTool>Chromium print pipeline with pikepdf remediation</xmp:CreatorTool>
+   <pdf:Producer>Chromium; pikepdf</pdf:Producer>
+  </rdf:Description>
+ </rdf:RDF>
+</x:xmpmeta>
+<?xpacket end="w"?>'''.encode("utf-8")
+
+
+def find_srgb_profile() -> Path:
+    configured = os.environ.get("SRGB_ICC_PROFILE")
+    candidates = [Path(configured)] if configured else []
+    candidates.extend(SRGB_PROFILE_CANDIDATES)
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+    searched = ", ".join(str(candidate) for candidate in candidates)
+    raise SystemExit(f"sRGB ICC profile not found. Set SRGB_ICC_PROFILE or install a profile at one of: {searched}")
 
 
 def main() -> int:
@@ -201,7 +280,7 @@ def main() -> int:
         qr_path = QR_DIR / f"{stem}.svg"
         generate_qr(canonical, qr_path)
         if chrome and not (args.skip_existing and pdf_path.exists() and pdf_path.stat().st_size > 10_000):
-            generate_pdf(chrome, args.base_url, page, pdf_path)
+            generate_pdf(chrome, args.base_url, page, pdf_path, article)
         qa.append(
             {
                 "page": page.relative_to(ROOT).as_posix(),
