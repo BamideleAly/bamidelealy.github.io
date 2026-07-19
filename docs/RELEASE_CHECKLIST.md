@@ -49,6 +49,8 @@ Use this checklist for every production release and every new long-form report.
 ## 6. Print
 
 - Run PDF export with `npm run print:report`.
+- Confirm article pages show the PDF icon beside share controls and that it
+  opens the browser print/save-as-PDF dialog.
 - Confirm FAQ/disclosure answers are visible in print preview and exported PDF.
 - Confirm header navigation, search, language selector, share controls, and CTAs are hidden.
 - Confirm A4 pagination, no clipped text, readable type, and preserved figure captions.

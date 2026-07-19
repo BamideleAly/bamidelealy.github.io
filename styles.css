@@ -1332,7 +1332,8 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
     margin-block-start: 1.55rem;
   }
   .article-share-link,
-  .article-copy-link {
+  .article-copy-link,
+  .article-pdf-link {
     inline-size: 2.45rem;
     block-size: 2.45rem;
     border: 1px solid var(--line);
@@ -1345,7 +1346,8 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
     transition: transform .2s var(--ease-out), border-color .2s var(--ease-out), box-shadow .2s var(--ease-out);
   }
   .article-share-link:hover,
-  .article-copy-link:hover {
+  .article-copy-link:hover,
+  .article-pdf-link:hover {
     border-color: var(--accent);
     color: var(--ink);
     text-decoration: none;
@@ -1353,11 +1355,13 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
     box-shadow: var(--shadow-md);
   }
   .article-share-link svg,
-  .article-copy-link svg {
+  .article-copy-link svg,
+  .article-pdf-link svg {
     inline-size: 1.05rem;
     block-size: 1.05rem;
   }
-  .article-copy-link {
+  .article-copy-link,
+  .article-pdf-link {
     cursor: pointer;
     font: inherit;
   }

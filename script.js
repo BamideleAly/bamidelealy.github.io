@@ -544,14 +544,43 @@
     var encodedTitle = encodeURIComponent(shareTitle);
     var actions = document.createElement('div');
     actions.className = 'article-actions';
-    actions.setAttribute('aria-label', 'Share article');
+    var actionLabels = hLang === 'fr' ? {
+      group: 'Partager, enregistrer ou imprimer l’article',
+      visible: 'Partager ou imprimer l’article',
+      sharePrefix: 'Partager sur ',
+      copy: 'Copier le lien de l’article',
+      copied: 'Lien de l’article copié',
+      prompt: 'Copier le lien de l’article',
+      print: 'Télécharger ou imprimer le PDF',
+      preparing: 'Préparation du PDF'
+    } : hLang === 'de' ? {
+      group: 'Artikel teilen, speichern oder drucken',
+      visible: 'Artikel teilen oder drucken',
+      sharePrefix: 'Teilen auf ',
+      copy: 'Artikellink kopieren',
+      copied: 'Artikellink kopiert',
+      prompt: 'Artikellink kopieren',
+      print: 'PDF herunterladen oder drucken',
+      preparing: 'PDF wird vorbereitet'
+    } : {
+      group: 'Share, save or print article',
+      visible: 'Share or print article',
+      sharePrefix: 'Share on ',
+      copy: 'Copy article link',
+      copied: 'Article link copied',
+      prompt: 'Copy article link',
+      print: 'Download or print PDF',
+      preparing: 'Preparing PDF'
+    };
+    actions.setAttribute('aria-label', actionLabels.group);
 
     var icons = {
       linkedin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.83v1.64h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V21h-4v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94V21h-4V9Z"/></svg>',
       x: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.86 10.47 21.15 2h-1.73l-6.33 7.36L8.03 2H2.2l7.64 11.12L2.2 22h1.73l6.68-7.77L15.95 22h5.83l-7.92-11.53Zm-2.36 2.75-.77-1.1L4.57 3.3H7.2l4.98 7.13.77 1.1 6.47 9.27h-2.63l-5.29-7.58Z"/></svg>',
       facebook: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 8.7V6.9c0-.86.2-1.3 1.4-1.3H17V2.2c-.78-.08-1.56-.13-2.35-.14-3.48 0-4.65 2.12-4.65 4.52V8.7H7v3.8h3V22h4v-9.5h2.75l.45-3.8H14Z"/></svg>',
       email: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m4 7 8 6 8-6"/></svg>',
-      copy: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M10 13a5 5 0 0 0 7.07 0l2.12-2.12a5 5 0 0 0-7.07-7.07L10.9 5.03"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14 11a5 5 0 0 0-7.07 0L4.81 13.12a5 5 0 0 0 7.07 7.07l1.22-1.22"/></svg>'
+      copy: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M10 13a5 5 0 0 0 7.07 0l2.12-2.12a5 5 0 0 0-7.07-7.07L10.9 5.03"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14 11a5 5 0 0 0-7.07 0L4.81 13.12a5 5 0 0 0 7.07 7.07l1.22-1.22"/></svg>',
+      pdf: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M7 2.75h6.2L18 7.55v13.7H7z"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M13 2.75V8h5"/><path fill="currentColor" d="M8.75 15.75h.85c.8 0 1.35-.48 1.35-1.2 0-.74-.53-1.17-1.36-1.17H7.9v4.5h.85v-2.13Zm0-.72v-.93h.72c.4 0 .62.17.62.46 0 .3-.23.47-.62.47h-.72Zm3.05 2.85h1.53c1.4 0 2.28-.88 2.28-2.25s-.88-2.25-2.28-2.25H11.8v4.5Zm.86-.75v-3h.62c.88 0 1.43.56 1.43 1.5s-.55 1.5-1.43 1.5h-.62Zm3.75.75h.86v-1.76h1.68v-.74h-1.68v-1.25h1.88v-.75h-2.74v4.5Z"/></svg>'
     };
     var links = [
       ['LinkedIn', 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodedUrl, icons.linkedin],
@@ -561,7 +590,7 @@
     ];
     var label = document.createElement('span');
     label.className = 'article-actions-label';
-    label.textContent = 'Share article';
+    label.textContent = actionLabels.visible;
     actions.appendChild(label);
     links.forEach(function (item) {
       var anchor = document.createElement('a');
@@ -569,29 +598,44 @@
       anchor.href = item[1];
       anchor.target = item[0] === 'Email' ? '' : '_blank';
       if (item[0] !== 'Email') anchor.rel = 'noopener noreferrer';
-      anchor.setAttribute('aria-label', 'Share on ' + item[0]);
+      anchor.setAttribute('aria-label', actionLabels.sharePrefix + item[0]);
       anchor.innerHTML = item[2];
       actions.appendChild(anchor);
     });
     var copyButton = document.createElement('button');
     copyButton.className = 'article-copy-link';
     copyButton.type = 'button';
-    copyButton.setAttribute('aria-label', 'Copy article link');
+    copyButton.setAttribute('aria-label', actionLabels.copy);
     copyButton.innerHTML = icons.copy;
     copyButton.addEventListener('click', function () {
       var done = function () {
-        copyButton.setAttribute('aria-label', 'Article link copied');
-        setTimeout(function () { copyButton.setAttribute('aria-label', 'Copy article link'); }, 1800);
+        copyButton.setAttribute('aria-label', actionLabels.copied);
+        setTimeout(function () { copyButton.setAttribute('aria-label', actionLabels.copy); }, 1800);
       };
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(shareUrl).then(done).catch(function () {
-          window.prompt('Copy article link', shareUrl);
+          window.prompt(actionLabels.prompt, shareUrl);
         });
       } else {
-        window.prompt('Copy article link', shareUrl);
+        window.prompt(actionLabels.prompt, shareUrl);
       }
     });
     actions.appendChild(copyButton);
+    var pdfButton = document.createElement('button');
+    pdfButton.className = 'article-pdf-link';
+    pdfButton.type = 'button';
+    pdfButton.setAttribute('aria-label', actionLabels.print);
+    pdfButton.setAttribute('title', actionLabels.print);
+    pdfButton.innerHTML = icons.pdf;
+    pdfButton.addEventListener('click', function () {
+      pdfButton.setAttribute('aria-label', actionLabels.preparing);
+      openDetailsForPrint();
+      window.setTimeout(function () {
+        window.print();
+        pdfButton.setAttribute('aria-label', actionLabels.print);
+      }, 60);
+    });
+    actions.appendChild(pdfButton);
     articleMeta.insertAdjacentElement('afterend', actions);
   }
 

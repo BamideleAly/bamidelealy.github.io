@@ -337,6 +337,7 @@ def check_report_images() -> None:
 
 def check_print_styles() -> None:
     css = (ROOT / "styles.css").read_text()
+    script = (ROOT / "script.js").read_text()
     if "@media print" not in css or "@page" not in css:
         fail("styles.css missing dedicated print stylesheet")
     for token in [
@@ -358,6 +359,8 @@ def check_print_styles() -> None:
             fail(f"styles.min.css contains invalid calc() plus spacing: {calc_expression}")
     if "calc(var(--article-column) + (var(--pad) * 2))" not in minified_css:
         fail("styles.min.css missing valid article-column calc() rule")
+    if "article-pdf-link" not in script or "window.print()" not in script:
+        fail("script.js missing article PDF/print action")
 
 
 def check_discovery_indexes() -> None:

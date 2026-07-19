@@ -373,6 +373,8 @@ Reader-mode and print support are first-class release requirements:
 - Article pages keep a clear title, description, byline/date metadata, body
   paragraphs, headings, figures, and captions for Safari Reader Mode and
   Chrome Reading Mode.
+- Article pages expose a toolbar PDF icon that opens the browser print dialog
+  so readers can print or save the article as a PDF.
 - The print stylesheet hides navigation, header controls, share controls,
   search, language controls, CTAs, and footer chrome.
 - FAQ and disclosure answers are automatically opened for print and restored

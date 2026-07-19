@@ -84,6 +84,8 @@ Required fields:
 - Pages must include `reader-content`.
 - Pages with navigation must include the language selector.
 - Footer must include RSS, sitemap, `llms.txt`, accessibility/privacy, and maker credit where applicable.
+- Long-form article pages must expose the share/copy/PDF toolbar so readers
+  can share, print, or save the article as a PDF.
 - Printable pages must keep FAQ answers, figure captions, and source notes in
   the document flow so tagged PDF export can include them.
 
