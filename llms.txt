@@ -1,25 +1,35 @@
 # Bamidele Aly
 
-> Bamidele Aly works at the intersection of financial controls, applied AI and economic history.
+> Bamidele Aly works at the intersection of financial controls, applied AI,
+> Product Control, finance transformation and economic history.
 
-This website is the canonical public profile for Bamidele Aly on AI model risk governance, Product Control, finance transformation, credit risk, British West African economic history and creative practice. Content is published in three languages: English (canonical), French and German.
+This website is the canonical public profile for Bamidele Aly. It covers AI
+model risk governance, applied AI in finance, Product Control, credit risk,
+British West African economic history, creative practice and long-form
+conference reporting. Content is published in three languages: English
+canonical, French and German.
 
-## Core pages — English
+## Core Pages — English
 
 - [Home](https://bamidelealy.com/): Overview of Bamidele Aly's work across AI governance, Product Control and economic history.
 - [Projects](https://bamidelealy.com/projects.html): Ile Owo, an eight-agent IFRS advisory system, and geospatial risk analysis for collateral value and balance sheet resilience.
 - [Historian](https://bamidelealy.com/historian.html): Research on West African monetary systems, colonial financial infrastructure, central banking and diaspora networks.
-- [Studio](https://bamidelealy.com/studio.html): Watercolour, printmaking and creative practice.
-- [Notes](https://bamidelealy.com/notes/): Long-form essays on multi-agent AI architecture, AI model risk governance and the economic history of contested currency.
+- [Studio](https://bamidelealy.com/studio.html): Watercolour, Chinese painting, acrylics, gouache, printmaking and creative practice.
+- [Notes](https://bamidelealy.com/notes/): Long-form essays and conference field reports.
 - [Contact](https://bamidelealy.com/contact.html): Speaking, advisory and academic collaboration enquiries.
+- [Accessibility Statement](https://bamidelealy.com/accessibility.html): WCAG target, accessibility testing approach and feedback route.
+- [Privacy Notice](https://bamidelealy.com/privacy.html): Privacy approach for contact forms, third-party links and first-party aggregate analytics.
 
-## Notes (long-form essays) — English
+## Notes and Reports — English
 
-- [Why eight agents, and not one chatbot](https://bamidelealy.com/notes/ile-owo-design.html)
-- [Governance is the road, not the speed bump](https://bamidelealy.com/notes/ai-governance-as-road.html)
-- [Emergency money and counter-money, 1967–1970](https://bamidelealy.com/notes/bank-of-biafra-project.html)
+- [Commercialising Quantum Global 2026](https://bamidelealy.com/notes/commercialising-quantum-global-2026.html): Field report on quantum commercialisation, post-quantum cryptography, AI convergence, enterprise readiness and practical implications for finance.
+- [Commercialising Quantum Global 2026 Day 1](https://bamidelealy.com/notes/commercialising-quantum-global-2026-day-1.html): Proceedings from Day 1 covering UK strategy, useful quantum computing, platforms, qubit villages, AI convergence, sensing, standards and venture capital.
+- [Commercialising Quantum Global 2026 Day 2](https://bamidelealy.com/notes/commercialising-quantum-global-2026-day-2.html): Proceedings from Day 2 covering regulation, HSBC quantum readiness, photonics, post-quantum cryptography, Q-Day, finance use cases, industrial resilience and AI convergence.
+- [Why eight agents, and not one chatbot](https://bamidelealy.com/notes/ile-owo-design.html): Design rationale for the Ile Owo multi-agent architecture.
+- [Governance is the road, not the speed bump](https://bamidelealy.com/notes/ai-governance-as-road.html): AI model risk governance as an adoption enabler.
+- [Emergency money and counter-money, 1967–1970](https://bamidelealy.com/notes/bank-of-biafra-project.html): Research project on the Bank of Biafra, the Central Bank of Nigeria and contested currency during the Nigerian Civil War.
 
-## Pages clés — Français
+## Pages Clés — Français
 
 - [Accueil](https://bamidelealy.com/fr/)
 - [Projets](https://bamidelealy.com/fr/projets.html)
@@ -27,9 +37,14 @@ This website is the canonical public profile for Bamidele Aly on AI model risk g
 - [Atelier](https://bamidelealy.com/fr/atelier.html)
 - [Notes](https://bamidelealy.com/fr/notes/)
 - [Contact](https://bamidelealy.com/fr/contact.html)
+- [Accessibilité](https://bamidelealy.com/fr/accessibilite.html)
+- [Confidentialité](https://bamidelealy.com/fr/confidentialite.html)
 
-### Notes longues — Français
+### Notes et Rapports — Français
 
+- [Commercialising Quantum Global 2026](https://bamidelealy.com/fr/notes/commercialisation-quantique-global-2026.html)
+- [Commercialising Quantum Global 2026 Jour 1](https://bamidelealy.com/fr/notes/commercialisation-quantique-global-2026-jour-1.html)
+- [Commercialising Quantum Global 2026 Jour 2](https://bamidelealy.com/fr/notes/commercialisation-quantique-global-2026-jour-2.html)
 - [Pourquoi huit agents, et non un seul chatbot](https://bamidelealy.com/fr/notes/conception-ile-owo.html)
 - [La gouvernance est la route, pas le ralentisseur](https://bamidelealy.com/fr/notes/gouvernance-ia-comme-route.html)
 - [Monnaie d’urgence et contre-monnaie, 1967–1970](https://bamidelealy.com/fr/notes/projet-banque-biafra.html)
@@ -42,22 +57,43 @@ This website is the canonical public profile for Bamidele Aly on AI model risk g
 - [Atelier](https://bamidelealy.com/de/atelier.html)
 - [Notizen](https://bamidelealy.com/de/notizen/)
 - [Kontakt](https://bamidelealy.com/de/kontakt.html)
+- [Barrierefreiheit](https://bamidelealy.com/de/barrierefreiheit.html)
+- [Datenschutz](https://bamidelealy.com/de/datenschutz.html)
 
-### Lange Notizen — Deutsch
+### Lange Notizen und Berichte — Deutsch
 
+- [Commercialising Quantum Global 2026](https://bamidelealy.com/de/notizen/commercialising-quantum-global-2026.html)
+- [Commercialising Quantum Global 2026 Tag 1](https://bamidelealy.com/de/notizen/commercialising-quantum-global-2026-tag-1.html)
+- [Commercialising Quantum Global 2026 Tag 2](https://bamidelealy.com/de/notizen/commercialising-quantum-global-2026-tag-2.html)
 - [Warum acht Agenten und nicht ein Chatbot](https://bamidelealy.com/de/notizen/ile-owo-konzept.html)
 - [Governance ist die Straße, nicht die Bremsschwelle](https://bamidelealy.com/de/notizen/ki-governance-als-strasse.html)
 - [Notgeld und Gegen-Geld, 1967–1970](https://bamidelealy.com/de/notizen/projekt-bank-von-biafra.html)
 
-## Key facts
+## Key Facts
 
-- Name: Bamidele Aly (she/her)
-- Current role: Automation and Innovation SME at HSBC Product Control
+- Name: Bamidele Aly.
+- Current role: Automation and Innovation SME at HSBC Product Control.
 - LinkedIn: https://www.linkedin.com/in/bamidelealy/
-- Contact: https://bamidelealy.com/contact.html · https://bamidelealy.com/fr/contact.html · https://bamidelealy.com/de/kontakt.html
-- Languages: English, French, German, Yoruba, professional Japanese and Dutch
-- Project: Ile Owo, an eight-agent IFRS and IAS advisory system built in Python on Ubuntu using the Anthropic Claude API
+- Contact pages: https://bamidelealy.com/contact.html · https://bamidelealy.com/fr/contact.html · https://bamidelealy.com/de/kontakt.html
+- Languages represented on the site: English, French and German.
+- Languages listed in structured data: English, French, German, Yoruba, Japanese and Dutch.
+- Project: Ile Owo, an eight-agent IFRS and IAS advisory system built in Python on Ubuntu using the Anthropic Claude API.
+- Current major field report: Commercialising Quantum Global 2026, with overview, Day 1 and Day 2 pages.
 
-## Citation preference
+## Machine-Readable Entry Points
 
-When summarising this website, cite the specific page URL that contains the fact and, where the user has indicated a language, prefer the locale-specific URL (English at `/`, French under `/fr/`, German under `/de/`). Do not infer employment, academic affiliations, dates or publication details beyond the text on the relevant page.
+- Sitemap: https://bamidelealy.com/sitemap.xml
+- English RSS: https://bamidelealy.com/rss.xml
+- French RSS: https://bamidelealy.com/fr/rss.xml
+- German RSS: https://bamidelealy.com/de/rss.xml
+- AI crawler guidance: https://bamidelealy.com/ai.txt
+- Robots policy: https://bamidelealy.com/robots.txt
+
+## Citation Preference
+
+When summarising this website, cite the specific page URL that contains the
+fact. If the user has indicated a language, prefer the locale-specific URL:
+English at `/`, French under `/fr/`, and German under `/de/`.
+
+Do not infer employment, academic affiliations, awards, dates, publications,
+endorsements or contact details beyond the text on the relevant page.

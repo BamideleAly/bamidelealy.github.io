@@ -1,0 +1,202 @@
+{
+  "articles": [
+    {
+      "page": "notes/ai-governance-as-road.html",
+      "title": "Governance is the road, not the speed bump.",
+      "canonical": "https://bamidelealy.com/notes/ai-governance-as-road.html",
+      "pdf": "assets/pdfs/notes-ai-governance-as-road.pdf",
+      "qr": "assets/qr/notes-ai-governance-as-road.svg",
+      "og_image": "https://bamidelealy.com/assets/social/ai-governance-as-road.jpg?v=2026071909",
+      "og_width": "1200",
+      "og_height": "630",
+      "social_preview_ok": true
+    },
+    {
+      "page": "notes/bank-of-biafra-project.html",
+      "title": "Emergency money and counter-money, 1967–1970.",
+      "canonical": "https://bamidelealy.com/notes/bank-of-biafra-project.html",
+      "pdf": "assets/pdfs/notes-bank-of-biafra-project.pdf",
+      "qr": "assets/qr/notes-bank-of-biafra-project.svg",
+      "og_image": "https://bamidelealy.com/assets/social/bank-of-biafra-project.jpg?v=2026071909",
+      "og_width": "1200",
+      "og_height": "630",
+      "social_preview_ok": true
+    },
+    {
+      "page": "notes/commercialising-quantum-global-2026-day-1.html",
+      "title": "Day 1: promise, platforms and ecosystems.",
+      "canonical": "https://bamidelealy.com/notes/commercialising-quantum-global-2026-day-1.html",
+      "pdf": "assets/pdfs/notes-commercialising-quantum-global-2026-day-1.pdf",
+      "qr": "assets/qr/notes-commercialising-quantum-global-2026-day-1.svg",
+      "og_image": "https://bamidelealy.com/assets/social/commercialising-quantum-global-2026-day-1.jpg?v=2026071909",
+      "og_width": "1200",
+      "og_height": "630",
+      "social_preview_ok": true
+    },
+    {
+      "page": "notes/commercialising-quantum-global-2026-day-2.html",
+      "title": "Day 2: regulation, Q-Day and finance.",
+      "canonical": "https://bamidelealy.com/notes/commercialising-quantum-global-2026-day-2.html",
+      "pdf": "assets/pdfs/notes-commercialising-quantum-global-2026-day-2.pdf",
+      "qr": "assets/qr/notes-commercialising-quantum-global-2026-day-2.svg",
+      "og_image": "https://bamidelealy.com/assets/social/commercialising-quantum-global-2026-day-2.jpg?v=2026071909",
+      "og_width": "1200",
+      "og_height": "630",
+      "social_preview_ok": true
+    },
+    {
+      "page": "notes/commercialising-quantum-global-2026.html",
+      "title": "Commercialising Quantum Global 2026: what finance should do now.",
+      "canonical": "https://bamidelealy.com/notes/commercialising-quantum-global-2026.html",
+      "pdf": "assets/pdfs/notes-commercialising-quantum-global-2026.pdf",
+      "qr": "assets/qr/notes-commercialising-quantum-global-2026.svg",
+      "og_image": "https://bamidelealy.com/assets/social/commercialising-quantum-global-2026.jpg?v=2026071909",
+      "og_width": "1200",
+      "og_height": "630",
+      "social_preview_ok": true
+    },
+    {
+      "page": "notes/ile-owo-design.html",
+      "title": "Why eight agents, and not one chatbot.",
+      "canonical": "https://bamidelealy.com/notes/ile-owo-design.html",
+      "pdf": "assets/pdfs/notes-ile-owo-design.pdf",
+      "qr": "assets/qr/notes-ile-owo-design.svg",
+      "og_image": "https://bamidelealy.com/assets/social/ile-owo-design.jpg?v=2026071909",
+      "og_width": "1200",
+      "og_height": "630",
+      "social_preview_ok": true
+    },
+    {
+      "page": "fr/notes/commercialisation-quantique-global-2026-jour-1.html",
+      "title": "Jour 1 : promesses, plateformes et écosystèmes.",
+      "canonical": "https://bamidelealy.com/fr/notes/commercialisation-quantique-global-2026-jour-1.html",
+      "pdf": "assets/pdfs/fr-notes-commercialisation-quantique-global-2026-jour-1.pdf",
+      "qr": "assets/qr/fr-notes-commercialisation-quantique-global-2026-jour-1.svg",
+      "og_image": "https://bamidelealy.com/assets/social/commercialising-quantum-global-2026-day-1.jpg?v=2026071909",
+      "og_width": "1200",
+      "og_height": "630",
+      "social_preview_ok": true
+    },
+    {
+      "page": "fr/notes/commercialisation-quantique-global-2026-jour-2.html",
+      "title": "Jour 2 : régulation, Q-Day et finance.",
+      "canonical": "https://bamidelealy.com/fr/notes/commercialisation-quantique-global-2026-jour-2.html",
+      "pdf": "assets/pdfs/fr-notes-commercialisation-quantique-global-2026-jour-2.pdf",
+      "qr": "assets/qr/fr-notes-commercialisation-quantique-global-2026-jour-2.svg",
+      "og_image": "https://bamidelealy.com/assets/social/commercialising-quantum-global-2026-day-2.jpg?v=2026071909",
+      "og_width": "1200",
+      "og_height": "630",
+      "social_preview_ok": true
+    },
+    {
+      "page": "fr/notes/commercialisation-quantique-global-2026.html",
+      "title": "Commercialising Quantum Global 2026 : ce que la finance doit faire maintenant.",
+      "canonical": "https://bamidelealy.com/fr/notes/commercialisation-quantique-global-2026.html",
+      "pdf": "assets/pdfs/fr-notes-commercialisation-quantique-global-2026.pdf",
+      "qr": "assets/qr/fr-notes-commercialisation-quantique-global-2026.svg",
+      "og_image": "https://bamidelealy.com/assets/social/commercialising-quantum-global-2026.jpg?v=2026071909",
+      "og_width": "1200",
+      "og_height": "630",
+      "social_preview_ok": true
+    },
+    {
+      "page": "fr/notes/conception-ile-owo.html",
+      "title": "Pourquoi huit agents, et non un seul chatbot.",
+      "canonical": "https://bamidelealy.com/fr/notes/conception-ile-owo.html",
+      "pdf": "assets/pdfs/fr-notes-conception-ile-owo.pdf",
+      "qr": "assets/qr/fr-notes-conception-ile-owo.svg",
+      "og_image": "https://bamidelealy.com/assets/social/ile-owo-design.jpg?v=2026071909",
+      "og_width": "1200",
+      "og_height": "630",
+      "social_preview_ok": true
+    },
+    {
+      "page": "fr/notes/gouvernance-ia-comme-route.html",
+      "title": "La gouvernance est la route, pas le ralentisseur.",
+      "canonical": "https://bamidelealy.com/fr/notes/gouvernance-ia-comme-route.html",
+      "pdf": "assets/pdfs/fr-notes-gouvernance-ia-comme-route.pdf",
+      "qr": "assets/qr/fr-notes-gouvernance-ia-comme-route.svg",
+      "og_image": "https://bamidelealy.com/assets/social/ai-governance-as-road.jpg?v=2026071909",
+      "og_width": "1200",
+      "og_height": "630",
+      "social_preview_ok": true
+    },
+    {
+      "page": "fr/notes/projet-banque-biafra.html",
+      "title": "Monnaie d’urgence et contre-monnaie, 1967–1970.",
+      "canonical": "https://bamidelealy.com/fr/notes/projet-banque-biafra.html",
+      "pdf": "assets/pdfs/fr-notes-projet-banque-biafra.pdf",
+      "qr": "assets/qr/fr-notes-projet-banque-biafra.svg",
+      "og_image": "https://bamidelealy.com/assets/social/bank-of-biafra-project.jpg?v=2026071909",
+      "og_width": "1200",
+      "og_height": "630",
+      "social_preview_ok": true
+    },
+    {
+      "page": "de/notizen/commercialising-quantum-global-2026-tag-1.html",
+      "title": "Tag 1: Versprechen, Plattformen und Ökosysteme.",
+      "canonical": "https://bamidelealy.com/de/notizen/commercialising-quantum-global-2026-tag-1.html",
+      "pdf": "assets/pdfs/de-notizen-commercialising-quantum-global-2026-tag-1.pdf",
+      "qr": "assets/qr/de-notizen-commercialising-quantum-global-2026-tag-1.svg",
+      "og_image": "https://bamidelealy.com/assets/social/commercialising-quantum-global-2026-day-1.jpg?v=2026071909",
+      "og_width": "1200",
+      "og_height": "630",
+      "social_preview_ok": true
+    },
+    {
+      "page": "de/notizen/commercialising-quantum-global-2026-tag-2.html",
+      "title": "Tag 2: Regulierung, Q-Day und Finance.",
+      "canonical": "https://bamidelealy.com/de/notizen/commercialising-quantum-global-2026-tag-2.html",
+      "pdf": "assets/pdfs/de-notizen-commercialising-quantum-global-2026-tag-2.pdf",
+      "qr": "assets/qr/de-notizen-commercialising-quantum-global-2026-tag-2.svg",
+      "og_image": "https://bamidelealy.com/assets/social/commercialising-quantum-global-2026-day-2.jpg?v=2026071909",
+      "og_width": "1200",
+      "og_height": "630",
+      "social_preview_ok": true
+    },
+    {
+      "page": "de/notizen/commercialising-quantum-global-2026.html",
+      "title": "Commercialising Quantum Global 2026: Was die Finanzfunktion jetzt tun sollte.",
+      "canonical": "https://bamidelealy.com/de/notizen/commercialising-quantum-global-2026.html",
+      "pdf": "assets/pdfs/de-notizen-commercialising-quantum-global-2026.pdf",
+      "qr": "assets/qr/de-notizen-commercialising-quantum-global-2026.svg",
+      "og_image": "https://bamidelealy.com/assets/social/commercialising-quantum-global-2026.jpg?v=2026071909",
+      "og_width": "1200",
+      "og_height": "630",
+      "social_preview_ok": true
+    },
+    {
+      "page": "de/notizen/ile-owo-konzept.html",
+      "title": "Warum acht Agenten und nicht ein Chatbot.",
+      "canonical": "https://bamidelealy.com/de/notizen/ile-owo-konzept.html",
+      "pdf": "assets/pdfs/de-notizen-ile-owo-konzept.pdf",
+      "qr": "assets/qr/de-notizen-ile-owo-konzept.svg",
+      "og_image": "https://bamidelealy.com/assets/social/ile-owo-design.jpg?v=2026071909",
+      "og_width": "1200",
+      "og_height": "630",
+      "social_preview_ok": true
+    },
+    {
+      "page": "de/notizen/ki-governance-als-strasse.html",
+      "title": "Governance ist die Straße, nicht die Bremsschwelle.",
+      "canonical": "https://bamidelealy.com/de/notizen/ki-governance-als-strasse.html",
+      "pdf": "assets/pdfs/de-notizen-ki-governance-als-strasse.pdf",
+      "qr": "assets/qr/de-notizen-ki-governance-als-strasse.svg",
+      "og_image": "https://bamidelealy.com/assets/social/ai-governance-as-road.jpg?v=2026071909",
+      "og_width": "1200",
+      "og_height": "630",
+      "social_preview_ok": true
+    },
+    {
+      "page": "de/notizen/projekt-bank-von-biafra.html",
+      "title": "Notgeld und Gegen-Geld, 1967–1970.",
+      "canonical": "https://bamidelealy.com/de/notizen/projekt-bank-von-biafra.html",
+      "pdf": "assets/pdfs/de-notizen-projekt-bank-von-biafra.pdf",
+      "qr": "assets/qr/de-notizen-projekt-bank-von-biafra.svg",
+      "og_image": "https://bamidelealy.com/assets/social/bank-of-biafra-project.jpg?v=2026071909",
+      "og_width": "1200",
+      "og_height": "630",
+      "social_preview_ok": true
+    }
+  ]
+}

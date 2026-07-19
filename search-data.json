@@ -1,43 +1,418 @@
 {
   "index": {
     "en": [
-      { "t": "Home", "d": "Engineering trustworthy AI for global finance — Bamidele Aly on AI governance, Product Control and economic history.", "u": "index.html" },
-      { "t": "Projects", "d": "Applied AI systems for finance and risk — Ile Owo and geospatial credit-risk work.", "u": "projects.html" },
-      { "t": "Economic Historian", "d": "West African monetary systems, colonial financial infrastructure, central banking and Nigerian diaspora research.", "u": "historian.html" },
-      { "t": "Studio", "d": "Watercolour, Chinese painting, acrylics, gouache and printmaking.", "u": "studio.html" },
-      { "t": "Contact", "d": "Speaking, advisory and academic collaboration enquiries.", "u": "contact.html" },
-
-      { "t": "AI Model Risk Governance", "d": "Designing and operationalising governance frameworks for AI in regulated financial environments.", "u": "index.html#expertise-heading" },
-      { "t": "Finance Transformation & Applied AI", "d": "AI systems that solve real Product Control problems, including Ile Owo.", "u": "index.html#expertise-heading" },
-      { "t": "Credit Risk & Market Infrastructure", "d": "Credit risk across banks, NBFIs, sovereigns, supranationals and 85+ jurisdictions.", "u": "index.html#expertise-heading" },
-
-      { "t": "Ile Owo", "d": "An eight-agent IFRS and IAS advisory system built on the Anthropic Claude API in Python.", "u": "projects.html#ile-owo" },
-      { "t": "Ile Owo architecture", "d": "Orchestrator, Filter, Summaryan, Historian, Insider, Outsider, Auditor, Scribe — the eight-agent flow.", "u": "projects.html#ile-owo-architecture" },
-      { "t": "Geospatial Risk Analysis", "d": "Collateral value, balance sheet resilience and spatially correlated shocks.", "u": "projects.html" },
-
-      { "t": "FT Live — Open Finance Meets AI", "d": "FT Fintech Festival panel, November 2025.", "u": "index.html#speaking-heading" },
-      { "t": "The Economist — AI for CFOs", "d": "Deep Learning: Training the AI-First CFO, March 2026.", "u": "index.html#speaking-heading" },
-      { "t": "Banque de France", "d": "Crédibilités des monnaies, de John Law au bitcoin — monetary sovereignties in Nigeria.", "u": "index.html#speaking-heading" },
-
-      { "t": "Enemy Capital in Colonial Lagos", "d": "First World War seizure of German and Austro-Hungarian trading houses in Lagos.", "u": "historian.html#research-heading" },
-      { "t": "Central Banking in British West Africa", "d": "Institutional architecture, monetary policy and political economy across the territories.", "u": "historian.html#research-heading" },
-      { "t": "The Nigerian Diaspora in Europe", "d": "Formation, economic networks and trajectory of Nigerian communities across European cities.", "u": "historian.html#research-heading" },
-
-      { "t": "Bank of Biafra and Central Bank of Nigeria (1967-1970)", "d": "Emergency Money and Counter-Money — paper in preparation.", "u": "historian.html#published-heading" },
-      { "t": "Monetary Sovereignty in Ghana and Nigeria", "d": "Late 1950s to early 1960s — chapter in Identity Transformation and Politicization in Africa (Rowman & Littlefield, 2022).", "u": "historian.html#published-heading" },
-      { "t": "West African Sterling in Southern Nigeria, 1916", "d": "Chapter in There Came a Time: Essays on the Great War in Africa (TSL Books, 2018).", "u": "historian.html#published-heading" },
-      { "t": "Mobile telephony in Sub-Saharan Africa", "d": "Top Up, Pay as You Go — chapter in Urban Challenges and Survival Strategies in Africa (2017).", "u": "historian.html#published-heading" },
-
-      { "t": "Education", "d": "Université Paris I Panthéon-Sorbonne, Birkbeck (London), INALCO, ESCP Business School.", "u": "historian.html#education-heading" },
-      { "t": "Studio practice", "d": "A discipline that keeps the others honest — printmaking, watercolour, gouache, acrylics.", "u": "studio.html#practice-heading" },
-
-      { "t": "Notes — index", "d": "Long-form essays on AI governance, multi-agent architectures and West African monetary history.", "u": "notes/" },
-      { "t": "Commercialising Quantum Global 2026", "d": "Field report on quantum commercialisation, post-quantum cryptography, AI convergence, enterprise readiness and practical implications for finance.", "u": "notes/commercialising-quantum-global-2026.html" },
-      { "t": "Commercialising Quantum Global 2026 Day 1", "d": "Proceedings from Day 1: UK strategy, useful quantum computing, platforms, qubit villages, AI convergence, sensing, standards and venture capital.", "u": "notes/commercialising-quantum-global-2026-day-1.html" },
-      { "t": "Commercialising Quantum Global 2026 Day 2", "d": "Proceedings from Day 2: regulation, HSBC quantum readiness, photonics, PQC, Q-Day, finance use cases, industrial resilience and AI convergence.", "u": "notes/commercialising-quantum-global-2026-day-2.html" },
-      { "t": "Why eight agents, and not one chatbot", "d": "The design rationale for the Ile Owo eight-agent architecture and why a single chatbot fails the tests an accounting policy team applies.", "u": "notes/ile-owo-design.html" },
-      { "t": "Governance is the road, not the speed bump", "d": "AI model risk governance as adoption enabler. Risk-tiered classification, the AI Project Canvas, supervisory alignment.", "u": "notes/ai-governance-as-road.html" },
-      { "t": "Emergency money and counter-money, 1967–1970", "d": "Research project page on the Bank of Biafra, the Central Bank of Nigeria, and contested currency during the Nigerian Civil War.", "u": "notes/bank-of-biafra-project.html" }
+      {
+        "t": "Home",
+        "d": "Engineering trustworthy AI for global finance — Bamidele Aly on AI governance, Product Control and economic history.",
+        "u": "index.html"
+      },
+      {
+        "t": "Projects",
+        "d": "Applied AI systems for finance and risk — Ile Owo and geospatial credit-risk work.",
+        "u": "projects.html"
+      },
+      {
+        "t": "Economic Historian",
+        "d": "West African monetary systems, colonial financial infrastructure, central banking and Nigerian diaspora research.",
+        "u": "historian.html"
+      },
+      {
+        "t": "Studio",
+        "d": "Watercolour, Chinese painting, acrylics, gouache and printmaking.",
+        "u": "studio.html"
+      },
+      {
+        "t": "Contact",
+        "d": "Speaking, advisory and academic collaboration enquiries.",
+        "u": "contact.html"
+      },
+      {
+        "t": "Accessibility Statement",
+        "d": "Accessibility commitments, WCAG target, testing approach and feedback route for bamidelealy.com.",
+        "u": "accessibility.html"
+      },
+      {
+        "t": "Privacy Notice",
+        "d": "Privacy notice covering first-party aggregate analytics, contact form handling, external links and data minimisation.",
+        "u": "privacy.html"
+      },
+      {
+        "t": "AI Model Risk Governance",
+        "d": "Designing and operationalising governance frameworks for AI in regulated financial environments.",
+        "u": "index.html#expertise-heading"
+      },
+      {
+        "t": "Finance Transformation & Applied AI",
+        "d": "AI systems that solve real Product Control problems, including Ile Owo.",
+        "u": "index.html#expertise-heading"
+      },
+      {
+        "t": "Credit Risk & Market Infrastructure",
+        "d": "Credit risk across banks, NBFIs, sovereigns, supranationals and 85+ jurisdictions.",
+        "u": "index.html#expertise-heading"
+      },
+      {
+        "t": "Ile Owo",
+        "d": "An eight-agent IFRS and IAS advisory system built on the Anthropic Claude API in Python.",
+        "u": "projects.html#ile-owo"
+      },
+      {
+        "t": "Ile Owo architecture",
+        "d": "Orchestrator, Filter, Summaryan, Historian, Insider, Outsider, Auditor, Scribe — the eight-agent flow.",
+        "u": "projects.html#ile-owo-architecture"
+      },
+      {
+        "t": "Geospatial Risk Analysis",
+        "d": "Collateral value, balance sheet resilience and spatially correlated shocks.",
+        "u": "projects.html"
+      },
+      {
+        "t": "FT Live — Open Finance Meets AI",
+        "d": "FT Fintech Festival panel, November 2025.",
+        "u": "index.html#speaking-heading"
+      },
+      {
+        "t": "The Economist — AI for CFOs",
+        "d": "Deep Learning: Training the AI-First CFO, March 2026.",
+        "u": "index.html#speaking-heading"
+      },
+      {
+        "t": "Banque de France",
+        "d": "Crédibilités des monnaies, de John Law au bitcoin — monetary sovereignties in Nigeria.",
+        "u": "index.html#speaking-heading"
+      },
+      {
+        "t": "Enemy Capital in Colonial Lagos",
+        "d": "First World War seizure of German and Austro-Hungarian trading houses in Lagos.",
+        "u": "historian.html#research-heading"
+      },
+      {
+        "t": "Central Banking in British West Africa",
+        "d": "Institutional architecture, monetary policy and political economy across the territories.",
+        "u": "historian.html#research-heading"
+      },
+      {
+        "t": "The Nigerian Diaspora in Europe",
+        "d": "Formation, economic networks and trajectory of Nigerian communities across European cities.",
+        "u": "historian.html#research-heading"
+      },
+      {
+        "t": "Bank of Biafra and Central Bank of Nigeria (1967-1970)",
+        "d": "Emergency Money and Counter-Money — paper in preparation.",
+        "u": "historian.html#published-heading"
+      },
+      {
+        "t": "Monetary Sovereignty in Ghana and Nigeria",
+        "d": "Late 1950s to early 1960s — chapter in Identity Transformation and Politicization in Africa (Rowman & Littlefield, 2022).",
+        "u": "historian.html#published-heading"
+      },
+      {
+        "t": "West African Sterling in Southern Nigeria, 1916",
+        "d": "Chapter in There Came a Time: Essays on the Great War in Africa (TSL Books, 2018).",
+        "u": "historian.html#published-heading"
+      },
+      {
+        "t": "Mobile telephony in Sub-Saharan Africa",
+        "d": "Top Up, Pay as You Go — chapter in Urban Challenges and Survival Strategies in Africa (2017).",
+        "u": "historian.html#published-heading"
+      },
+      {
+        "t": "Education",
+        "d": "Université Paris I Panthéon-Sorbonne, Birkbeck (London), INALCO, ESCP Business School.",
+        "u": "historian.html#education-heading"
+      },
+      {
+        "t": "Studio practice",
+        "d": "A discipline that keeps the others honest — printmaking, watercolour, gouache, acrylics.",
+        "u": "studio.html#practice-heading"
+      },
+      {
+        "t": "Notes — index",
+        "d": "Long-form essays on AI governance, multi-agent architectures and West African monetary history.",
+        "u": "notes/"
+      },
+      {
+        "t": "Commercialising Quantum Global 2026",
+        "d": "Field report on quantum commercialisation, post-quantum cryptography, AI convergence, enterprise readiness and practical implications for finance.",
+        "u": "notes/commercialising-quantum-global-2026.html"
+      },
+      {
+        "t": "Commercialising Quantum Global 2026 Day 1",
+        "d": "Proceedings from Day 1: UK strategy, useful quantum computing, platforms, qubit villages, AI convergence, sensing, standards and venture capital.",
+        "u": "notes/commercialising-quantum-global-2026-day-1.html"
+      },
+      {
+        "t": "Commercialising Quantum Global 2026 Day 2",
+        "d": "Proceedings from Day 2: regulation, HSBC quantum readiness, photonics, PQC, Q-Day, finance use cases, industrial resilience and AI convergence.",
+        "u": "notes/commercialising-quantum-global-2026-day-2.html"
+      },
+      {
+        "t": "Why eight agents, and not one chatbot",
+        "d": "The design rationale for the Ile Owo eight-agent architecture and why a single chatbot fails the tests an accounting policy team applies.",
+        "u": "notes/ile-owo-design.html"
+      },
+      {
+        "t": "Governance is the road, not the speed bump",
+        "d": "AI model risk governance as adoption enabler. Risk-tiered classification, the AI Project Canvas, supervisory alignment.",
+        "u": "notes/ai-governance-as-road.html"
+      },
+      {
+        "t": "Emergency money and counter-money, 1967–1970",
+        "d": "Research project page on the Bank of Biafra, the Central Bank of Nigeria, and contested currency during the Nigerian Civil War.",
+        "u": "notes/bank-of-biafra-project.html"
+      },
+      {
+        "t": "Talk. Backing science, building capability: delivering the UK’s quantum missions",
+        "d": "Lord Vallance. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Talk. Small steps and quantum leaps: delivering useful quantum computing now",
+        "d": "Katie Pizzolato. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Talk. So many platforms, so little time? When and how to start narrowing the field",
+        "d": "Peter Knight. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Fireside chat. Beyond computing: the quantum technologies transforming industry",
+        "d": "Matthew Kinsella, Tom Standage. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panel. It takes a qubit village: who builds—and who benefits?",
+        "d": "Zulfi Alam, Ebba Carbonnier, Lene Oddershede, Tom Standage. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panel. The superposition of utility and hype: removing the obstacles to a quantum-powered future",
+        "d": "Gillian Bussey, David Rivas, Richard Murray, Yong Meng Sua, Tom Standage. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Talk. Britain’s quantum strategy and a new national purpose: sovereignty, scale and strategic resilience",
+        "d": "Lord William Hague. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Interactive roundtables. Quantum approaches, national security and responsible quantum",
+        "d": "Pouya Dianat, Charlotte Bullard Davies, Jonathan Birdwell, Pranav Gokhale, Matt Dent, Vaibhav Sahgal. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panel. What users are learning about use cases and platforms",
+        "d": "Leigh Lapworth, Regev Yativ, Jasper Krauser, Yudong Cao, Laveena Iyer. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panel. Quantum + AI: collaboration and convergence",
+        "d": "Katie Pizzolato, Marco Iannone, Alex van Someren, Michelle Simmons, Sven Jager, Alex Hern. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Fireside chats. Algorithms, AI leaders, adoption and clean-fuel impact",
+        "d": "Ashley Montanaro, Sunando Das, Gabriela Styf Sjoman, Niall Moroney, Jason Palmer, Laveena Iyer. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panel. The secret sauce of sensing: exploring applications for society and industry",
+        "d": "Colin Sullivan, Gillian Bussey, Chris Holmes, Baron Holmes of Richmond, Christina Yan Zhang. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panel. The continuum of compute: AI and data modernisation",
+        "d": "Asteris Apostolidis, Akshay Pore, Yulia Shamsudinova, Harry Stovin-Bradford, Alex Hern. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panel. From pilots to platforms: what will change for organisations once they reach quantum advantage?",
+        "d": "Dave Starling, Christian Gogolin, Corey O’Meara, Miryem Salah, Matthijs Rijlaarsdam, Charlotte Bullard Davies. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panels. Quantum for Bio, foundries, medicine and superclusters",
+        "d": "Shihan Sajeed, Michael Streif, Bijoy Sagar, Joe Spencer, Manjari Chandran-Ramesh, Ching-Ray Chang, Ann Dunkin, Yong Cong Choy. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panel. Setting the rules of entanglement: building a global standard",
+        "d": "Tim Prior, Pere Arqué-Castells, David Cuckow, Jonathan Legh-Smith, Celia Merzbacher, Christopher Bishop. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panel. Scaling the quantum startup: how to survive the capital desert",
+        "d": "Zeynep Koruturk, Eloisa Angeles, Pepijn Rot, Kirill Pyshkin, Steve Suarez. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "qBIG prizewinner announcement and networking reception",
+        "d": "Wenmiao Yu, Karar Wridhdhisom, Francisco Ulises Hernandez, Julia Thiele, Tommaso Macri. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Talk. Incubating an industry: how smarter regulation should stop the UK from squandering the quantum opportunity",
+        "d": "Chris Holmes, Baron Holmes of Richmond. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Talk. Unforced errors: why industry can’t wait for fault-tolerant quantum to start collaborating",
+        "d": "Phil Intallura. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Fireside chat. Photonics meets quantum: seeing the light on commercial adoption",
+        "d": "Yuping Huang, Jason Palmer. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Talk. The next compute stack: where AI and quantum converge",
+        "d": "Krysta Svore. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Fireside chat. Quantum readiness: what business leaders should watch now",
+        "d": "Amir Naveh, Tom Standage. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Fireside chat. Secure to succeed: can quantum readiness provide a competitive edge?",
+        "d": "Craig Farrell, Laveena Iyer. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Quantum’s missing middle: who is building the connective tissue and enabling infrastructure?",
+        "d": "Mihir Bhaskar, Tom Standage. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panel. Why qubit quality could matter more than quantity",
+        "d": "Pierre Desjardins, Ellen Devereux, Guillermo Albareda, Jason Palmer. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Fireside chat. Quantum-inspired today, quantum-ready tomorrow",
+        "d": "Scott Buchholz, Tamzin Booth. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Interactive roundtables. Finance, life sciences and end-user adoption",
+        "d": "Matus Samuel, Romi Sumaria, Amir Naveh, Regev Yativ, Laveena Iyer. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Fireside chats. Blockchain resilience and enterprise cryptographic inventory",
+        "d": "Dino Cataldo Dell’Accio, Joanne Miller, Christina Yan Zhang, Tom Standage. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panel. Harvest now, decrypt later: managing the long tail of risk",
+        "d": "Kartheek Solipuram, Nicolas Gomez Iglesias, Jordi Mur-Petit, Laveena Iyer. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panel. Quantum blocs or open ecosystems: designing industrial strategy in a fragmented world",
+        "d": "Chester Butterworth, Jørgen Ellegaard Andersen, Oscar Diez, Romi Sumaria, Cailin Birch. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panel. A thought experiment: the countdown to Q-Day",
+        "d": "Becky Pinkard, Ricardo LaFosse, Manfred Rieck, Steve Suarez. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Fireside chat. Fixing Europe’s competitiveness in quantum",
+        "d": "Sella Brosh, Jason Palmer. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Talk. Designing better materials: could quantum technology deliver the next big thing in R&D?",
+        "d": "Ching-Ray Chang. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Fireside chat. Rain or shine: how quantum could improve weather modelling",
+        "d": "Julia Lane, Cailin Birch. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Talks. Sustainable AI, quantum policy and the AI equation",
+        "d": "Aparna Prabhakar, Fern Watson, Wendy Ng, Christina Yan Zhang, Jason Palmer. Commercialising Quantum Global 2026 session.",
+        "u": "notes/commercialising-quantum-global-2026-day-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      }
     ]
   }
 }

@@ -1,43 +1,236 @@
 {
   "index": {
     "de": [
-      { "t": "Startseite", "d": "Vertrauenswürdige KI für die globale Finanzwelt — Bamidele Aly zu KI-Governance, Product Control und Wirtschaftsgeschichte.", "u": "/de/" },
-      { "t": "Projekte", "d": "Angewandte KI-Systeme für Finanzen und Risiko — Ile Owo und geospatiale Kreditrisikoanalyse.", "u": "/de/projekte.html" },
-      { "t": "Wirtschaftshistorikerin", "d": "Westafrikanische Geldsysteme, koloniale Finanzinfrastruktur, Zentralbankwesen und Forschung zur nigerianischen Diaspora.", "u": "/de/historikerin.html" },
-      { "t": "Atelier", "d": "Aquarell, chinesische Malerei, Acryl, Gouache und Druckgrafik.", "u": "/de/atelier.html" },
-      { "t": "Kontakt", "d": "Anfragen zu Vorträgen, Beratung und akademischer Zusammenarbeit.", "u": "/de/kontakt.html" },
-
-      { "t": "Governance von KI-Modellrisiken", "d": "Entwurf und Operationalisierung von Governance-Rahmen für KI in regulierten Finanzumfeldern.", "u": "/de/#expertise-heading" },
-      { "t": "Finanztransformation & angewandte KI", "d": "KI-Systeme für echte Product-Control-Probleme, darunter Ile Owo.", "u": "/de/#expertise-heading" },
-      { "t": "Kreditrisiko & Marktinfrastrukturen", "d": "Kreditrisiko in Banken, NBFI, Staaten, Supranationals und über 85 Länderrisiken.", "u": "/de/#expertise-heading" },
-
-      { "t": "Ile Owo", "d": "Ein achtagentenbasiertes IFRS- und IAS-Beratungssystem auf der Anthropic-Claude-API in Python.", "u": "/de/projekte.html#ile-owo" },
-      { "t": "Ile-Owo-Architektur", "d": "Orchestrator, Filter, Summarian, Historiker, Insider, Outsider, Auditor, Scribe — der Achter-Agenten-Fluss.", "u": "/de/projekte.html#ile-owo-architektur" },
-      { "t": "Geospatiale Risikoanalyse", "d": "Sicherheitenwert, Bilanzresilienz und räumlich korrelierte Schocks.", "u": "/de/projekte.html" },
-
-      { "t": "FT Live — Open Finance Meets AI", "d": "Panel beim FT Fintech Festival, November 2025.", "u": "/de/#speaking-heading" },
-      { "t": "The Economist — AI for CFOs", "d": "Deep Learning: Training the AI-First CFO, März 2026.", "u": "/de/#speaking-heading" },
-      { "t": "Banque de France", "d": "Crédibilités des monnaies, de John Law au bitcoin — monetäre Souveränitäten in Nigeria.", "u": "/de/#speaking-heading" },
-
-      { "t": "Feindliches Kapital im kolonialen Lagos", "d": "Beschlagnahme deutscher und österreichisch-ungarischer Handelshäuser in Lagos im Ersten Weltkrieg.", "u": "/de/historikerin.html#research-heading" },
-      { "t": "Zentralbankwesen in British West Africa", "d": "Institutionelle Architektur, Geldpolitik und politische Ökonomie über die Territorien.", "u": "/de/historikerin.html#research-heading" },
-      { "t": "Die nigerianische Diaspora in Europa", "d": "Entstehung, ökonomische Netzwerke und Trajektorien nigerianischer Gemeinden in europäischen Städten.", "u": "/de/historikerin.html#research-heading" },
-
-      { "t": "Bank von Biafra und Zentralbank von Nigeria (1967-1970)", "d": "Notgeld und Gegen-Geld — Papier in Vorbereitung.", "u": "/de/historikerin.html#published-heading" },
-      { "t": "Monetäre Souveränität in Ghana und Nigeria", "d": "Späte 1950er bis frühe 1960er Jahre — Kapitel in Identity Transformation and Politicization in Africa (Rowman & Littlefield, 2022).", "u": "/de/historikerin.html#published-heading" },
-      { "t": "Das West African Sterling im südlichen Nigeria, 1916", "d": "Kapitel in There Came a Time: Essays on the Great War in Africa (TSL Books, 2018).", "u": "/de/historikerin.html#published-heading" },
-      { "t": "Mobiltelefonie in Subsahara-Afrika", "d": "„Top Up, Pay as You Go!“ — Kapitel in Urban Challenges and Survival Strategies in Africa (2017).", "u": "/de/historikerin.html#published-heading" },
-
-      { "t": "Ausbildung", "d": "Université Paris I Panthéon-Sorbonne, Birkbeck (London), INALCO, ESCP Business School.", "u": "/de/historikerin.html#education-heading" },
-      { "t": "Atelier-Praxis", "d": "Eine Disziplin, die die anderen ehrlich hält — Druckgrafik, Aquarell, Gouache, Acryl.", "u": "/de/atelier.html#practice-heading" },
-
-      { "t": "Notizen — Index", "d": "Lange Essays zu KI-Governance, Multi-Agenten-Architekturen und westafrikanischer Geldgeschichte.", "u": "/de/notizen/" },
-      { "t": "Commercialising Quantum Global 2026", "d": "Feldbericht zu Quantenkommerzialisierung, Post-Quantum-Kryptografie, KI-Konvergenz, Unternehmensreife und praktischen Implikationen für Finance.", "u": "/de/notizen/commercialising-quantum-global-2026.html" },
-      { "t": "Commercialising Quantum Global 2026 Tag 1", "d": "Bericht zu Tag 1: UK-Strategie, Plattformen, Ökosysteme, KI-Konvergenz, Sensorik, Standards und Risikokapital.", "u": "/de/notizen/commercialising-quantum-global-2026-tag-1.html" },
-      { "t": "Commercialising Quantum Global 2026 Tag 2", "d": "Bericht zu Tag 2: Regulierung, HSBC-Reife, PQC, Q-Day, Finance Use Cases, industrielle Resilienz und KI-Konvergenz.", "u": "/de/notizen/commercialising-quantum-global-2026-tag-2.html" },
-      { "t": "Warum acht Agenten und nicht ein Chatbot", "d": "Designbegründung für die Achter-Agenten-Architektur von Ile Owo und warum ein einzelner Chatbot an den Prüfungen eines Bilanzierungs-Policy-Teams scheitert.", "u": "/de/notizen/ile-owo-konzept.html" },
-      { "t": "Governance ist die Straße, nicht die Bremsschwelle", "d": "Governance von KI-Modellrisiken als Wegbereiter der Einführung. Risikobasierte Klassifizierung, AI Project Canvas, aufsichtliche Anschlussfähigkeit.", "u": "/de/notizen/ki-governance-als-strasse.html" },
-      { "t": "Notgeld und Gegen-Geld, 1967–1970", "d": "Forschungsprojektseite zur Bank von Biafra, zur Zentralbank von Nigeria und zur umstrittenen Währungsausgabe im nigerianischen Bürgerkrieg.", "u": "/de/notizen/projekt-bank-von-biafra.html" }
+      {
+        "t": "Startseite",
+        "d": "Vertrauenswürdige KI für die globale Finanzwelt — Bamidele Aly zu KI-Governance, Product Control und Wirtschaftsgeschichte.",
+        "u": "/de/"
+      },
+      {
+        "t": "Projekte",
+        "d": "Angewandte KI-Systeme für Finanzen und Risiko — Ile Owo und geospatiale Kreditrisikoanalyse.",
+        "u": "/de/projekte.html"
+      },
+      {
+        "t": "Wirtschaftshistorikerin",
+        "d": "Westafrikanische Geldsysteme, koloniale Finanzinfrastruktur, Zentralbankwesen und Forschung zur nigerianischen Diaspora.",
+        "u": "/de/historikerin.html"
+      },
+      {
+        "t": "Atelier",
+        "d": "Aquarell, chinesische Malerei, Acryl, Gouache und Druckgrafik.",
+        "u": "/de/atelier.html"
+      },
+      {
+        "t": "Kontakt",
+        "d": "Anfragen zu Vorträgen, Beratung und akademischer Zusammenarbeit.",
+        "u": "/de/kontakt.html"
+      },
+      {
+        "t": "Erklärung zur Barrierefreiheit",
+        "d": "Barrierefreiheitsziele, WCAG-Ansatz, Testmethode und Feedbackweg für bamidelealy.com.",
+        "u": "/de/barrierefreiheit.html"
+      },
+      {
+        "t": "Datenschutzhinweis",
+        "d": "Datenschutz, aggregierte First-Party-Analytik, Kontaktformular, externe Links und Datenminimierung.",
+        "u": "/de/datenschutz.html"
+      },
+      {
+        "t": "Governance von KI-Modellrisiken",
+        "d": "Entwurf und Operationalisierung von Governance-Rahmen für KI in regulierten Finanzumfeldern.",
+        "u": "/de/#expertise-heading"
+      },
+      {
+        "t": "Finanztransformation & angewandte KI",
+        "d": "KI-Systeme für echte Product-Control-Probleme, darunter Ile Owo.",
+        "u": "/de/#expertise-heading"
+      },
+      {
+        "t": "Kreditrisiko & Marktinfrastrukturen",
+        "d": "Kreditrisiko in Banken, NBFI, Staaten, Supranationals und über 85 Länderrisiken.",
+        "u": "/de/#expertise-heading"
+      },
+      {
+        "t": "Ile Owo",
+        "d": "Ein achtagentenbasiertes IFRS- und IAS-Beratungssystem auf der Anthropic-Claude-API in Python.",
+        "u": "/de/projekte.html#ile-owo"
+      },
+      {
+        "t": "Ile-Owo-Architektur",
+        "d": "Orchestrator, Filter, Summarian, Historiker, Insider, Outsider, Auditor, Scribe — der Achter-Agenten-Fluss.",
+        "u": "/de/projekte.html#ile-owo-architektur"
+      },
+      {
+        "t": "Geospatiale Risikoanalyse",
+        "d": "Sicherheitenwert, Bilanzresilienz und räumlich korrelierte Schocks.",
+        "u": "/de/projekte.html"
+      },
+      {
+        "t": "FT Live — Open Finance Meets AI",
+        "d": "Panel beim FT Fintech Festival, November 2025.",
+        "u": "/de/#speaking-heading"
+      },
+      {
+        "t": "The Economist — AI for CFOs",
+        "d": "Deep Learning: Training the AI-First CFO, März 2026.",
+        "u": "/de/#speaking-heading"
+      },
+      {
+        "t": "Banque de France",
+        "d": "Crédibilités des monnaies, de John Law au bitcoin — monetäre Souveränitäten in Nigeria.",
+        "u": "/de/#speaking-heading"
+      },
+      {
+        "t": "Feindliches Kapital im kolonialen Lagos",
+        "d": "Beschlagnahme deutscher und österreichisch-ungarischer Handelshäuser in Lagos im Ersten Weltkrieg.",
+        "u": "/de/historikerin.html#research-heading"
+      },
+      {
+        "t": "Zentralbankwesen in British West Africa",
+        "d": "Institutionelle Architektur, Geldpolitik und politische Ökonomie über die Territorien.",
+        "u": "/de/historikerin.html#research-heading"
+      },
+      {
+        "t": "Die nigerianische Diaspora in Europa",
+        "d": "Entstehung, ökonomische Netzwerke und Trajektorien nigerianischer Gemeinden in europäischen Städten.",
+        "u": "/de/historikerin.html#research-heading"
+      },
+      {
+        "t": "Bank von Biafra und Zentralbank von Nigeria (1967-1970)",
+        "d": "Notgeld und Gegen-Geld — Papier in Vorbereitung.",
+        "u": "/de/historikerin.html#published-heading"
+      },
+      {
+        "t": "Monetäre Souveränität in Ghana und Nigeria",
+        "d": "Späte 1950er bis frühe 1960er Jahre — Kapitel in Identity Transformation and Politicization in Africa (Rowman & Littlefield, 2022).",
+        "u": "/de/historikerin.html#published-heading"
+      },
+      {
+        "t": "Das West African Sterling im südlichen Nigeria, 1916",
+        "d": "Kapitel in There Came a Time: Essays on the Great War in Africa (TSL Books, 2018).",
+        "u": "/de/historikerin.html#published-heading"
+      },
+      {
+        "t": "Mobiltelefonie in Subsahara-Afrika",
+        "d": "„Top Up, Pay as You Go!“ — Kapitel in Urban Challenges and Survival Strategies in Africa (2017).",
+        "u": "/de/historikerin.html#published-heading"
+      },
+      {
+        "t": "Ausbildung",
+        "d": "Université Paris I Panthéon-Sorbonne, Birkbeck (London), INALCO, ESCP Business School.",
+        "u": "/de/historikerin.html#education-heading"
+      },
+      {
+        "t": "Atelier-Praxis",
+        "d": "Eine Disziplin, die die anderen ehrlich hält — Druckgrafik, Aquarell, Gouache, Acryl.",
+        "u": "/de/atelier.html#practice-heading"
+      },
+      {
+        "t": "Notizen — Index",
+        "d": "Lange Essays zu KI-Governance, Multi-Agenten-Architekturen und westafrikanischer Geldgeschichte.",
+        "u": "/de/notizen/"
+      },
+      {
+        "t": "Commercialising Quantum Global 2026",
+        "d": "Feldbericht zu Quantenkommerzialisierung, Post-Quantum-Kryptografie, KI-Konvergenz, Unternehmensreife und praktischen Implikationen für Finance.",
+        "u": "/de/notizen/commercialising-quantum-global-2026.html"
+      },
+      {
+        "t": "Commercialising Quantum Global 2026 Tag 1",
+        "d": "Bericht zu Tag 1: UK-Strategie, Plattformen, Ökosysteme, KI-Konvergenz, Sensorik, Standards und Risikokapital.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-1.html"
+      },
+      {
+        "t": "Commercialising Quantum Global 2026 Tag 2",
+        "d": "Bericht zu Tag 2: Regulierung, HSBC-Reife, PQC, Q-Day, Finance Use Cases, industrielle Resilienz und KI-Konvergenz.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-2.html"
+      },
+      {
+        "t": "Warum acht Agenten und nicht ein Chatbot",
+        "d": "Designbegründung für die Achter-Agenten-Architektur von Ile Owo und warum ein einzelner Chatbot an den Prüfungen eines Bilanzierungs-Policy-Teams scheitert.",
+        "u": "/de/notizen/ile-owo-konzept.html"
+      },
+      {
+        "t": "Governance ist die Straße, nicht die Bremsschwelle",
+        "d": "Governance von KI-Modellrisiken als Wegbereiter der Einführung. Risikobasierte Klassifizierung, AI Project Canvas, aufsichtliche Anschlussfähigkeit.",
+        "u": "/de/notizen/ki-governance-als-strasse.html"
+      },
+      {
+        "t": "Notgeld und Gegen-Geld, 1967–1970",
+        "d": "Forschungsprojektseite zur Bank von Biafra, zur Zentralbank von Nigeria und zur umstrittenen Währungsausgabe im nigerianischen Bürgerkrieg.",
+        "u": "/de/notizen/projekt-bank-von-biafra.html"
+      },
+      {
+        "t": "Commercialising Quantum Global 2026: Was die Finanzfunktion jetzt tun sollte.",
+        "d": "Ein ausführlicher Feldbericht zu Commercialising Quantum Global 2026: Quantenkommerzialisierung, Post-Quantum-Kryptografie, KI-Konvergenz, Unternehmensreife und Finanzdienstleistungen.",
+        "u": "/de/notizen/commercialising-quantum-global-2026.html",
+        "type": "conference-report",
+        "w": 50
+      },
+      {
+        "t": "Tag 1: Versprechen, Plattformen und Ökosysteme.",
+        "d": "Tag-1-Bericht von Commercialising Quantum Global 2026: britische Strategie, Quantenplattformen, KI, Sensorik, Standards, Ökosysteme und Risikokapital.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-1.html",
+        "type": "conference-report",
+        "w": 50
+      },
+      {
+        "t": "Opening talks and fireside chats",
+        "d": "Lord Vallance, Katie Pizzolato, Peter Knight, Matthew Kinsella, Lord William Hague, Tom Standage. Commercialising Quantum Global 2026 session.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panels. Qubit village, utility versus hype, users, AI convergence and compute continuum",
+        "d": "Zulfi Alam, Ebba Carbonnier, Lene Oddershede, Gillian Bussey, David Rivas, Richard Murray, Yong Meng Sua, Leigh Lapworth. Commercialising Quantum Global 2026 session.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panels. Adoption, sensing, bio, foundries, superclusters, standards and startup capital",
+        "d": "Dave Starling, Christian Gogolin, Corey O’Meara, Colin Sullivan, Shihan Sajeed, Michael Streif, Bijoy Sagar, Joe Spencer. Commercialising Quantum Global 2026 session.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Tag 2: Regulierung, Q-Day und Finance.",
+        "d": "Tag-2-Bericht von Commercialising Quantum Global 2026: Regulierung, HSBC-Quantenreife, Photonik, KI, Post-Quantum-Kryptografie, Q-Day und Finance Use Cases.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-2.html",
+        "type": "conference-report",
+        "w": 50
+      },
+      {
+        "t": "Opening talks, photonics, AI compute stack and quantum readiness",
+        "d": "Chris Holmes, Baron Holmes of Richmond, Phil Intallura, Yuping Huang, Krysta Svore, Amir Naveh, Tom Standage, Jason Palmer. Commercialising Quantum Global 2026 session.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panels. Secure to succeed, missing middle, qubit quality and quantum-inspired strategy",
+        "d": "Craig Farrell, Mihir Bhaskar, Pierre Desjardins, Ellen Devereux, Guillermo Albareda, Scott Buchholz, Tamzin Booth, Laveena Iyer. Commercialising Quantum Global 2026 session.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panels. Finance, life sciences, PQC, Q-Day and industrial strategy",
+        "d": "Matus Samuel, Romi Sumaria, Regev Yativ, Dino Cataldo Dell’Accio, Joanne Miller, Kartheek Solipuram, Nicolas Gomez Iglesias, Jordi Mur-Petit. Commercialising Quantum Global 2026 session.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Closing sessions. Europe, materials, weather, sustainable AI, policy and superintelligence",
+        "d": "Sella Brosh, Ching-Ray Chang, Julia Lane, Aparna Prabhakar, Fern Watson, Wendy Ng, Cailin Birch, Christina Yan Zhang. Commercialising Quantum Global 2026 session.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      }
     ]
   }
 }

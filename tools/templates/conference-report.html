@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITLE}} | Bamidele Aly</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <meta name="author" content="Bamidele Aly">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; connect-src 'self' https://formspree.io https://analytics.bamidelealy.com; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'; upgrade-insecure-requests;">
+  <link rel="canonical" href="https://bamidelealy.com/{{CANONICAL_PATH}}">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Bamidele Aly">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:image" content="https://bamidelealy.com/assets/social/{{SLUG}}.jpg?v={{VERSION}}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{SOCIAL_ALT}}">
+  <meta property="og:url" content="https://bamidelealy.com/{{CANONICAL_PATH}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bamidelealy.com/assets/social/{{SLUG}}.jpg?v={{VERSION}}">
+  <link rel="stylesheet" href="../styles.min.css?v={{VERSION}}">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"{{TITLE}}","description":"{{DESCRIPTION}}","datePublished":"{{DATE}}","dateModified":"{{DATE}}","url":"https://bamidelealy.com/{{CANONICAL_PATH}}","inLanguage":"{{LANG}}","author":{"@type":"Person","name":"Bamidele Aly","url":"https://bamidelealy.com/"},"image":"https://bamidelealy.com/assets/social/{{SLUG}}.jpg?v={{VERSION}}","keywords":"{{KEYWORDS}}"}
+  </script>
+</head>
+<body class="essay-snap">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <!-- Insert shared header/navigation from an existing note page and keep language switcher mappings accurate. -->
+  <main id="main" class="reader-content">
+    <article class="reader-content" role="article">
+      <section class="essay-hero">
+        <div class="container">
+          <span class="essay-eyebrow">{{EYEBROW}}</span>
+          <h1 class="essay-title">{{TITLE}}</h1>
+          <p class="essay-dek">{{DEK}}</p>
+          <p class="essay-meta"><span>By <a href="../index.html">Bamidele Aly</a></span><span class="dot" aria-hidden="true"></span><span>{{READING_TIME}}</span><span class="dot" aria-hidden="true"></span><time datetime="{{DATE}}">{{DISPLAY_DATE}}</time></p>
+        </div>
+      </section>
+      <section class="essay-body">
+        <div class="container">
+          <section class="essay-chapter programme-map no-drop" id="agenda-index">
+            <h2>{{AGENDA_HEADING}}</h2>
+            <p>{{AGENDA_INTRO}}</p>
+            <details class="programme-details"><summary>{{AGENDA_SUMMARY}}</summary><div class="session-index" aria-label="{{AGENDA_ARIA}}">
+              <article><h3>{{SESSION_TITLE}}</h3><p>{{SESSION_SPEAKERS}}</p></article>
+            </div></details>
+          </section>
+          <section class="essay-chapter" id="thesis"><h2>{{THESIS_HEADING}}</h2><p>{{THESIS}}</p></section>
+          <section class="essay-chapter" id="analysis"><h2>{{ANALYSIS_HEADING}}</h2><p>{{ANALYSIS}}</p></section>
+          <section class="essay-chapter no-drop apple-faq" id="faq"><h2><span>Questions?</span> <span>Answers.</span></h2><div class="faq-list"><details><summary>{{FAQ_Q}}</summary><p>{{FAQ_A}}</p></details></div></section>
+        </div>
+      </section>
+    </article>
+  </main>
+  <!-- Insert shared footer/search overlay from an existing note page. -->
+  <script src="../script.min.js?v={{VERSION}}" defer></script>
+</body>
+</html>

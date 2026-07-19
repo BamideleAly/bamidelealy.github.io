@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
   <meta name="view-transition" content="same-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'; upgrade-insecure-requests;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; connect-src 'self' https://formspree.io https://analytics.bamidelealy.com; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'; upgrade-insecure-requests;">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="canonical" href="https://bamidelealy.com/de/danke/">
   <link rel="alternate" hreflang="en-GB" href="https://bamidelealy.com/thanks/">
@@ -26,7 +26,9 @@
   <meta property="og:locale" content="de_DE">
   <meta name="twitter:card" content="summary">
 
-  <link rel="stylesheet" href="/styles.css?v=2026051804">
+    <link rel="preload" href="/assets/fonts/atkinson-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/atkinson-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css?v=2026051804">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any">
   <link rel="manifest" href="/manifest.json">
@@ -68,7 +70,7 @@
           <li><a class="nav-link" href="/de/historikerin.html">Historikerin</a></li>
           <li><a class="nav-link" href="/de/atelier.html">Atelier</a></li>
           <li><a class="nav-link" href="/de/notizen/">Notizen</a></li>
-          <li><a class="nav-link" href="/de/kontakt.html">Kontakt</a></li>
+          <li><a class="nav-link active" href="/de/kontakt.html" aria-current="location">Kontakt</a></li>
         </ul>
         <button class="search-trigger" id="searchTrigger" type="button" aria-label="Suchen">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
@@ -95,7 +97,7 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" class="reader-content">
     <section class="thanks-hero" aria-labelledby="thanks-heading">
       <div class="thanks-inner">
         <div class="thanks-check" aria-hidden="true">
@@ -133,7 +135,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year">2026</span> Bamidele Aly. Alle Rechte vorbehalten.</p>
-      <p><a href="/de/rss.xml">RSS</a> · <a href="/sitemap.xml">Sitemap</a> · <a href="/llms.txt">LLMs.txt</a> · <a href="https://sebastienrousseau.com/" rel="noopener noreferrer">Website by Sébastien Rousseau</a></p>
+      <p><a href="/de/rss.xml">RSS</a> · <a href="/sitemap.xml">Sitemap</a> · <a href="/llms.txt">LLMs.txt</a> · <a href="/de/barrierefreiheit.html">Barrierefreiheit</a> · <a href="/de/datenschutz.html">Datenschutz</a> · <a href="https://sebastienrousseau.com/" rel="noopener noreferrer">Website by Sébastien Rousseau</a></p>
     </div>
   </footer>
   <script src="/script.js?v=2026051804" defer></script>

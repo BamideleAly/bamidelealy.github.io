@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#f1f1f1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
   <meta name="view-transition" content="same-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'; upgrade-insecure-requests;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; connect-src 'self' https://formspree.io https://analytics.bamidelealy.com; base-uri 'self'; form-action 'self' https://formspree.io; object-src 'none'; upgrade-insecure-requests;">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="canonical" href="https://bamidelealy.com/studio.html">
   <link rel="alternate" hreflang="en-GB" href="https://bamidelealy.com/studio.html">
@@ -28,7 +28,9 @@
   <meta name="twitter:image" content="https://bamidelealy.com/assets/bamidele-studio.jpeg?v=2026051804">
   <link rel="preload" as="image" href="assets/bamidele-studio.avif?v=2026051804" type="image/avif" fetchpriority="high">
   <link rel="preload" as="image" href="assets/bamidele-studio.webp?v=2026051804" type="image/webp">
-  <link rel="stylesheet" href="styles.css?v=2026051804">
+    <link rel="preload" href="/assets/fonts/atkinson-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/atkinson-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css?v=2026051804">
   <script>
     (function () {
       try {
@@ -99,7 +101,7 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" class="reader-content">
     <section class="studio-hero" aria-labelledby="studio-heading">
       <div class="container grid grid-cols-12 hero-grid">
         <div class="col-span-5 hero-image-wrap">
@@ -151,7 +153,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year">2026</span> Bamidele Aly. All rights reserved.</p>
-      <p><a href="rss.xml">RSS</a> · <a href="sitemap.xml">Sitemap</a> · <a href="llms.txt">LLMs.txt</a> · <a href="https://sebastienrousseau.com/" rel="noopener noreferrer">Website by Sébastien Rousseau</a></p>
+      <p><a href="rss.xml">RSS</a> · <a href="sitemap.xml">Sitemap</a> · <a href="llms.txt">LLMs.txt</a> · <a href="/accessibility.html">Accessibility</a> · <a href="/privacy.html">Privacy</a> · <a href="https://sebastienrousseau.com/" rel="noopener noreferrer">Website by Sébastien Rousseau</a></p>
     </div>
   </footer>
   <script src="script.js?v=2026051804" defer></script>

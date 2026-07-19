@@ -1,0 +1,2 @@
+pikepdf==10.7.2
+qrcode[pil]==8.2
