@@ -79,12 +79,15 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("source", type=Path)
     parser.add_argument("--write", action="store_true")
+    parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
     data = json.loads(args.source.read_text())
     validate(data)
-    output = ROOT / data["canonical_path"]
     html_text = render(data)
-    if args.write:
+    if args.check:
+        print(f"Valid conference report source: {args.source}")
+    elif args.write:
+        output = ROOT / data["canonical_path"]
         output.parent.mkdir(parents=True, exist_ok=True)
         output.write_text(html_text)
         print(output.relative_to(ROOT))

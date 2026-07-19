@@ -1,0 +1,160 @@
+{
+  "slug": "commercialising-quantum-global-2026-day-1",
+  "lang": "en-GB",
+  "title": "Day 1: promise, platforms and ecosystems.",
+  "description": "Day 1 proceedings from Commercialising Quantum Global 2026, retracing the agenda from UK strategy and quantum platforms to AI convergence, sensing, standards and venture capital.",
+  "canonical_path": "notes/commercialising-quantum-global-2026-day-1.html",
+  "dek": "Tuesday 16 June opened with national strategy and useful quantum computing, then widened into sensing, qubit villages, practical utility, AI convergence, standards, supply chains and venture capital. The day’s real subject was how a research field becomes an investable industrial system.",
+  "date": "2026-07-19",
+  "reading_time": "16 min read",
+  "eyebrow": "Proceedings · Day 1",
+  "agenda_intro": "Talks and panels are listed before the analysis so readers can follow the conference chronology, speaker references and moderator context.",
+  "sessions": [
+    {
+      "title": "Talk. Backing science, building capability: delivering the UK’s quantum missions",
+      "speakers": "Lord Vallance ."
+    },
+    {
+      "title": "Talk. Small steps and quantum leaps: delivering useful quantum computing now",
+      "speakers": "Katie Pizzolato , IBM Quantum Platform."
+    },
+    {
+      "title": "Talk. So many platforms, so little time? When and how to start narrowing the field",
+      "speakers": "Peter Knight , UK National Quantum Technology Strategic Advisory Board."
+    },
+    {
+      "title": "Fireside chat. Beyond computing: the quantum technologies transforming industry",
+      "speakers": "Matthew Kinsella , Infleqtion; moderated by Tom Standage ."
+    },
+    {
+      "title": "Panel. It takes a qubit village: who builds—and who benefits?",
+      "speakers": "Zulfi Alam , Ebba Carbonnier , Lene Oddershede ; moderated by Tom Standage ."
+    },
+    {
+      "title": "Panel. The superposition of utility and hype: removing the obstacles to a quantum-powered future",
+      "speakers": "Gillian Bussey , David Rivas , Richard Murray , Yong Meng Sua ; moderated by Tom Standage ."
+    },
+    {
+      "title": "Talk. Britain’s quantum strategy and a new national purpose: sovereignty, scale and strategic resilience",
+      "speakers": "Lord William Hague ."
+    },
+    {
+      "title": "Interactive roundtables. Quantum approaches, national security and responsible quantum",
+      "speakers": "Pouya Dianat , Charlotte Bullard Davies , Jonathan Birdwell , Pranav Gokhale , Matt Dent , Vaibhav Sahgal ."
+    },
+    {
+      "title": "Panel. What users are learning about use cases and platforms",
+      "speakers": "Leigh Lapworth , Regev Yativ , Jasper Krauser , Yudong Cao ; moderated by Laveena Iyer ."
+    },
+    {
+      "title": "Panel. Quantum + AI: collaboration and convergence",
+      "speakers": "Katie Pizzolato , Marco Iannone , Alex van Someren , Michelle Simmons , Sven Jager ; moderated by Alex Hern ."
+    },
+    {
+      "title": "Fireside chats. Algorithms, AI leaders, adoption and clean-fuel impact",
+      "speakers": "Ashley Montanaro , Sunando Das , Gabriela Styf Sjoman , Niall Moroney , with moderators Jason Palmer and Laveena Iyer ."
+    },
+    {
+      "title": "Panel. The secret sauce of sensing: exploring applications for society and industry",
+      "speakers": "Colin Sullivan , Gillian Bussey , Chris Holmes, Baron Holmes of Richmond ; moderated by Christina Yan Zhang ."
+    },
+    {
+      "title": "Panel. The continuum of compute: AI and data modernisation",
+      "speakers": "Asteris Apostolidis , Akshay Pore , Yulia Shamsudinova , Harry Stovin-Bradford ; moderated by Alex Hern ."
+    },
+    {
+      "title": "Panel. From pilots to platforms: what will change for organisations once they reach quantum advantage?",
+      "speakers": "Dave Starling , Christian Gogolin , Corey O’Meara , Miryem Salah , Matthijs Rijlaarsdam ; moderated by Charlotte Bullard Davies ."
+    },
+    {
+      "title": "Panels. Quantum for Bio, foundries, medicine and superclusters",
+      "speakers": "Shihan Sajeed , Michael Streif , Bijoy Sagar , Joe Spencer , Manjari Chandran-Ramesh , Ching-Ray Chang , Ann Dunkin , Yong Cong Choy , Preeti Chalsani , Edmund Phillips , Simon Plant ; moderated by Christopher Bishop and John Lincoln ."
+    },
+    {
+      "title": "Panel. Setting the rules of entanglement: building a global standard",
+      "speakers": "Tim Prior , Pere Arqué-Castells , David Cuckow , Jonathan Legh-Smith , Celia Merzbacher ; moderated by Christopher Bishop ."
+    },
+    {
+      "title": "Panel. Scaling the quantum startup: how to survive the capital desert",
+      "speakers": "Zeynep Koruturk , Eloisa Angeles , Pepijn Rot , Kirill Pyshkin ; moderated by Steve Suarez ."
+    },
+    {
+      "title": "qBIG prizewinner announcement and networking reception",
+      "speakers": "Wenmiao Yu , Karar Wridhdhisom , Francisco Ulises Hernandez , Julia Thiele , Tommaso Macri ."
+    }
+  ],
+  "chapters": [
+    {
+      "id": "opening",
+      "heading": "Opening frame: from research excellence to delivery",
+      "paragraphs": [
+        "The morning agenda began with the UK state speaking the language of missions: resilient navigation, advanced sensing, national infrastructure, procurement, testbeds and long-term value capture. That framing is important. It treats quantum less as a laboratory breakthrough and more as an industrial policy problem: how to turn scientific leadership into deployed capability before capital, talent and intellectual property drift elsewhere.",
+        "The next talk, supported by IBM, shifted from national capability to useful quantum computing. The argument was not that fault tolerance has arrived; it was that hybrid and quantum-centric supercomputing are already producing signals worth learning from. Chemistry, materials science and scientific simulation were presented as early fields where quantum processors can sit beside classical machines, with value emerging gradually rather than through a single dramatic switch.",
+        "For finance, the early lesson is governance-related. If useful quantum arrives incrementally, then the control environment has to learn incrementally too. Waiting for a fully fault-tolerant machine before building internal literacy would mean trying to design data access, vendor review, benchmark standards and model validation under pressure."
+      ]
+    },
+    {
+      "id": "platforms",
+      "heading": "Platforms: many paths, no premature winner",
+      "paragraphs": [
+        "The 09:30 platform discussion asked when the field should narrow. Superconducting circuits, trapped ions, neutral atoms, photonics, silicon approaches and simulators all carry different strengths. The strongest answer was pragmatic: do not pick winners by narrative. Narrow with evidence: logical qubits, fidelity, connectivity, correction overhead, deployability, energy profile, manufacturing path and application fit.",
+        "Infleqtion’s fireside chat made this concrete by moving beyond computing. Quantum clocks, inertial sensing and radio-frequency systems may become profitable before large-scale quantum computers. GPS-independent navigation, resilient timing for critical infrastructure and gravity sensing show why quantum should be understood as a portfolio of technologies. For financial markets, timing and secure infrastructure are not abstract domains. They sit inside payment rails, trading systems and operational resilience."
+      ]
+    },
+    {
+      "id": "ecosystems",
+      "heading": "Qubit villages and practical utility",
+      "paragraphs": [
+        "The Qubit Village panel turned the platform question into an ecosystem question. The Copenhagen Magni project, backed by Nordic public-private collaboration, was presented as a model for bringing hardware, research, startups, enterprises and skills into one place. The important point was not the romance of a cluster. It was the governance of access: who gets to learn, who defines use cases, who owns the intellectual property, and how much dependence a public-private model creates.",
+        "The following panel on hype versus practical utility sharpened the same discipline. Customers should not buy qubits; they should buy measured advantage against a useful problem. Cloud access and Quantum-as-a-Service lower the barrier to experimentation, but they also make it easier to confuse activity with readiness. A proof of concept only matters if it teaches the organisation something reusable about data, controls, benchmarks, cost or workflow integration."
+      ]
+    },
+    {
+      "id": "ai",
+      "heading": "AI convergence and the compute continuum",
+      "paragraphs": [
+        "By midday, the programme split into parallel questions that belong together: what users are learning about platforms, and how quantum and AI converge. The quantum-AI discussion treated both technologies as complementary. AI helps control, calibrate and operate quantum systems; quantum may improve optimisation, sparse-data learning, simulation and energy efficiency in selected AI workloads.",
+        "The compute-continuum panel translated that into enterprise architecture. Classical systems, AI and quantum processors should be seen as different layers in one decision stack. Data governance became the unglamorous centre of gravity. Without clean lineage, metadata, security and business definitions, advanced compute simply accelerates confusion. For Product Control, that is the most familiar warning in the entire conference: better models do not rescue weak data controls."
+      ]
+    },
+    {
+      "id": "afternoon",
+      "heading": "Afternoon: sensing, bio, readiness and standards",
+      "paragraphs": [
+        "The afternoon widened the lens. Quantum sensing and imaging were presented as nearer-market technologies, with practical applications in navigation, healthcare, infrastructure and defence. Quantum for Bio then moved the conversation back into scientific simulation, where molecular and biological complexity expose the limits of classical approximation.",
+        "The adoption panels asked what changes when pilots become platforms. The answer was organisational. Leadership must understand value; technical teams must understand integration; risk teams must understand validation; procurement must understand vendors; and business owners must understand which problems are worth translating into quantum form. This is why the best quantum programme looks less like a lab and more like a cross-functional operating model.",
+        "The standards panel was one of the day’s most important governance moments. Standards cannot arrive too early as rigid rules, but the field needs shared language, benchmarks, interoperability, curriculum guidance and certification. For finance, standards are not bureaucratic overhead. They are what makes vendor comparison, audit evidence and supervisory dialogue possible."
+      ]
+    },
+    {
+      "id": "capital",
+      "heading": "Capital, supply chains and the close of Day 1",
+      "paragraphs": [
+        "The final sessions moved from standards to startup survival. The venture-capital discussion described a funding landscape pulled between excitement and long timelines. AI is absorbing enormous capital now; quantum needs investors who understand infrastructure depth, hardware risk, manufacturing constraints and patient commercialisation. The foundry and supply-chain conversations added a geopolitical edge: control of chips, cryogenics, photonics, packaging, testbeds and talent will shape who captures value.",
+        "Day 1 ended with a clear through-line. Commercial quantum will not be won by the best scientific slide alone. It will be won by the institutions that can connect mission-led policy, credible platforms, practical use cases, standards, supply chains, capital and enterprise readiness. For finance, the implication is direct: start with the controls and the business problems, then let the technology roadmap inform the timing."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Why did Day 1 begin with UK quantum missions rather than hardware alone?",
+      "answer": "The opening sessions framed quantum as industrial policy: procurement, testbeds, resilient navigation, advanced sensing, national infrastructure and long-term value capture. The point was that research leadership only matters commercially if it becomes deployable capability."
+    },
+    {
+      "question": "What was the practical lesson from the platform sessions?",
+      "answer": "The platform debate argued against premature winners. Superconducting, trapped-ion, neutral-atom, photonic, silicon and simulator approaches should be assessed through evidence: fidelity, error correction, connectivity, manufacturability, energy profile and application fit."
+    },
+    {
+      "question": "Why were sensing and timing important on Day 1?",
+      "answer": "They showed that quantum commercialisation is broader than computing. Clocks, inertial sensing, RF systems and imaging may produce useful infrastructure, defence, aviation, telecoms and healthcare applications before large-scale quantum computers are ready."
+    },
+    {
+      "question": "What did the AI and compute-continuum panels add?",
+      "answer": "They moved the story from isolated quantum processors to enterprise architecture. Data quality, metadata, lineage, security and workflow design determine whether AI, HPC and quantum can become a coherent compute stack."
+    },
+    {
+      "question": "Why do standards and startup capital matter in the Day 1 analysis?",
+      "answer": "Standards make vendor comparison, interoperability and audit evidence possible. Capital determines which startups survive long hardware and infrastructure cycles. Together they decide whether the ecosystem can scale beyond pilots."
+    }
+  ]
+}

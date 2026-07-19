@@ -79,7 +79,7 @@ Primary themes:
 | `studio.html` | Creative practice across watercolour, Chinese painting, gouache, printmaking, and acrylics. |
 | `contact.html` | Advisory, speaking, collaboration, and contact intake. |
 | `accessibility.html` | Accessibility statement, WCAG target, testing approach, and feedback route. |
-| `privacy.html` | Privacy notice for contact forms, third-party links, and analytics-free publishing. |
+| `privacy.html` | Privacy notice for contact forms, third-party links, and first-party aggregate analytics. |
 | `notes/index.html` | Long-form notes and field-report index. |
 | `thanks/index.html` | Post-submission confirmation page. |
 | `404.html` | Not-found page. |
@@ -581,9 +581,7 @@ Strict PDF/UA-2 + PDF/A-4f validation is available when `verapdf` is installed:
 npm run pdf:ua2-a4f
 ```
 
-Current browser-generated PDFs are tagged and structurally checked, but their
-headers are `%PDF-1.4`; they must not be described as PDF/UA-2 or PDF/A-4f
-compliant until the strict validator passes.
+Current article PDFs are tagged, structurally checked, and rewritten as `%PDF-2.0` containers. They must not be described as PDF/UA-2 or PDF/A-4f compliant until `npm run pdf:ua2-a4f` passes.
 
 GitHub Actions runs the v0.0.3 release gate via
 `.github/workflows/static-quality.yml`.

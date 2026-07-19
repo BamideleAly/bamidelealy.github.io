@@ -26,7 +26,9 @@ jobs:
       - name: Run unit tests
         run: npm test
       - name: Verify content compiler
-        run: npm run content:example >/tmp/example-conference-report.html
+        run: |
+          npm run content:example >/tmp/example-conference-report.html
+          npm run content:check
       - name: Run static quality checks
         run: npm run quality
       - name: Verify generated article PDF and QR assets

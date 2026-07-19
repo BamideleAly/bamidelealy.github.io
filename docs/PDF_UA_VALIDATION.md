@@ -6,13 +6,9 @@ PDF assets for every article.
 
 ## Important Standard Boundary
 
-Chrome currently exports tagged PDFs as PDF 1.4 (`Skia/PDF`). Those files can be
-useful for accessibility remediation, but they are not automatically PDF/UA-2 or
-PDF/A-4f. PDF/UA-2 and PDF/A-4f are PDF 2.0-era targets and must be validated
-with a PDF standards validator.
+Chrome exports tagged PDFs via Skia/PDF, then `tools/generate-article-assets.py` rewrites the committed article PDFs as `%PDF-2.0` containers with the structure tree preserved. These files are tagged PDF 2.0 assets, but that does not automatically make them PDF/UA-2 or PDF/A-4f compliant. PDF/UA-2 and PDF/A-4f conformance still requires strict validator evidence.
 
-Do not describe a generated PDF as PDF/UA-2 or PDF/A-4f compliant unless the
-strict validator command passes.
+Do not describe a generated PDF as PDF/UA-2 or PDF/A-4f compliant unless the strict validator command passes.
 
 ## Commands
 

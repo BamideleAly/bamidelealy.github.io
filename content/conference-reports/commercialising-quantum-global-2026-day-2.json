@@ -1,0 +1,158 @@
+{
+  "slug": "commercialising-quantum-global-2026-day-2",
+  "lang": "en-GB",
+  "title": "Day 2: regulation, Q-Day and finance.",
+  "description": "Day 2 proceedings from Commercialising Quantum Global 2026, covering regulation, HSBC quantum readiness, photonics, AI convergence, post-quantum cryptography, Q-Day, finance and weather modelling.",
+  "canonical_path": "notes/commercialising-quantum-global-2026-day-2.html",
+  "dek": "Wednesday 17 June turned the commercialisation argument into an operating agenda: smarter regulation, HSBC’s case for early collaboration, photonics, AI convergence, software abstraction, post-quantum cryptography, Q-Day, industrial resilience and finance use cases.",
+  "date": "2026-07-19",
+  "reading_time": "17 min read",
+  "eyebrow": "Proceedings · Day 2",
+  "agenda_intro": "Talks and panels are listed before the analysis so readers can follow the conference chronology, speaker references and moderator context.",
+  "sessions": [
+    {
+      "title": "Talk. Incubating an industry: how smarter regulation should stop the UK from squandering the quantum opportunity",
+      "speakers": "Chris Holmes, Baron Holmes of Richmond ."
+    },
+    {
+      "title": "Talk. Unforced errors: why industry can’t wait for fault-tolerant quantum to start collaborating",
+      "speakers": "Phil Intallura , HSBC."
+    },
+    {
+      "title": "Fireside chat. Photonics meets quantum: seeing the light on commercial adoption",
+      "speakers": "Yuping Huang , Quantum Computing Inc.; moderated by Jason Palmer ."
+    },
+    {
+      "title": "Talk. The next compute stack: where AI and quantum converge",
+      "speakers": "Krysta Svore , NVIDIA."
+    },
+    {
+      "title": "Fireside chat. Quantum readiness: what business leaders should watch now",
+      "speakers": "Amir Naveh , Classiq; moderated by Tom Standage ."
+    },
+    {
+      "title": "Fireside chat. Secure to succeed: can quantum readiness provide a competitive edge?",
+      "speakers": "Craig Farrell , EY; moderated by Laveena Iyer ."
+    },
+    {
+      "title": "Quantum’s missing middle: who is building the connective tissue and enabling infrastructure?",
+      "speakers": "Mihir Bhaskar , IonQ; moderated by Tom Standage ."
+    },
+    {
+      "title": "Panel. Why qubit quality could matter more than quantity",
+      "speakers": "Pierre Desjardins , Ellen Devereux , Guillermo Albareda ; moderated by Jason Palmer ."
+    },
+    {
+      "title": "Fireside chat. Quantum-inspired today, quantum-ready tomorrow",
+      "speakers": "Scott Buchholz , Deloitte; moderated by Tamzin Booth ."
+    },
+    {
+      "title": "Interactive roundtables. Finance, life sciences and end-user adoption",
+      "speakers": "Matus Samuel , Romi Sumaria , Amir Naveh , Regev Yativ , Laveena Iyer ."
+    },
+    {
+      "title": "Fireside chats. Blockchain resilience and enterprise cryptographic inventory",
+      "speakers": "Dino Cataldo Dell’Accio , Joanne Miller ; moderated by Christina Yan Zhang and Tom Standage ."
+    },
+    {
+      "title": "Panel. Harvest now, decrypt later: managing the long tail of risk",
+      "speakers": "Kartheek Solipuram , Nicolas Gomez Iglesias , Jordi Mur-Petit ; moderated by Laveena Iyer ."
+    },
+    {
+      "title": "Panel. Quantum blocs or open ecosystems: designing industrial strategy in a fragmented world",
+      "speakers": "Chester Butterworth , Jørgen Ellegaard Andersen , Oscar Diez , Romi Sumaria ; moderated by Cailin Birch ."
+    },
+    {
+      "title": "Panel. A thought experiment: the countdown to Q-Day",
+      "speakers": "Becky Pinkard , Ricardo LaFosse , Manfred Rieck ; moderated by Steve Suarez ."
+    },
+    {
+      "title": "Fireside chat. Fixing Europe’s competitiveness in quantum",
+      "speakers": "Sella Brosh ; moderated by Jason Palmer ."
+    },
+    {
+      "title": "Talk. Designing better materials: could quantum technology deliver the next big thing in R&D?",
+      "speakers": "Ching-Ray Chang ."
+    },
+    {
+      "title": "Fireside chat. Rain or shine: how quantum could improve weather modelling",
+      "speakers": "Julia Lane ; moderated by Cailin Birch ."
+    },
+    {
+      "title": "Talks. Sustainable AI, quantum policy and the AI equation",
+      "speakers": "Aparna Prabhakar , Fern Watson , Wendy Ng ; moderated by Christina Yan Zhang , with closing remarks by Jason Palmer ."
+    }
+  ],
+  "chapters": [
+    {
+      "id": "regulation",
+      "heading": "Regulation as market design",
+      "paragraphs": [
+        "Day 2 opened with regulation, but not in the narrow compliance sense. The question was how smarter regulation can help the UK retain and grow quantum companies rather than exporting value after the research phase. The useful distinction was between premature rulemaking and market-building governance. Quantum does not yet need a dense rulebook for every modality, but it does need principles, sandboxes, procurement signals, interoperability, responsible innovation and credible routes for domestic firms to scale.",
+        "This matters to financial services because regulated adoption depends on clarity. Banks can experiment earlier when the policy environment explains what kind of evidence, security posture, third-party controls and model governance will be expected later."
+      ]
+    },
+    {
+      "id": "hsbc",
+      "heading": "HSBC and the argument for starting before fault tolerance",
+      "paragraphs": [
+        "Philip Intallura’s HSBC talk was the closest thing to a finance operating manual. The argument was direct: industry cannot wait for fault-tolerant quantum before collaborating, because the adoption path is steep. A bank needs strategy, funding, business engagement, problem selection, data identification, vendor selection, model risk governance, pilot design and production integration. Those muscles take years to build.",
+        "The HSBC example of quantum machine learning for algorithmic bond trading was useful because it avoided overclaiming. It was not presented as full quantum advantage. It was presented as marginal commercial advantage: a real-data, real-hardware feature-generation experiment that beat an existing classical baseline and taught the organisation how to move a quantum technique through bank processes. That is exactly the kind of proof-of-value finance should prefer."
+      ]
+    },
+    {
+      "id": "security",
+      "heading": "From quantum-safe now to Q-Day scenarios",
+      "paragraphs": [
+        "The middle of Day 2 concentrated on security. The post-quantum sessions turned Q-Day from a science-fiction date into a migration-management problem. The risk is not only that a future machine breaks RSA or elliptic-curve cryptography. The risk is that sensitive data captured today remains valuable when that machine exists. Finance therefore needs cryptographic inventory, data-life classification, vendor dependency mapping and a migration path tied to NIST post-quantum standards.",
+        "The UN pension fund blockchain case made the point at system level. Digital identity, biometrics, geolocation and distributed ledger infrastructure can modernise a legacy process, but the same architecture must be examined for quantum-era signature and key risks. Innovation and future resilience have to be designed together."
+      ]
+    },
+    {
+      "id": "stack",
+      "heading": "Photonics, software abstraction and the missing middle",
+      "paragraphs": [
+        "Photonics, software abstraction and IonQ’s missing-middle discussion all pointed to the same structural issue: quantum will commercialise through infrastructure, not through isolated chips. Photonics offers manufacturability and potential room-temperature advantages. Software abstraction allows enterprises to write algorithms without locking themselves into one hardware modality. Manufacturing, networking, control interfaces and error correction turn fragile machines into deployable platforms.",
+        "For finance, this means vendor strategy should stay hardware-agnostic where possible. The question is not which modality wins a conference debate. It is which architecture lets the bank benchmark use cases, protect intellectual property, preserve auditability and move workloads across platforms as the technology matures."
+      ]
+    },
+    {
+      "id": "ai-finance",
+      "heading": "AI convergence, finance use cases and energy",
+      "paragraphs": [
+        "Krysta Svore’s AI-quantum talk placed QPUs inside a broader compute stack with AI agents, simulation and high-performance computing. The sustainable AI session added a financial control angle: energy per useful solution may become a real performance metric. As AI infrastructure becomes more power-constrained, finance teams will need to evaluate compute choices by cost, resilience, energy, carbon and business outcome, not just speed.",
+        "The finance commercialisation sessions made the use-case list concrete: Monte Carlo simulation, VaR, stress testing, derivatives valuation, portfolio optimisation, liquidity and capital allocation. The right starting point is not a large programme slogan. It is a small set of bounded problems where classical methods are costly enough that a marginal improvement would be visible and governable."
+      ]
+    },
+    {
+      "id": "close",
+      "heading": "Industrial resilience and the final lesson",
+      "paragraphs": [
+        "The final panels broadened from enterprise readiness to geopolitics, weather modelling and open ecosystems. Europe’s competitiveness problem was framed as a capital, coordination and industrial-policy issue. Weather modelling showed a public-good use case where hybrid quantum approaches may improve specific algorithmic modules before replacing full classical systems. Networking and distributed quantum architectures added a scale-out path that again depends on infrastructure rather than isolated machines.",
+        "Day 2’s conclusion was more urgent than Day 1’s. The first day showed that the quantum ecosystem is forming. The second day showed that finance has immediate work to do: PQC migration, quantum-aware governance, use-case selection, vendor literacy, data readiness and a long-term compute strategy that links AI, HPC and quantum."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Why does Day 2 treat regulation as market design?",
+      "answer": "The regulation sessions argued that the UK needs more than scientific strength. Sandboxes, procurement signals, interoperability, responsible innovation and scale-up pathways can help domestic quantum companies retain capital, talent and intellectual property."
+    },
+    {
+      "question": "What made the HSBC session important for finance readers?",
+      "answer": "HSBC’s case showed that banks cannot wait for fault tolerance. They need business sponsorship, data access, vendor selection, pilot controls, model-risk review and integration pathways before quantum techniques can become production candidates."
+    },
+    {
+      "question": "Why is post-quantum cryptography the most immediate action item?",
+      "answer": "PQC addresses harvest-now-decrypt-later risk: sensitive data stolen today may remain valuable when future quantum computers can break current public-key cryptography. Inventory and migration planning are therefore current operational-resilience tasks."
+    },
+    {
+      "question": "What does Q-Day planning mean operationally?",
+      "answer": "It means knowing where cryptography is used, which data has long-term confidentiality value, which vendors create dependencies, what migration sequence is feasible and how emergency response would work if the timeline compresses."
+    },
+    {
+      "question": "How do photonics, qubit quality and the missing middle fit the report?",
+      "answer": "They explain why commercialisation depends on infrastructure: control systems, networking, fabrication, software abstraction, error correction and cloud access. Useful quantum will be delivered through platforms, not isolated chips."
+    }
+  ]
+}

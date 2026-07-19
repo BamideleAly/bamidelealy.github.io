@@ -76,6 +76,9 @@ def main() -> int:
     structural_failures = [entry for entry in entries if not entry["has_structure_tree"]]
     if structural_failures:
         raise SystemExit("One or more PDFs lack /StructTreeRoot")
+    pdf_2_failures = [entry for entry in entries if not entry["is_pdf_2"]]
+    if pdf_2_failures:
+        raise SystemExit("One or more PDFs are not PDF 2.0 containers")
     if args.strict:
         failures = [
             entry

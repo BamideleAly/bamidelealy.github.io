@@ -469,6 +469,22 @@ def check_documentation() -> None:
                 fail(f"{doc.relative_to(ROOT)} missing {url}")
 
 
+def check_conference_sources() -> None:
+    source_dir = ROOT / "content" / "conference-reports"
+    required = [
+        source_dir / "commercialising-quantum-global-2026.json",
+        source_dir / "commercialising-quantum-global-2026-day-1.json",
+        source_dir / "commercialising-quantum-global-2026-day-2.json",
+    ]
+    for path in required:
+        if not path.exists():
+            fail(f"missing structured conference source {path.relative_to(ROOT)}")
+        data = json.loads(path.read_text())
+        for key in ["slug", "title", "description", "canonical_path", "sessions", "chapters", "faqs"]:
+            if not data.get(key):
+                fail(f"{path.relative_to(ROOT)} missing {key}")
+
+
 def main() -> int:
     check_structured_files()
     check_contrast_tokens()
@@ -479,6 +495,7 @@ def main() -> int:
     check_article_assets()
     check_discovery_indexes()
     check_documentation()
+    check_conference_sources()
     print("Static quality checks passed.")
     return 0
 

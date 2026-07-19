@@ -18,6 +18,10 @@ try:
     import qrcode.image.svg
 except Exception:  # pragma: no cover - dependency guidance is tested via CLI use.
     qrcode = None
+try:
+    import pikepdf
+except Exception:  # pragma: no cover - dependency guidance is tested via CLI use.
+    pikepdf = None
 
 ROOT = Path(__file__).resolve().parents[1]
 PDF_DIR = ROOT / "assets" / "pdfs"
@@ -160,6 +164,19 @@ def generate_pdf(chrome: str, base_url: str, page: Path, output: Path) -> None:
         raise SystemExit(f"PDF export is suspiciously small: {output}")
     if b"/StructTreeRoot" not in data:
         raise SystemExit(f"PDF lacks a structure tree: {output}")
+    rewrite_pdf_2(output)
+
+
+def rewrite_pdf_2(output: Path) -> None:
+    if pikepdf is None:
+        raise SystemExit("Install pikepdf with `python3 -m pip install -r requirements-dev.txt` to write PDF 2.0 assets.")
+    with pikepdf.Pdf.open(output, allow_overwriting_input=True) as pdf:
+        pdf.save(output, force_version="2.0")
+    data = output.read_bytes()
+    if not data.startswith(b"%PDF-2.0"):
+        raise SystemExit(f"PDF 2.0 rewrite failed: {output}")
+    if b"/StructTreeRoot" not in data:
+        raise SystemExit(f"PDF 2.0 rewrite removed the structure tree: {output}")
 
 
 def main() -> int:

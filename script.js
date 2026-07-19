@@ -70,8 +70,9 @@
     window.dispatchEvent(new CustomEvent('ba:analytics', { detail: payload }));
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(payload);
-    if (window.BA_ANALYTICS_ENDPOINT && navigator.sendBeacon) {
-      navigator.sendBeacon(window.BA_ANALYTICS_ENDPOINT, JSON.stringify(payload));
+    var analyticsEndpoint = window.BA_ANALYTICS_ENDPOINT || '';
+    if (analyticsEndpoint && navigator.sendBeacon) {
+      navigator.sendBeacon(analyticsEndpoint, JSON.stringify(payload));
     }
   };
 

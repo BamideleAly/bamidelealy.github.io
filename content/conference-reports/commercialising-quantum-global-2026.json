@@ -1,0 +1,106 @@
+{
+  "slug": "commercialising-quantum-global-2026",
+  "lang": "en-GB",
+  "title": "Commercialising Quantum Global 2026: what finance should do now.",
+  "description": "An in-depth field report from Commercialising Quantum Global 2026 on quantum commercialisation, post-quantum cryptography, AI convergence, enterprise readiness and financial services.",
+  "canonical_path": "notes/commercialising-quantum-global-2026.html",
+  "dek": "The conference did not describe a technology waiting politely in the laboratory. It described an industrial stack forming around hardware, software, standards, procurement, energy and security. Finance should treat quantum readiness as an operating model question, not a science-watch function.",
+  "date": "2026-07-19",
+  "reading_time": "18 min read",
+  "eyebrow": "Field Report · Quantum",
+  "agenda_intro": "",
+  "sessions": [
+    {
+      "title": "Conference source map",
+      "speakers": "See report body and companion proceedings."
+    }
+  ],
+  "chapters": [
+    {
+      "id": "thesis",
+      "heading": "The thesis",
+      "paragraphs": [
+        "Across two days of interviews, lectures and panel discussions at Commercialising Quantum Global, the strongest signal was not that fault-tolerant quantum computing has arrived. It was that the surrounding commercial system is being assembled before the machines fully mature. Governments are moving from research grants to procurement. Standards bodies are moving from definitions to benchmarking. Enterprises are moving from curiosity to roadmaps. Security teams are moving from theoretical quantum risk to post-quantum migration planning.",
+        "That matters for banks because finance is rarely late to technology through lack of awareness. It is late when a new capability does not yet fit an accountable control model. The conference repeatedly returned to the same practical constraint: quantum will not enter production because a vendor announces a larger qubit count. It will enter production when boards can understand the business case, risk teams can govern the model, technologists can integrate the workload, and supervisors can follow the decision path.",
+        "The right stance is therefore neither hype nor passivity. Product Control, Financial Control and Business Finance should build a no-regrets quantum capability now: cryptographic inventory and migration, use-case triage, data readiness, vendor literacy, control design and a small portfolio of proof-of-value work tied to measurable finance outcomes."
+      ]
+    },
+    {
+      "id": "commercialisation",
+      "heading": "Commercialisation has moved beyond hardware",
+      "paragraphs": [
+        "The most mature presentations treated quantum as an ecosystem, not a box. The UK strategy sessions emphasised procurement, benchmarking, standards, skills and supply chains alongside hardware. IBM's roadmap framed the future as quantum-centric supercomputing: CPUs, GPUs and QPUs working in hybrid workflows. IonQ's discussion of the missing middle made the same point from another angle: commercial quantum needs manufacturing, networking, control systems, error correction, standards and deployment infrastructure.",
+        "This should change how finance evaluates vendors. A qubit-count conversation is too thin. A serious evaluation asks how the platform handles error correction, workload orchestration, repeatability, auditability, data movement, model governance, vendor lock-in, cloud access, on-premise constraints and energy use. Logical qubits, gate fidelity, connectivity and deployability matter, but no single metric is enough. The more useful question is whether the system can be benchmarked against a specific business problem under realistic operational constraints.",
+        "The conference also made clear that governments are trying to create demand, not just fund research. The UK's procurement-led model and the Nordic Qubit Village initiative are examples of market-shaping infrastructure: public or philanthropic capital reduces early uncertainty, while enterprise users define the use cases that make quantum commercially legible. For finance, this means the window to influence standards and use-case definitions is open now."
+      ]
+    },
+    {
+      "id": "security",
+      "heading": "Post-quantum cryptography is the immediate action",
+      "paragraphs": [
+        "The most urgent finance implication is not portfolio optimisation. It is cryptography. Multiple sessions converged on the same point: post-quantum cryptography is a current programme, not a future memo. The risk is harvest now, decrypt later: adversaries collect encrypted traffic today and wait for sufficiently powerful quantum computers to break vulnerable public-key schemes.",
+        "The practical work starts with inventory. Which systems use RSA or elliptic-curve cryptography? Which data has a confidentiality life longer than the migration window? Which vendor products, mainframes, certificates, APIs, data stores, identity systems and blockchain dependencies rely on algorithms that must be replaced or wrapped? Which clients, regulators and counterparties need roadmap visibility?",
+        "For Product Control and Financial Control, this is not only a cyber issue. Finance owns reporting processes that depend on trusted data lineage, secure transmission, evidential integrity and access control. A post-quantum migration that changes payload size, latency, certificate handling or integration behaviour can affect reconciliations, end-user controls and audit evidence. The governance work therefore needs finance at the table early, especially for long-lived records and regulated reporting chains."
+      ]
+    },
+    {
+      "id": "finance",
+      "heading": "Financial services should start with bounded use cases",
+      "paragraphs": [
+        "The finance sessions were strongest when they avoided abstract quantum advantage and focused on bounded problems: algorithmic bond trading feature generation, risk modelling, derivatives pricing, Value at Risk, fraud detection, optimisation and computationally intensive simulation. The lesson is not that every finance desk needs quantum hardware. It is that some finance problems are expensive because the search space is combinatorial, the simulation burden is high, or the classical approximation is operationally fragile.",
+        "A useful first portfolio for finance would have three tracks. The first is security: PQC inventory, risk classification and migration sequencing. The second is business value: two or three use cases where classical approaches are expensive enough that a marginal improvement would matter. The third is control design: a governance pattern for quantum-assisted outputs, including input provenance, benchmark evidence, model limitations, human review, repeatability and production monitoring.",
+        "Product Control is a natural proving ground because it already lives between models, markets, controls and explanations. The unit of value is not a spectacular quantum claim. It is a better-controlled valuation, faster scenario generation, more robust anomaly detection, or clearer prioritisation of exceptions. The moment a quantum or quantum-inspired method changes a number used in reporting, the control framework has to be ready."
+      ]
+    },
+    {
+      "id": "ai",
+      "heading": "AI and quantum are becoming one compute conversation",
+      "paragraphs": [
+        "Several sessions presented AI and quantum as mutually reinforcing. AI improves calibration, error correction, control, algorithm design and scientific discovery workflows. Quantum may eventually improve AI by reducing energy intensity, generating better scientific data, handling sparse datasets and accelerating selected optimisation and simulation tasks. NVIDIA's framing of AI agents, simulation and QPUs as a unified discovery loop was the clearest expression of this convergence.",
+        "For enterprises, the implication is architectural. Quantum should not be treated as a separate innovation island. It belongs in the same conversation as data products, AI governance, high-performance computing, cloud strategy and energy constraints. The compute continuum panel made the governance point sharply: advanced compute amplifies the quality of the data and controls beneath it. Poorly described data does not become strategic because a more exotic processor touches it.",
+        "That is why finance should connect quantum readiness to existing AI governance work. The same questions recur: what problem is being solved, what data enters the system, what benchmark proves improvement, who approves use, how errors are detected, how outputs are explained, and what evidence survives audit?"
+      ]
+    },
+    {
+      "id": "operating-model",
+      "heading": "A practical operating model for finance",
+      "paragraphs": [
+        "The conference points to a simple operating model. First, name quantum readiness as a cross-functional capability owned jointly by technology, cyber, risk, finance and legal. Second, separate immediate mandatory work from exploratory optional work. PQC planning is mandatory. Quantum optimisation pilots are selective. Vendor education is useful, but it should be tied to decisions.",
+        "Third, maintain a quantum use-case register with business owners, data dependencies, control owners, expected benefit, classical baseline, quantum method, vendor exposure and evidence threshold. Fourth, require every experiment to produce a reusable artefact: a benchmark, a control pattern, a data-quality lesson, a vendor-risk note or a board-ready explanation. Fifth, publish a short internal field report after every major conference or vendor engagement. The value is not the event summary; it is institutional memory.",
+        "For recurring public reports on this site, this will be the pattern: a thesis-led synthesis, the implications for regulated finance, an accessible explanation of the technical layer, and a source map of the sessions reviewed. It avoids transcript dumping while preserving enough detail for readers to trace where the conclusions came from."
+      ]
+    },
+    {
+      "id": "source-map",
+      "heading": "Source map",
+      "paragraphs": [
+        "This report was prepared from the Day 1 and Day 2 source pack: agendas, session summaries, interviews, lectures, panel discussions, slides and finance-specific takeaway notes. The strongest evidence base came from sessions on UK quantum strategy and regulation, IBM's quantum roadmap, Infleqtion and Q-CTRL interviews, the Qubit Village panel, compute continuum discussion, quantum-AI convergence, post-quantum cryptography, IonQ's platform expansion, quantum metrics, enterprise adoption and financial-services commercialisation.",
+        "For readers who want the conference reconstructed in sequence, I have split the proceedings into two companion pages: Day 1: promise, platforms and ecosystems and Day 2: regulation, Q-Day and finance .",
+        "Day 1 established the commercialisation frame: public procurement, standards, hybrid compute, quantum sensing, practical utility, quantum-AI synergy, clusters, venture funding and enterprise adoption strategy. Day 2 sharpened the operating implications: regulation, post-quantum migration, finance use cases, software abstraction, photonic manufacturability, platform infrastructure, deployability metrics, sustainable AI, geopolitical competition and weather-modelling applications.",
+        "The recurring finance takeaway is consistent across both days: start before advantage is obvious. The institutions that wait for a clean inflection point will still have to build skills, controls, vendor literacy, cryptographic resilience and data foundations under time pressure. The institutions that begin now can learn while the stakes are still manageable."
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the central thesis of this Commercialising Quantum Global 2026 report?",
+      "answer": "The report argues that quantum readiness is becoming an operating model question for finance: cryptographic resilience, data governance, vendor literacy, benchmark design and AI/HPC integration matter before fault-tolerant machines arrive."
+    },
+    {
+      "question": "Why does the report connect quantum computing, AI and post-quantum cryptography?",
+      "answer": "The conference repeatedly framed them as one strategic stack. AI helps operate and optimise quantum systems; quantum may eventually support selected optimisation and simulation workloads; post-quantum cryptography is the security migration that cannot wait for quantum advantage."
+    },
+    {
+      "question": "What should a bank take from the conference now?",
+      "answer": "A bank should start with bounded use cases, cryptographic inventory, long-lived data classification, vendor due diligence and model-risk evidence. The practical work is governance-led, not hardware-led."
+    },
+    {
+      "question": "How should readers use the Day 1 and Day 2 proceedings?",
+      "answer": "Use Day 1 to understand platforms, ecosystems, sensing, standards and capital formation. Use Day 2 to understand regulation, PQC, Q-Day readiness, financial-services adoption and the emerging AI-quantum compute stack."
+    },
+    {
+      "question": "Does the report claim quantum advantage is already here for finance?",
+      "answer": "No. It treats current finance value as experimental and marginal: learning how to identify useful problems, benchmark against classical methods, govern vendors and prepare data before larger technical breakthroughs arrive."
+    }
+  ]
+}

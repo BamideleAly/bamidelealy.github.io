@@ -16,6 +16,7 @@
     "pdf:audit": "python3 tools/pdf-ua-audit.py",
     "pdf:ua": "python3 tools/pdf-ua-audit.py --verapdf --strict",
     "pdf:ua2-a4f": "python3 tools/pdf-ua-audit.py --verapdf --flavours ua2,4f --strict",
-    "content:example": "python3 tools/build-conference-report.py content/conference-reports/example.json"
+    "content:example": "python3 tools/build-conference-report.py content/conference-reports/example.json",
+    "content:check": "python3 -c \"from pathlib import Path; import subprocess, sys; [subprocess.run([sys.executable, 'tools/build-conference-report.py', str(p), '--check'], check=True) for p in sorted(Path('content/conference-reports').glob('*.json'))]\""
   }
 }

@@ -18,7 +18,7 @@ canonical, French and German.
 - [Notes](https://bamidelealy.com/notes/): Long-form essays and conference field reports.
 - [Contact](https://bamidelealy.com/contact.html): Speaking, advisory and academic collaboration enquiries.
 - [Accessibility Statement](https://bamidelealy.com/accessibility.html): WCAG target, accessibility testing approach and feedback route.
-- [Privacy Notice](https://bamidelealy.com/privacy.html): Privacy approach for contact forms, third-party links and analytics-free publishing.
+- [Privacy Notice](https://bamidelealy.com/privacy.html): Privacy approach for contact forms, third-party links and first-party aggregate analytics.
 
 ## Notes and Reports — English
 
