@@ -50,6 +50,14 @@ jobs:
         run: |
           npm run assets:articles
           git diff --exit-code -- assets/pdfs assets/qr docs/SOCIAL_PREVIEW_QA.json
+      - name: Resolve Chrome for Pa11y
+        run: |
+          CHROME="$(command -v google-chrome-stable || command -v google-chrome || command -v chromium-browser || command -v chromium || true)"
+          if [ -z "$CHROME" ]; then
+            npx --yes puppeteer@24.15.0 browsers install chrome
+          else
+            echo "PUPPETEER_EXECUTABLE_PATH=$CHROME" >> "$GITHUB_ENV"
+          fi
       - name: Run Pa11y WCAG2AAA checks
         run: |
           npm run pa11y:report
