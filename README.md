@@ -520,8 +520,8 @@ To add a new long-form conference report:
 8. Generate 1200×630 social preview images, QR SVGs, and tagged static PDFs.
 9. Add entries to notes indexes, search data, RSS feeds, and sitemap.
 10. Update `README.md`, `llms.txt`, and `ai.txt` when site structure changes.
-10. Run the static quality check.
-11. Validate key pages with accessibility and Lighthouse tooling.
+11. Run the static quality check.
+12. Validate key pages with accessibility and Lighthouse tooling.
 
 ---
 
