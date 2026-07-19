@@ -52,6 +52,9 @@ Required fields:
 - `organisations`
 - `images`
 - `faqs`
+- `pdf_asset`
+- `qr_asset`
+- `social_image_1200x630`
 
 ## Editorial Rules
 
@@ -88,6 +91,12 @@ Required fields:
   can share, print, or save the article as a PDF.
 - Printable pages must keep FAQ answers, figure captions, and source notes in
   the document flow so tagged PDF export can include them.
+- New conference reports should start from
+  `tools/templates/conference-report.html` or
+  `tools/scaffold-conference-report.py` so agenda maps, FAQs, social previews,
+  reader-mode hooks, print support, and article metadata stay consistent.
+- After publishing or changing an article, run `npm run assets:articles` while
+  the local server is running to refresh PDF, QR, and social-preview QA assets.
 
 ## Generation Roadmap
 

@@ -484,6 +484,18 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
     font-size: .98rem;
     letter-spacing: -.005em;
   }
+  .search-result-badge {
+    display: inline-flex;
+    margin-block-start: .3rem;
+    padding: .15rem .45rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--ink-muted);
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
   .search-result-desc {
     margin: .2rem 0 0;
     color: var(--ink-muted);
@@ -1373,6 +1385,52 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
     clip: rect(0 0 0 0);
     white-space: nowrap;
   }
+  .article-toc {
+    border-block: 1px solid var(--line);
+    background: color-mix(in srgb, var(--surface) 84%, transparent);
+  }
+  .article-toc-inner {
+    max-inline-size: calc(var(--article-column) + (var(--pad) * 2));
+    padding-block: 1.15rem;
+  }
+  .article-toc-label {
+    margin: 0 0 .7rem;
+    color: var(--ink-muted);
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+  .article-toc-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .article-toc-list a {
+    display: inline-flex;
+    align-items: center;
+    min-block-size: 2.25rem;
+    padding: .45rem .75rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--ink);
+    font-size: .86rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: var(--shadow-sm);
+  }
+  .article-toc-list a:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  .print-source {
+    display: none;
+  }
 
   .essay-body { padding-block: clamp(1rem, 3vw, 2rem) clamp(4rem, 10vw, 7rem); }
   .essay-body .container { max-inline-size: calc(var(--article-column) + (var(--pad) * 2)); }
@@ -1828,6 +1886,24 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
     @page {
       size: A4;
       margin: .7in .65in .75in;
+      @top-center {
+        content: string(article-title);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        color: #333;
+      }
+      @bottom-left {
+        content: "bamidelealy.com";
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        color: #333;
+      }
+      @bottom-right {
+        content: "Page " counter(page) " / " counter(pages);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 8pt;
+        color: #333;
+      }
     }
     *,
     *::before,
@@ -1859,6 +1935,7 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
     .search-overlay,
     .lang-switch,
     .article-actions,
+    .article-toc,
     .cta-row,
     .contact-links,
     .trusted-section,
@@ -1911,6 +1988,7 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
       font-size: 24pt !important;
       line-height: 1.08 !important;
       margin: 0 0 12pt !important;
+      string-set: article-title content(text);
     }
     h2 {
       font-size: 16pt !important;
@@ -2022,6 +2100,32 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
       max-inline-size: none !important;
       padding: 0 0 10pt !important;
       color: #000 !important;
+    }
+    .print-source {
+      display: grid !important;
+      grid-template-columns: 1fr .9in;
+      gap: .18in;
+      align-items: end;
+      margin-block-start: .35in;
+      padding-block-start: .18in;
+      border-block-start: 1pt solid #999;
+      page-break-inside: avoid;
+      break-inside: avoid-page;
+      font-family: Arial, Helvetica, sans-serif !important;
+    }
+    .print-source p {
+      margin: 0 0 5pt !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-size: 8.5pt !important;
+      line-height: 1.25 !important;
+    }
+    .print-source img {
+      inline-size: .9in !important;
+      block-size: .9in !important;
+      justify-self: end;
+    }
+    .print-source a[href^="http"]::after {
+      content: "" !important;
     }
   }
 }

@@ -160,6 +160,76 @@
         "t": "Notgeld und Gegen-Geld, 1967–1970",
         "d": "Forschungsprojektseite zur Bank von Biafra, zur Zentralbank von Nigeria und zur umstrittenen Währungsausgabe im nigerianischen Bürgerkrieg.",
         "u": "/de/notizen/projekt-bank-von-biafra.html"
+      },
+      {
+        "t": "Commercialising Quantum Global 2026: Was die Finanzfunktion jetzt tun sollte.",
+        "d": "Ein ausführlicher Feldbericht zu Commercialising Quantum Global 2026: Quantenkommerzialisierung, Post-Quantum-Kryptografie, KI-Konvergenz, Unternehmensreife und Finanzdienstleistungen.",
+        "u": "/de/notizen/commercialising-quantum-global-2026.html",
+        "type": "conference-report",
+        "w": 50
+      },
+      {
+        "t": "Tag 1: Versprechen, Plattformen und Ökosysteme.",
+        "d": "Tag-1-Bericht von Commercialising Quantum Global 2026: britische Strategie, Quantenplattformen, KI, Sensorik, Standards, Ökosysteme und Risikokapital.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-1.html",
+        "type": "conference-report",
+        "w": 50
+      },
+      {
+        "t": "Opening talks and fireside chats",
+        "d": "Lord Vallance, Katie Pizzolato, Peter Knight, Matthew Kinsella, Lord William Hague, Tom Standage. Commercialising Quantum Global 2026 session.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panels. Qubit village, utility versus hype, users, AI convergence and compute continuum",
+        "d": "Zulfi Alam, Ebba Carbonnier, Lene Oddershede, Gillian Bussey, David Rivas, Richard Murray, Yong Meng Sua, Leigh Lapworth. Commercialising Quantum Global 2026 session.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panels. Adoption, sensing, bio, foundries, superclusters, standards and startup capital",
+        "d": "Dave Starling, Christian Gogolin, Corey O’Meara, Colin Sullivan, Shihan Sajeed, Michael Streif, Bijoy Sagar, Joe Spencer. Commercialising Quantum Global 2026 session.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-1.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Tag 2: Regulierung, Q-Day und Finance.",
+        "d": "Tag-2-Bericht von Commercialising Quantum Global 2026: Regulierung, HSBC-Quantenreife, Photonik, KI, Post-Quantum-Kryptografie, Q-Day und Finance Use Cases.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-2.html",
+        "type": "conference-report",
+        "w": 50
+      },
+      {
+        "t": "Opening talks, photonics, AI compute stack and quantum readiness",
+        "d": "Chris Holmes, Baron Holmes of Richmond, Phil Intallura, Yuping Huang, Krysta Svore, Amir Naveh, Tom Standage, Jason Palmer. Commercialising Quantum Global 2026 session.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panels. Secure to succeed, missing middle, qubit quality and quantum-inspired strategy",
+        "d": "Craig Farrell, Mihir Bhaskar, Pierre Desjardins, Ellen Devereux, Guillermo Albareda, Scott Buchholz, Tamzin Booth, Laveena Iyer. Commercialising Quantum Global 2026 session.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panels. Finance, life sciences, PQC, Q-Day and industrial strategy",
+        "d": "Matus Samuel, Romi Sumaria, Regev Yativ, Dino Cataldo Dell’Accio, Joanne Miller, Kartheek Solipuram, Nicolas Gomez Iglesias, Jordi Mur-Petit. Commercialising Quantum Global 2026 session.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Closing sessions. Europe, materials, weather, sustainable AI, policy and superintelligence",
+        "d": "Sella Brosh, Ching-Ray Chang, Julia Lane, Aparna Prabhakar, Fern Watson, Wendy Ng, Cailin Birch, Christina Yan Zhang. Commercialising Quantum Global 2026 session.",
+        "u": "/de/notizen/commercialising-quantum-global-2026-tag-2.html#agenda-index",
+        "type": "conference-session",
+        "w": 40
       }
     ]
   }

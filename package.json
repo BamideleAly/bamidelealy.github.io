@@ -11,6 +11,7 @@
     "pa11y:report": "npx --yes pa11y@9.1.1 http://127.0.0.1:8081/notes/commercialising-quantum-global-2026.html --standard WCAG2AAA --timeout 30000",
     "pa11y:trust": "npx --yes pa11y@9.1.1 http://127.0.0.1:8081/accessibility.html --standard WCAG2AAA --timeout 30000",
     "lighthouse:report": "npx --yes lighthouse@13.4.0 http://127.0.0.1:8081/notes/commercialising-quantum-global-2026.html --quiet --chrome-flags='--headless --no-sandbox' --output=json --output-path=/tmp/cqg-lighthouse.json",
-    "print:report": "python3 tools/export-print-pdf.py http://127.0.0.1:8081/notes/commercialising-quantum-global-2026.html /tmp/cqg-overview-print.pdf"
+    "print:report": "python3 tools/export-print-pdf.py http://127.0.0.1:8081/notes/commercialising-quantum-global-2026.html /tmp/cqg-overview-print.pdf",
+    "assets:articles": "python3 tools/generate-article-assets.py --base-url http://127.0.0.1:8081 --skip-existing"
   }
 }

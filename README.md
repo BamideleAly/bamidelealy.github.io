@@ -96,7 +96,7 @@ Primary themes:
 | `notes/ai-governance-as-road.html` | AI governance as the road to adoption, not a blocker. |
 | `notes/bank-of-biafra-project.html` | Bank of Biafra / Central Bank of Nigeria research note. |
 
-The repository currently contains 51 HTML pages across English, French,
+The repository currently contains 52 HTML pages across English, French,
 German, redirect/compatibility pages, localized notes, and governance pages.
 
 ---
@@ -456,6 +456,7 @@ Install the lightweight Node metadata used for scripts:
 
 ```bash
 npm install
+python3 -m pip install -r requirements-dev.txt
 ```
 
 The repository does not persist browser-audit dependencies. Pa11y and
@@ -516,8 +517,9 @@ To add a new long-form conference report:
 6. Add social metadata, canonical URL, Open Graph, Twitter card, and JSON-LD.
 7. Process images into the report asset folder with matching 3:2 responsive
    variants.
-8. Add entries to notes indexes, search data, RSS feeds, and sitemap.
-9. Update `README.md`, `llms.txt`, and `ai.txt` when site structure changes.
+8. Generate 1200×630 social preview images, QR SVGs, and tagged static PDFs.
+9. Add entries to notes indexes, search data, RSS feeds, and sitemap.
+10. Update `README.md`, `llms.txt`, and `ai.txt` when site structure changes.
 10. Run the static quality check.
 11. Validate key pages with accessibility and Lighthouse tooling.
 
@@ -557,15 +559,22 @@ Export a print PDF while `npm run serve` is running:
 npm run print:report
 ```
 
+Regenerate article PDFs, QR codes, and social-preview QA while
+`npm run serve` is running:
+
+```bash
+npm run assets:articles
+```
+
 GitHub Actions runs the v0.0.3 release gate via
 `.github/workflows/static-quality.yml`.
 
 The quality gate verifies parseable structured files, local references,
 canonical and `hreflang` coverage, image alternatives and dimensions, AAA
 contrast-sensitive design tokens, search targets, trust-page discovery,
-Commercialising Quantum image dimensions, print stylesheet requirements,
-reader-mode hooks, navigation indicators, governance footer links, and
-documentation page counts.
+Commercialising Quantum image dimensions, 1200×630 social previews, static
+tagged PDFs, QR assets, print stylesheet requirements, reader-mode hooks,
+navigation indicators, governance footer links, and documentation page counts.
 
 ---
 
@@ -575,6 +584,7 @@ Operational documentation:
 
 - `docs/RELEASE_CHECKLIST.md`
 - `docs/PUBLISHING.md`
+- `docs/PDF_UA_VALIDATION.md`
 - `docs/ROADMAP_V0_0_3.md`
 - `CONTRIBUTING.md`
 - `CHANGELOG.md`
@@ -591,6 +601,7 @@ Release-critical tools:
 | `npm run pa11y:trust` | WCAG2AAA browser audit for the accessibility page. |
 | `npm run lighthouse:report` | Lighthouse JSON audit for the main report. |
 | `npm run print:report` | Headless Chrome PDF export for print verification. |
+| `npm run assets:articles` | Generates per-article tagged PDFs, QR SVGs, and social-preview QA. |
 
 The v0.0.3 branch is the first operational release branch for scaling from a
 hand-authored static site into a controlled publishing system.

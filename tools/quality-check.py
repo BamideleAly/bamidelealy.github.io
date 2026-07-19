@@ -31,6 +31,7 @@ TRUST_PAGES = {
     "fr": ["/fr/accessibilite.html", "/fr/confidentialite.html"],
     "de": ["/de/barrierefreiheit.html", "/de/datenschutz.html"],
 }
+SOCIAL_IMAGE_DIMENSIONS = (1200, 630)
 
 
 class PageParser(HTMLParser):
@@ -181,7 +182,7 @@ def check_contrast_tokens() -> None:
 
 def check_html_pages() -> None:
     for page in sorted(ROOT.glob("**/*.html")):
-        if ".git" in page.parts or ".lighthouseci" in page.parts:
+        if ".git" in page.parts or ".lighthouseci" in page.parts or "tools" in page.parts:
             continue
         text = page.read_text(errors="replace")
         parser = PageParser()
@@ -350,6 +351,9 @@ def check_print_styles() -> None:
         "display: none !important",
         "inline-size: 6.8in",
         "print-color-adjust: exact",
+        "counter(page)",
+        ".print-source",
+        "string-set: article-title",
     ]:
         if token not in css:
             fail(f"styles.css print stylesheet missing {token}")
@@ -361,6 +365,53 @@ def check_print_styles() -> None:
         fail("styles.min.css missing valid article-column calc() rule")
     if "article-pdf-link" not in script or "window.print()" not in script:
         fail("script.js missing article PDF/print action")
+    if "buildArticleToc()" not in script or "injectPrintSource()" not in script:
+        fail("script.js missing article TOC or print-source initialization")
+
+
+def check_article_assets() -> None:
+    qa_path = ROOT / "docs" / "SOCIAL_PREVIEW_QA.json"
+    if not qa_path.exists():
+        fail("docs/SOCIAL_PREVIEW_QA.json is missing")
+    qa = json.loads(qa_path.read_text())
+    articles = qa.get("articles", [])
+    html_articles = []
+    for folder in [ROOT / "notes", ROOT / "fr" / "notes", ROOT / "de" / "notizen"]:
+        html_articles.extend(page for page in folder.glob("*.html") if page.name != "index.html")
+    if len(articles) != len(html_articles):
+        fail(f"social preview QA has {len(articles)} articles, expected {len(html_articles)}")
+    for entry in articles:
+        page = ROOT / entry["page"]
+        pdf = ROOT / entry["pdf"]
+        qr = ROOT / entry["qr"]
+        if not page.exists():
+            fail(f"social preview QA references missing page {entry['page']}")
+        if not pdf.exists() or pdf.stat().st_size < 10_000:
+            fail(f"missing or suspicious static PDF {entry['pdf']}")
+        if b"/StructTreeRoot" not in pdf.read_bytes():
+            fail(f"static PDF lacks structure tree {entry['pdf']}")
+        if not qr.exists() or "<svg" not in qr.read_text(errors="replace"):
+            fail(f"missing QR SVG {entry['qr']}")
+        if not entry.get("social_preview_ok"):
+            fail(f"social preview QA failed for {entry['page']}")
+        image_url = entry.get("og_image", "")
+        if "/assets/social/" not in image_url:
+            fail(f"{entry['page']} og:image does not use assets/social")
+        image_path = ROOT / urlparse(image_url).path.lstrip("/")
+        if not image_path.exists():
+            fail(f"missing social image {image_path.relative_to(ROOT)}")
+        if jpeg_dimensions(image_path) != SOCIAL_IMAGE_DIMENSIONS:
+            fail(f"{image_path.relative_to(ROOT)} must be 1200x630")
+        text = page.read_text(errors="replace")
+        og_dimensions: dict[str, str] = {}
+        for first_key, first_value, second_value, second_key in re.findall(
+            r"<meta\s+[^>]*(?:property=[\"'](og:image:(?:width|height))[\"'][^>]*content=[\"']([^\"']+)[\"']|content=[\"']([^\"']+)[\"'][^>]*property=[\"'](og:image:(?:width|height))[\"'])",
+            text,
+            re.I,
+        ):
+            og_dimensions[first_key or second_key] = first_value or second_value
+        if og_dimensions.get("og:image:width") != "1200" or og_dimensions.get("og:image:height") != "630":
+            fail(f"{entry['page']} missing 1200x630 social metadata")
 
 
 def check_discovery_indexes() -> None:
@@ -415,6 +466,7 @@ def main() -> int:
     check_search_targets()
     check_report_images()
     check_print_styles()
+    check_article_assets()
     check_discovery_indexes()
     check_documentation()
     print("Static quality checks passed.")

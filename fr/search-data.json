@@ -160,6 +160,97 @@
         "t": "Monnaie d’urgence et contre-monnaie, 1967–1970",
         "d": "Page de projet de recherche sur la Banque du Biafra, la Banque centrale du Nigeria et l’émission contestée pendant la guerre civile.",
         "u": "/fr/notes/projet-banque-biafra.html"
+      },
+      {
+        "t": "Commercialising Quantum Global 2026 : ce que la finance doit faire maintenant.",
+        "d": "Rapport approfondi sur Commercialising Quantum Global 2026 : commercialisation quantique, cryptographie post-quantique, convergence IA-quantique, préparation des entreprises et services financiers.",
+        "u": "/fr/notes/commercialisation-quantique-global-2026.html",
+        "type": "conference-report",
+        "w": 50
+      },
+      {
+        "t": "Jour 1 : promesses, plateformes et écosystèmes.",
+        "d": "Compte rendu du Jour 1 de Commercialising Quantum Global 2026 : stratégie britannique, plateformes quantiques, IA, capteurs, standards, écosystèmes et capital-risque.",
+        "u": "/fr/notes/commercialisation-quantique-global-2026-jour-1.html",
+        "type": "conference-report",
+        "w": 50
+      },
+      {
+        "t": "Talk. Backing science, building capability: delivering the UK’s quantum missions",
+        "d": "Lord Vallance. Commercialising Quantum Global 2026 session.",
+        "u": "/fr/notes/commercialisation-quantique-global-2026-jour-1.html#index-agenda",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Talk. Small steps and quantum leaps: delivering useful quantum computing now",
+        "d": "Katie Pizzolato. Commercialising Quantum Global 2026 session.",
+        "u": "/fr/notes/commercialisation-quantique-global-2026-jour-1.html#index-agenda",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Talk. So many platforms, so little time? When and how to start narrowing the field",
+        "d": "Peter Knight. Commercialising Quantum Global 2026 session.",
+        "u": "/fr/notes/commercialisation-quantique-global-2026-jour-1.html#index-agenda",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Fireside chat. Beyond computing: the quantum technologies transforming industry",
+        "d": "Matthew Kinsella, Tom Standage. Commercialising Quantum Global 2026 session.",
+        "u": "/fr/notes/commercialisation-quantique-global-2026-jour-1.html#index-agenda",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panels. Qubit village, utility versus hype, users, AI convergence and compute continuum",
+        "d": "Zulfi Alam, Ebba Carbonnier, Lene Oddershede, Gillian Bussey, David Rivas, Richard Murray, Yong Meng Sua, Leigh Lapworth. Commercialising Quantum Global 2026 session.",
+        "u": "/fr/notes/commercialisation-quantique-global-2026-jour-1.html#index-agenda",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panels. Adoption, sensing, bio, foundries, superclusters, standards and startup capital",
+        "d": "Dave Starling, Christian Gogolin, Corey O’Meara, Colin Sullivan, Shihan Sajeed, Michael Streif, Bijoy Sagar, Joe Spencer. Commercialising Quantum Global 2026 session.",
+        "u": "/fr/notes/commercialisation-quantique-global-2026-jour-1.html#index-agenda",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Jour 2 : régulation, Q-Day et finance.",
+        "d": "Compte rendu du Jour 2 de Commercialising Quantum Global 2026 : régulation, préparation HSBC, photonique, IA, cryptographie post-quantique, Q-Day et cas d'usage finance.",
+        "u": "/fr/notes/commercialisation-quantique-global-2026-jour-2.html",
+        "type": "conference-report",
+        "w": 50
+      },
+      {
+        "t": "Opening talks, photonics, AI compute stack and quantum readiness",
+        "d": "Chris Holmes, Baron Holmes of Richmond, Phil Intallura, Yuping Huang, Krysta Svore, Amir Naveh, Tom Standage, Jason Palmer. Commercialising Quantum Global 2026 session.",
+        "u": "/fr/notes/commercialisation-quantique-global-2026-jour-2.html#index-agenda",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panels. Secure to succeed, missing middle, qubit quality and quantum-inspired strategy",
+        "d": "Craig Farrell, Mihir Bhaskar, Pierre Desjardins, Ellen Devereux, Guillermo Albareda, Scott Buchholz, Tamzin Booth, Laveena Iyer. Commercialising Quantum Global 2026 session.",
+        "u": "/fr/notes/commercialisation-quantique-global-2026-jour-2.html#index-agenda",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Panels. Finance, life sciences, PQC, Q-Day and industrial strategy",
+        "d": "Matus Samuel, Romi Sumaria, Regev Yativ, Dino Cataldo Dell’Accio, Joanne Miller, Kartheek Solipuram, Nicolas Gomez Iglesias, Jordi Mur-Petit. Commercialising Quantum Global 2026 session.",
+        "u": "/fr/notes/commercialisation-quantique-global-2026-jour-2.html#index-agenda",
+        "type": "conference-session",
+        "w": 40
+      },
+      {
+        "t": "Closing sessions. Europe, materials, weather, sustainable AI, policy and superintelligence",
+        "d": "Sella Brosh, Ching-Ray Chang, Julia Lane, Aparna Prabhakar, Fern Watson, Wendy Ng, Cailin Birch, Christina Yan Zhang. Commercialising Quantum Global 2026 session.",
+        "u": "/fr/notes/commercialisation-quantique-global-2026-jour-2.html#index-agenda",
+        "type": "conference-session",
+        "w": 40
       }
     ]
   }

@@ -9,7 +9,12 @@
 - Added reader-mode hooks and article semantics.
 - Added print-optimized CSS with A4 layout, hidden UI chrome, and print-safe typography.
 - Added print lifecycle handling so FAQ/disclosure answers are visible in print and restored afterward.
-- Added article-level PDF icon action for browser print and save-as-PDF flows.
+- Added article-level PDF icon action linked to generated static PDFs.
+- Added generated article PDFs, canonical QR SVGs, and social-preview QA.
+- Added article table-of-contents rail, print source block, page-counter CSS, and QR print footer.
+- Added privacy-preserving analytics event hooks for PDF, print, share, copy, FAQ, TOC, search and scroll-depth interactions.
+- Added conference session entries and weighted result badges to site search.
+- Added reusable conference-report template and scaffolding tool.
 - Updated PDF export to request tagged PDF output and fail when no structure tree is present.
 - Added print-specific master image sources for report photography.
 - Updated Commercialising Quantum report images to 300 DPI metadata.
