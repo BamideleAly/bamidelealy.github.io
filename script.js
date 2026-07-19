@@ -70,7 +70,7 @@
     window.dispatchEvent(new CustomEvent('ba:analytics', { detail: payload }));
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(payload);
-    var analyticsEndpoint = window.BA_ANALYTICS_ENDPOINT || '';
+    var analyticsEndpoint = window.BA_ANALYTICS_ENDPOINT || 'https://analytics.bamidelealy.com/';
     if (analyticsEndpoint && navigator.sendBeacon) {
       navigator.sendBeacon(analyticsEndpoint, JSON.stringify(payload));
     }

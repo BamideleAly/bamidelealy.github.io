@@ -1,12 +1,19 @@
 {
 	"name": "bamidelealy-analytics",
 	"main": "analytics-worker.js",
-	"account_id": "86517e41d2a102eaf49542829c881221",
+	"account_id": "85025fbd5f99d3e8b5a876155f6d35e7",
 	"compatibility_date": "2026-07-19",
+	"workers_dev": false,
+	"routes": [
+		{
+			"pattern": "analytics.bamidelealy.com",
+			"custom_domain": true
+		}
+	],
 	"kv_namespaces": [
 		{
 			"binding": "ANALYTICS_KV",
-			"id": "REPLACE_WITH_BAMIDELE_ANALYTICS_KV_ID"
+			"id": "7f2da22c4c6d48949cf7a429a2980888"
 		}
 	],
 	"vars": {

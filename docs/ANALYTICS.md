@@ -32,20 +32,20 @@ npx --yes wrangler@latest kv namespace create bamidelealy_analytics \
 ./deploy-analytics.sh
 ```
 
-Then add this before `script.min.js` on production pages or through an injected
-snippet at the hosting layer:
+Production endpoint:
 
 ```html
-<script>window.BA_ANALYTICS_ENDPOINT = 'https://analytics.bamidelealy.com/';</script>
+https://analytics.bamidelealy.com/
 ```
 
-The repository intentionally does not hard-code a `workers.dev` endpoint. The
-runtime sends analytics only when `window.BA_ANALYTICS_ENDPOINT` is configured,
-and the CSP allows the intended first-party endpoint
-`https://analytics.bamidelealy.com`.
+The repository intentionally does not use a `workers.dev` endpoint. The runtime
+sends analytics to the first-party endpoint
+`https://analytics.bamidelealy.com/`, and it can still be overridden with
+`window.BA_ANALYTICS_ENDPOINT` for staged environments.
 
-The Team Rousseau / sebastienrousseau Worker and KV namespace created during
-testing were deleted on 19 July 2026. The available Wrangler login can list the
-non-Sebastien account but currently receives Cloudflare API authentication error
-`10000` when creating resources there, so final Cloudflare deployment requires a
-Bamidele-owned Wrangler session or refreshed permissions.
+The Worker is deployed in Team Bamidele Account:
+
+- Account ID: `85025fbd5f99d3e8b5a876155f6d35e7`
+- Worker: `bamidelealy-analytics`
+- KV namespace ID: `7f2da22c4c6d48949cf7a429a2980888`
+- Current deployed version: `766ee31b-4ae7-4825-8b39-707aafb81a59`
