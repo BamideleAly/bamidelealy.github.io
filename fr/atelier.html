@@ -31,7 +31,9 @@
   <meta name="twitter:image" content="https://bamidelealy.com/assets/bamidele-studio.jpeg?v=2026051804">
   <link rel="preload" as="image" href="/assets/bamidele-studio.avif?v=2026051804" type="image/avif" fetchpriority="high">
   <link rel="preload" as="image" href="/assets/bamidele-studio.webp?v=2026051804" type="image/webp">
-  <link rel="stylesheet" href="/styles.css?v=2026051804">
+    <link rel="preload" href="/assets/fonts/atkinson-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/atkinson-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css?v=2026051804">
   <script>
     (function () {
       try {
@@ -102,7 +104,7 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" class="reader-content">
     <section class="studio-hero" aria-labelledby="studio-heading">
       <div class="container grid grid-cols-12 hero-grid">
         <div class="col-span-5 hero-image-wrap">
@@ -154,7 +156,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year">2026</span> Bamidele Aly. Tous droits réservés.</p>
-      <p><a href="/fr/rss.xml">RSS</a> · <a href="/sitemap.xml">Plan du site</a> · <a href="/llms.txt">LLMs.txt</a> · <a href="https://sebastienrousseau.com/" rel="noopener noreferrer">Website by Sébastien Rousseau</a></p>
+      <p><a href="/fr/rss.xml">RSS</a> · <a href="/sitemap.xml">Plan du site</a> · <a href="/llms.txt">LLMs.txt</a> · <a href="/fr/accessibilite.html">Accessibilité</a> · <a href="/fr/confidentialite.html">Confidentialité</a> · <a href="https://sebastienrousseau.com/" rel="noopener noreferrer">Website by Sébastien Rousseau</a></p>
     </div>
   </footer>
   <script src="/script.js?v=2026051804" defer></script>

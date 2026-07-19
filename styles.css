@@ -305,11 +305,14 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
     background: var(--surface-soft);
     text-decoration: none;
   }
-  .nav-link.active {
+  .nav-link.active,
+  .nav-link[aria-current] {
     color: var(--ink);
+    background: var(--accent-soft);
     text-decoration: none;
   }
-  .nav-link.active::after {
+  .nav-link.active::after,
+  .nav-link[aria-current]::after {
     content: "";
     display: inline-block;
     inline-size: 4px;
@@ -1153,6 +1156,14 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
   .site-footer p { margin: 0; }
   .site-footer a { color: var(--ink-soft); }
   .site-footer a:hover { color: var(--ink); }
+  .site-footer a[aria-current],
+  .site-footer a.active {
+    color: var(--ink);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: .08em;
+    text-underline-offset: .28em;
+  }
 
   /* ============================================================
      Responsive
@@ -1198,8 +1209,10 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
       border-radius: 0;
     }
     .nav-link:hover { background: transparent; color: var(--ink); }
-    .nav-link.active::after { display: none; }
-    .nav-link.active { color: var(--accent); }
+    .nav-link.active::after,
+    .nav-link[aria-current]::after { display: none; }
+    .nav-link.active,
+    .nav-link[aria-current] { color: var(--accent); background: transparent; }
     .timeline { grid-template-columns: 1fr; }
     .contact-inner,
     .contact-card {
@@ -1808,13 +1821,184 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
   }
 
   @media print {
+    @page {
+      size: A4;
+      margin: .7in .65in .75in;
+    }
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      box-shadow: none !important;
+      filter: none !important;
+      text-shadow: none !important;
+      transition: none !important;
+    }
+    html,
+    body {
+      margin: 0 !important;
+      padding: 0 !important;
+      background: #fff !important;
+      color: #000 !important;
+      font-family: Georgia, "Times New Roman", Times, serif !important;
+      font-size: 11pt !important;
+      line-height: 1.45 !important;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
     .site-header,
     .site-footer,
     .skip-link,
     .nav-toggle,
-    .theme-toggle { display: none !important; }
-    body { background: #fff; color: #000; }
-    a { color: #000; text-decoration: underline; }
+    .theme-toggle,
+    .search-trigger,
+    .search-overlay,
+    .lang-switch,
+    .article-actions,
+    .cta-row,
+    .contact-links,
+    .trusted-section,
+    .btn-primary,
+    .btn-secondary {
+      display: none !important;
+    }
+    main,
+    article,
+    section,
+    .container,
+    .narrow,
+    .essay-body .container,
+    .essay-hero .container {
+      inline-size: auto !important;
+      max-inline-size: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: transparent !important;
+      border: 0 !important;
+    }
+    .hero,
+    .studio-hero,
+    .page-hero,
+    .essay-hero,
+    .intro,
+    .expertise,
+    .feature-project,
+    .approach,
+    .speaking,
+    .content-section,
+    .contact-options,
+    .contact-card-section,
+    .project-detail,
+    .agents-section,
+    .essay-body {
+      padding-block: 0 !important;
+      background: transparent !important;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: #000 !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+      page-break-after: avoid;
+      break-after: avoid-page;
+    }
+    h1 {
+      font-size: 24pt !important;
+      line-height: 1.08 !important;
+      margin: 0 0 12pt !important;
+    }
+    h2 {
+      font-size: 16pt !important;
+      margin: 20pt 0 8pt !important;
+    }
+    h3 {
+      font-size: 13pt !important;
+      margin: 14pt 0 6pt !important;
+    }
+    p,
+    li,
+    dd,
+    dt,
+    blockquote {
+      color: #000 !important;
+      font-size: 11pt !important;
+      line-height: 1.45 !important;
+      orphans: 3;
+      widows: 3;
+    }
+    a {
+      color: #000 !important;
+      text-decoration: underline;
+      text-underline-offset: 2pt;
+    }
+    a[href^="http"]::after {
+      content: " (" attr(href) ")";
+      font-size: 8.5pt;
+      word-break: break-all;
+    }
+    img,
+    picture,
+    svg {
+      max-inline-size: 100% !important;
+      block-size: auto !important;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .brand-mark,
+    .feature-icon,
+    .contact-icon {
+      background: transparent !important;
+      color: #000 !important;
+      border: 1pt solid #000 !important;
+    }
+    .report-figure,
+    .article-lead-media {
+      inline-size: 6.8in !important;
+      max-inline-size: 100% !important;
+      margin: 14pt auto !important;
+      page-break-inside: avoid;
+      break-inside: avoid-page;
+    }
+    .report-figure img,
+    .article-lead-media img {
+      inline-size: 6.8in !important;
+      max-inline-size: 100% !important;
+      block-size: auto !important;
+    }
+    figcaption,
+    .essay-eyebrow,
+    .section-eyebrow,
+    .essay-meta,
+    .note-meta {
+      color: #333 !important;
+      font-size: 9pt !important;
+      line-height: 1.35 !important;
+    }
+    .card,
+    .feature-card,
+    .timeline-item,
+    .publication,
+    .contact-card,
+    .report-nav-card,
+    .programme-map,
+    .session-index article,
+    .faq-list details,
+    .note-card {
+      border: 1pt solid #bbb !important;
+      background: transparent !important;
+      page-break-inside: avoid;
+      break-inside: avoid-page;
+    }
+    details {
+      display: block !important;
+    }
+    details > * {
+      display: block !important;
+    }
+    details:not([open]) > :not(summary) {
+      display: block !important;
+    }
   }
 }
 

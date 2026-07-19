@@ -2,7 +2,7 @@ name: Static quality
 
 on:
   push:
-    branches: [main]
+    branches: [main, "feat/**"]
   pull_request:
 
 jobs:
@@ -13,5 +13,52 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+      - name: Install browser audit tools
+        run: npm install
+      - name: Install image metadata tools
+        run: sudo apt-get update && sudo apt-get install -y exiftool
+      - name: Run unit tests
+        run: npm test
       - name: Run static quality checks
-        run: python3 tools/quality-check.py
+        run: npm run quality
+      - name: Verify report image DPI metadata
+        run: |
+          exiftool -XResolution -YResolution -ResolutionUnit assets/reports/commercialising-quantum-global-2026/*.{jpg,webp} \
+            | awk '/^========/ {count++} /X Resolution/ {if ($NF != "300") bad=1} /Y Resolution/ {if ($NF != "300") bad=1} /Resolution Unit/ {if ($0 !~ /inches/) bad=1} END {print "checked files:", count; if (bad) exit 1}'
+      - name: Start production-like static server
+        run: python3 tools/serve-with-headers.py --host 127.0.0.1 --port 8081 &
+      - name: Wait for server
+        run: |
+          for i in {1..30}; do
+            curl -fsS http://127.0.0.1:8081/accessibility.html >/dev/null && exit 0
+            sleep 1
+          done
+          exit 1
+      - name: Run Pa11y WCAG2AAA checks
+        run: |
+          npm run pa11y:report
+          npm run pa11y:trust
+      - name: Run Lighthouse representative checks
+        run: npm run lighthouse:report
+      - name: Enforce Lighthouse budgets
+        run: |
+          node - <<'NODE'
+          const report = require('/tmp/cqg-lighthouse.json');
+          const required = {
+            performance: 0.90,
+            accessibility: 1,
+            'best-practices': 1,
+            seo: 1
+          };
+          for (const [name, minimum] of Object.entries(required)) {
+            const score = report.categories[name].score;
+            console.log(`${name}: ${Math.round(score * 100)}`);
+            if (score < minimum) process.exitCode = 1;
+          }
+          NODE
+      - name: Export print PDF
+        run: npm run print:report

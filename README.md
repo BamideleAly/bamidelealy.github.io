@@ -7,165 +7,120 @@
 <h1 align="center">bamidelealy.github.io</h1>
 
 <p align="center">
-  A static personal site for Bamidele Aly, covering AI model risk
-  governance, applied AI in finance, British West African economic history,
-  and creative practice.
+  Multilingual static website for Bamidele Aly: AI governance, Product
+  Control, finance transformation, economic history, creative practice, and
+  long-form conference reporting.
 </p>
 
 <p align="center">
-  <a href="https://github.com/sebastienrousseau/bamidelealy.github.io/actions"><img src="https://img.shields.io/github/actions/workflow/status/sebastienrousseau/bamidelealy.github.io/pages%2Fpages-build-deployment?style=for-the-badge&label=deploy&logo=github" alt="GitHub Pages deploy" /></a>
-  <a href="https://github.com/sebastienrousseau/bamidelealy.github.io/blob/main/README.md"><img src="https://img.shields.io/badge/license-MIT-66c2a5?style=for-the-badge" alt="License: MIT" /></a>
-  <a href="https://www.w3.org/WAI/WCAG22/quickref/"><img src="https://img.shields.io/badge/WCAG_2.2-AA%2FAAA-fc8d62?style=for-the-badge" alt="WCAG 2.2 AA / AAA" /></a>
-  <a href="#engineering"><img src="https://img.shields.io/badge/no_build_step-zero_deps-1d1d1f?style=for-the-badge&logo=html5&logoColor=white" alt="No build step, zero deps" /></a>
-  <a href="https://bamidelealy.com/"><img src="https://img.shields.io/badge/live-bamidelealy.com-0071e3?style=for-the-badge" alt="Live site" /></a>
+  <a href="https://github.com/BamideleAly/bamidelealy.github.io/actions"><img src="https://img.shields.io/github/actions/workflow/status/BamideleAly/bamidelealy.github.io/static-quality.yml?style=for-the-badge&label=quality&logo=github" alt="Static quality workflow" /></a>
+  <a href="https://bamidelealy.com/"><img src="https://img.shields.io/badge/live-bamidelealy.com-0050a4?style=for-the-badge" alt="Live site" /></a>
+  <a href="https://www.w3.org/WAI/WCAG22/quickref/"><img src="https://img.shields.io/badge/WCAG_2.2-AA%2FAAA-1d1d1f?style=for-the-badge" alt="WCAG 2.2 AA / AAA target" /></a>
+  <a href="#architecture"><img src="https://img.shields.io/badge/static_site-zero_build-66c2a5?style=for-the-badge&logo=html5&logoColor=white" alt="Static site, zero build" /></a>
+  <a href="#license"><img src="https://img.shields.io/badge/license-MIT-545458?style=for-the-badge" alt="License: MIT" /></a>
 </p>
 
 ---
 
 ## Contents
 
-**Getting started**
-
-- [Install](#install) — clone, serve, deploy
-- [Quick Start](#quick-start) — edit a page, add an entry to search
-
-**The site**
-
-- [Pages](#pages) — six canonical pages, a notes section with essays and field reports, a `/thanks/` confirmation, and a `/404.html`
-- [Locales](#locales) — English (canonical), French at `/fr/`, German at `/de/`, with translated slugs
-- [Architecture](#architecture) — file layout, no-build philosophy
-- [Design system](#design-system) — Apple-inspired tokens, typography, layers
-
-**Features**
-
-- [Search](#search) — Cmd/Ctrl+K palette with fuzzy match across all pages, locale-aware
-- [Theme](#theme) — OS-aware light/dark with persistence, no flash
-- [Language selector](#language-selector) — EN/FR/DE dropdown in the header
-- [Architecture diagram](#architecture-diagram) — lazy-loaded Mermaid flowchart
-- [Contact form](#contact-form) — Formspree intake with mailto fallback
-- [Internationalisation](#internationalisation) — three locale trees with reciprocal `hreflang`
-
-**Engineering**
-
-- [Performance](#performance) — Core Web Vitals on a static budget
-- [Accessibility](#accessibility) — WCAG 2.2 AA target size, AAA contrast
-- [Security](#security) — strict CSP, no plain-text email, no trackers
-- [SEO and AI discovery](#seo-and-ai-discovery) — JSON-LD `@graph`, sitemap, `llms.txt`
-- [Deployment](#deployment) — GitHub Pages, custom domain and DNS notes
-- [Development](#development) — local server, audit recipes
-
-**Operational**
-
+- [Overview](#overview)
+- [Current Content](#current-content)
+- [Locales](#locales)
+- [Commercialising Quantum Global 2026](#commercialising-quantum-global-2026)
+- [Architecture](#architecture)
+- [Design System](#design-system)
+- [Features](#features)
+- [SEO and Discovery](#seo-and-discovery)
+- [Accessibility](#accessibility)
+- [Reader and Print](#reader-and-print)
+- [Performance](#performance)
+- [Security and Hosting](#security-and-hosting)
+- [Development](#development)
+- [Publishing Workflow](#publishing-workflow)
+- [Quality Checks](#quality-checks)
+- [Release Operations](#release-operations)
+- [Deployment](#deployment)
+- [Repository Metadata](#repository-metadata)
 - [License](#license)
 
 ---
 
-## Install
+## Overview
 
-### Clone
+This repository contains the source for `https://bamidelealy.com/`.
 
-```bash
-git clone https://github.com/sebastienrousseau/bamidelealy.github.io.git
-cd bamidelealy.github.io
-```
+The site is deliberately simple operationally: hand-authored HTML, CSS,
+vanilla JavaScript, static assets, no build step, and no framework runtime.
+It is designed for high-trust professional publishing where accessibility,
+SEO, multilingual consistency, and editorial quality matter more than
+implementation novelty.
 
-### Serve locally
+Primary themes:
 
-```bash
-python3 -m http.server 8000
-```
-
-Then open `http://localhost:8000/`. No build step, no Node toolchain, no
-dependencies to install. The site is hand-authored HTML, CSS and vanilla
-JavaScript, gzip-served via GitHub Pages.
-
-### Quality check
-
-```bash
-python3 tools/quality-check.py
-```
-
-The check validates JSON/XML syntax, internal links, core page metadata,
-image alternatives and dimensions, locale `hreflang` coverage and search
-targets. The same command runs in GitHub Actions on pull requests.
-
-### Deploy
-
-Push to `main` on a repository named `bamidelealy.github.io`. GitHub
-Pages rebuilds in ~30 s. For a custom apex domain see
-[Deployment](#deployment).
+- AI governance and model risk in regulated finance.
+- Product Control, finance transformation, and applied AI systems.
+- Economic history, especially West African monetary systems.
+- Creative studio practice.
+- Long-form conference and field reports, starting with Commercialising
+  Quantum Global 2026.
 
 ---
 
-## Quick Start
+## Current Content
 
-To change a page heading or body copy, open the relevant `*.html` and
-edit between `<h1>` and `</h1>` (or the surrounding `<section>`). Save.
-Push. GitHub Pages rebuilds.
+### Core English Pages
 
-To add a new searchable page:
-
-1. Copy `studio.html` (smallest content page) to `mypage.html` and
-   rewrite the content. Keep the `<head>` block intact so CSP,
-   JSON-LD, theme bootstrap, the language selector and the search
-   overlay travel with it.
-2. Add an entry to `search-data.json` **inside `index.en`**:
-
-   ```json
-   { "t": "My page", "d": "Short description", "u": "mypage.html" }
-   ```
-
-   Then add the translated entries to `fr/search-data.json` (under
-   `index.fr`) and `de/search-data.json` (under `index.de`).
-3. Create the FR sibling at `fr/<translated-slug>.html` and the DE
-   sibling at `de/<translated-slug>.html`. Add reciprocal
-   `<link rel="alternate" hreflang>` tags to all three.
-4. Add the three URLs to `sitemap.xml` with a sensible `<priority>`,
-   each carrying `<xhtml:link rel="alternate" hreflang>` entries for
-   the other two locales.
-
-No build, no SSR, no rehydration — refresh the browser.
-
----
-
-## Pages
-
-| Page | What it covers |
+| Page | Purpose |
 |---|---|
-| `index.html` | Home — engineering trustworthy AI for global finance. |
-| `projects.html` | Ile Owo eight-agent IFRS advisory system + geospatial risk. |
-| `historian.html` | West African monetary systems, publications, education. |
-| `studio.html` | Watercolour, Chinese painting, gouache, printmaking. |
-| `contact.html` | Curated intake form (Formspree) for speaking and advisory. |
-| `notes/index.html` | Long-form notes index — editorial essays and field reports. |
-| `notes/commercialising-quantum-global-2026.html` | Field report on Commercialising Quantum Global 2026, quantum readiness and finance. |
-| `notes/commercialising-quantum-global-2026-day-1.html` | Day 1 proceedings — promise, platforms and ecosystems. |
-| `notes/commercialising-quantum-global-2026-day-2.html` | Day 2 proceedings — regulation, Q-Day and finance. |
-| `notes/ile-owo-design.html` | Why eight agents, and not one chatbot. |
-| `notes/ai-governance-as-road.html` | Governance is the road, not the speed bump. |
-| `notes/bank-of-biafra-project.html` | Emergency money and counter-money, 1967–1970. |
-| `thanks/index.html` | Post-submission confirmation, `noindex, follow`. |
-| `404.html` | Tri-lingual not-found page; language picked from URL prefix. |
-| `about.html` | Legacy compatibility redirect to `historian.html`. |
+| `index.html` | Home page and professional positioning. |
+| `projects.html` | Applied AI, Ile Owo, multi-agent architecture, and risk projects. |
+| `historian.html` | Economic history, research, publications, and education. |
+| `studio.html` | Creative practice across watercolour, Chinese painting, gouache, printmaking, and acrylics. |
+| `contact.html` | Advisory, speaking, collaboration, and contact intake. |
+| `accessibility.html` | Accessibility statement, WCAG target, testing approach, and feedback route. |
+| `privacy.html` | Privacy notice for contact forms, third-party links, and analytics-free publishing. |
+| `notes/index.html` | Long-form notes and field-report index. |
+| `thanks/index.html` | Post-submission confirmation page. |
+| `404.html` | Not-found page. |
+| `about.html` | Compatibility redirect to `historian.html`. |
 
-Each EN page has a French sibling under `fr/` and a German sibling
-under `de/` — see [Locales](#locales) for the slug map.
+### Notes and Reports
+
+| Page | Purpose |
+|---|---|
+| `notes/commercialising-quantum-global-2026.html` | Main field report on Commercialising Quantum Global 2026. |
+| `notes/commercialising-quantum-global-2026-day-1.html` | Day 1 proceedings: promise, platforms, ecosystems, AI, standards, capital, and readiness. |
+| `notes/commercialising-quantum-global-2026-day-2.html` | Day 2 proceedings: regulation, Q-Day, post-quantum cryptography, finance, AI convergence, and enterprise adoption. |
+| `notes/ile-owo-design.html` | Why Ile Owo uses eight agents rather than one chatbot. |
+| `notes/ai-governance-as-road.html` | AI governance as the road to adoption, not a blocker. |
+| `notes/bank-of-biafra-project.html` | Bank of Biafra / Central Bank of Nigeria research note. |
+
+The repository currently contains 51 HTML pages across English, French,
+German, redirect/compatibility pages, localized notes, and governance pages.
 
 ---
 
 ## Locales
 
-The site ships in three locales — English (canonical), French and
-German. Each locale uses translated slugs so the URLs read naturally
-in their language.
+The site ships in three languages:
 
-| EN canonical | FR canonical | DE canonical |
+- English: canonical root pages.
+- French: `/fr/`.
+- German: `/de/`.
+
+Each indexable page has reciprocal `hreflang` links for `en-GB`, `fr-FR`,
+`de-DE`, and `x-default`. Search indexes and RSS feeds are localized.
+
+| English | French | German |
 |---|---|---|
 | `/` | `/fr/` | `/de/` |
 | `/projects.html` | `/fr/projets.html` | `/de/projekte.html` |
 | `/historian.html` | `/fr/historienne.html` | `/de/historikerin.html` |
 | `/studio.html` | `/fr/atelier.html` | `/de/atelier.html` |
 | `/contact.html` | `/fr/contact.html` | `/de/kontakt.html` |
+| `/accessibility.html` | `/fr/accessibilite.html` | `/de/barrierefreiheit.html` |
+| `/privacy.html` | `/fr/confidentialite.html` | `/de/datenschutz.html` |
 | `/notes/` | `/fr/notes/` | `/de/notizen/` |
 | `/notes/commercialising-quantum-global-2026.html` | `/fr/notes/commercialisation-quantique-global-2026.html` | `/de/notizen/commercialising-quantum-global-2026.html` |
 | `/notes/commercialising-quantum-global-2026-day-1.html` | `/fr/notes/commercialisation-quantique-global-2026-jour-1.html` | `/de/notizen/commercialising-quantum-global-2026-tag-1.html` |
@@ -175,26 +130,68 @@ in their language.
 | `/notes/bank-of-biafra-project.html` | `/fr/notes/projet-banque-biafra.html` | `/de/notizen/projekt-bank-von-biafra.html` |
 | `/thanks/` | `/fr/merci/` | `/de/danke/` |
 | `/about.html` | `/fr/a-propos.html` | `/de/ueber.html` |
-| `/404.html` | `/fr/404.html` | `/de/404.html` |
 
-Every indexable page declares `<link rel="alternate" hreflang>` for
-`en-GB`, `fr-FR`, `de-DE` and `x-default`. The sitemap mirrors this
-with `xhtml:link` alternates. Each locale has its own
-`search-data.json` and `rss.xml`.
+---
+
+## Commercialising Quantum Global 2026
+
+The Commercialising Quantum Global 2026 package is the first full example of
+the site’s long-form conference-report model.
+
+It includes:
+
+- A main editorial report.
+- Day 1 and Day 2 reconstruction pages.
+- French and German localized versions.
+- Apple Newsroom-inspired article layout.
+- Report navigation near the top of the article.
+- Article-specific FAQ sections with expandable `+` rows.
+- Social sharing controls for LinkedIn, X, Facebook, email, and copy link.
+- Structured metadata for search and social previews.
+- Responsive report photography from the provided Word-document source images.
+
+### Report Media
+
+Report images live under:
+
+```text
+assets/reports/commercialising-quantum-global-2026/
+```
+
+Each photo set has:
+
+- Master JPEG: `2048×1365`.
+- Master WebP: `2048×1365`.
+- Medium JPEG/WebP: `760×507`.
+- Small JPEG/WebP: `600×400`.
+
+The current report image sets are:
+
+- `quantum-commercialisation-hero`
+- `uk-quantum-strategy`
+- `compute-continuum-panel`
+- `post-quantum-cryptography`
+- `ai-quantum-convergence`
+- `quantum-regulation-strategy`
+
+Images are normalized to a consistent 3:2 editorial ratio and include
+embedded Nikon-style metadata supplied for the project.
 
 ---
 
 ## Architecture
 
-```
+```text
 bamidelealy.github.io/
-├── index.html            ← root EN pages
+├── index.html
 ├── projects.html
 ├── historian.html
 ├── studio.html
 ├── contact.html
-├── about.html            ← legacy redirect → historian.html
-├── 404.html              ← tri-lingual not-found, locale picked from URL
+├── accessibility.html
+├── privacy.html
+├── about.html
+├── 404.html
 ├── notes/
 │   ├── index.html
 │   ├── commercialising-quantum-global-2026.html
@@ -203,74 +200,72 @@ bamidelealy.github.io/
 │   ├── ile-owo-design.html
 │   ├── ai-governance-as-road.html
 │   └── bank-of-biafra-project.html
-├── thanks/
-│   └── index.html        ← noindex thank-you confirmation
-├── fr/                   ← French locale tree, translated slugs
+├── fr/
 │   ├── index.html
-│   ├── projets.html
-│   ├── historienne.html
-│   ├── atelier.html
-│   ├── contact.html
-│   ├── a-propos.html
-│   ├── 404.html
-│   ├── notes/{index,commercialisation-quantique-global-2026,commercialisation-quantique-global-2026-jour-1,commercialisation-quantique-global-2026-jour-2,conception-ile-owo,gouvernance-ia-comme-route,projet-banque-biafra}.html
-│   ├── merci/index.html
+│   ├── accessibilite.html
+│   ├── confidentialite.html
+│   ├── notes/
 │   ├── rss.xml
 │   └── search-data.json
-├── de/                   ← German locale tree, translated slugs
+├── de/
 │   ├── index.html
-│   ├── projekte.html
-│   ├── historikerin.html
-│   ├── atelier.html
-│   ├── kontakt.html
-│   ├── ueber.html
-│   ├── 404.html
-│   ├── notizen/{index,commercialising-quantum-global-2026,commercialising-quantum-global-2026-tag-1,commercialising-quantum-global-2026-tag-2,ile-owo-konzept,ki-governance-als-strasse,projekt-bank-von-biafra}.html
-│   ├── danke/index.html
+│   ├── barrierefreiheit.html
+│   ├── datenschutz.html
+│   ├── notizen/
 │   ├── rss.xml
 │   └── search-data.json
-├── styles.css            ← design system (≈37 KB raw)
-├── script.js             ← interactions (≈22 KB raw)
-├── search-data.json      ← EN search index, 27 entries
 ├── assets/
-│   ├── bamidele-aly-studio.{jpeg,webp,avif}
-│   └── bamidele-studio.{jpeg,webp,avif}
-├── sitemap.xml           ← 27 URLs with reciprocal xhtml:link hreflang
-├── rss.xml               ← EN feed; FR + DE under their locale roots
+│   ├── fonts/
+│   ├── icons/
+│   ├── diagrams/
+│   └── reports/commercialising-quantum-global-2026/
+├── styles.css
+├── styles.min.css
+├── script.js
+├── script.min.js
+├── search-data.json
+├── sitemap.xml
+├── rss.xml
 ├── robots.txt
 ├── llms.txt
 ├── ai.txt
-├── CNAME                 ← bamidelealy.com
+├── _headers
+├── tools/quality-check.py
 └── README.md
 ```
 
-Zero build step. The browser parses HTML and renders. The CSS uses
-native `@layer`, container-free `clamp()` typography, View Transitions
-where supported, and a `<picture>` element on every raster so AVIF /
-WebP win where the browser supports them.
+The production pages can reference minified assets. Source files remain in
+the repository for maintainability.
 
 ---
 
-## Design system
+## Design System
 
-Apple-inspired token set, defined once in `:root` and
-`:root[data-theme="dark"]`. Every colour, radius, motion value and
-shadow flows from these tokens — change them once and the whole site
-follows.
+The visual system is defined in `styles.css` using CSS custom properties and
+systematic layout rules.
 
-| Token group | Tokens |
+Key principles:
+
+- Apple-inspired restraint: large whitespace, strong typography, low visual
+  noise, and calm interaction states.
+- High-contrast colour tokens suitable for AAA normal-text contrast checks.
+- Editorial article columns with wider media breaks.
+- Native disclosure elements for accessible FAQs.
+- Responsive images via `<picture>`, WebP, JPEG fallback, `srcset`, and
+  explicit `width`/`height`.
+- `prefers-reduced-motion` support for article and UI animations.
+
+Core token groups:
+
+| Token group | Examples |
 |---|---|
 | Surfaces | `--bg`, `--bg-soft`, `--surface`, `--surface-soft`, `--surface-elev` |
 | Text | `--ink`, `--ink-soft`, `--ink-muted` |
 | Accent | `--accent`, `--accent-hover`, `--accent-press`, `--accent-soft`, `--accent-ink` |
 | Lines | `--line`, `--line-soft` |
+| Layout | `--container`, `--article-column`, `--article-media`, `--pad` |
+| Typography | `--font-text`, `--font-display` |
 | Motion | `--ease-out`, `--ease-in-out` |
-| Layout | `--radius`, `--radius-pill`, `--container`, `--pad` |
-| Typography | `--font-text` (Atkinson Hyperlegible), `--font-display` (SF Pro / system) |
-
-Cascade order is pinned with
-`@layer skeletonic.base, skeletonic.layout, skeletonic.elements, skeletonic.components, site;`
-so the `site` layer always wins over the Skeletonic CDN baseline.
 
 ---
 
@@ -278,226 +273,364 @@ so the `site` layer always wins over the Skeletonic CDN baseline.
 
 ### Search
 
-`Cmd+K` (macOS), `Ctrl+K` (Windows/Linux, shown as `Strg+K` on German
-pages) or `/` opens a centred dialog. Substring + fuzzy-subsequence
-match across 27 entries per locale. Arrow keys navigate, Enter
-follows, Esc closes. Under 560 px the dialog becomes full-bleed and
-the footer hints hide. The index is lazy-fetched on first open and
-cached for the session.
+The search palette opens with `Cmd+K`, `Ctrl+K`, or `/`. It lazy-loads the
+locale-specific search index:
 
-The loader is locale-aware: pages with `<html lang="fr-…">` load
-`/fr/search-data.json`, German pages load `/de/search-data.json`, all
-others load `/search-data.json`. Empty-state and "no results" strings
-are translated to match.
+- English: `search-data.json`
+- French: `fr/search-data.json`
+- German: `de/search-data.json`
+
+Search supports substring and fuzzy-subsequence matching, keyboard
+navigation, translated empty states, and locale-aware URLs.
 
 ### Theme
 
-OS-aware default via `prefers-color-scheme`, manual override stored in
-`localStorage`. A four-line inline bootstrap script runs in `<head>`
-before paint, so there is no flash of incorrect theme. Toggling the
-theme dispatches a `themechange` custom event — the Mermaid diagram
-listens and re-renders with the matching palette.
+The theme system respects `prefers-color-scheme`, stores a manual override in
+`localStorage`, and sets the theme before paint to avoid a flash of the wrong
+theme.
 
-### Language selector
+### Language Selector
 
-Every page (except redirect / 404 pages) carries an EN/FR/DE dropdown
-in the header — a globe icon, the current locale code, and a chevron.
-The dropdown items link directly to the equivalent page in each
-locale (using the localised slug), so a visitor can switch languages
-without losing context. The current locale is marked with
-`aria-current="true"`. The dropdown closes on outside click and on
-`Escape`.
+Each standard page has an EN/FR/DE language selector with reciprocal links to
+the equivalent localized page. The active locale is marked with
+`aria-current="true"`.
 
-### Architecture diagram
+### Contact Form
 
-`projects.html` ships a MermaidJS flowchart of the Ile Owo eight-agent
-system (Orchestrator, Filter, Summaryan, Historian, Insider, Outsider,
-Auditor, Scribe). The 893 KB Mermaid bundle is **lazy-loaded** via
-`IntersectionObserver` with a 400 px root-margin — pages that never
-scroll to the diagram never pay for the library.
+`contact.html` posts to Formspree and falls back gracefully. The thank-you
+pages are localized under:
 
-### Contact form
+- `thanks/`
+- `fr/merci/`
+- `de/danke/`
 
-Posted to Formspree (`https://formspree.io/f/mvojvaej`) via `fetch()`.
-On success the browser redirects to `/thanks/`. A hidden `_next` field
-also handles the no-JS server-redirect path. If JS is enabled but
-Formspree is unreachable, error states point at LinkedIn — never at a
-plain-text email.
+### Article Sharing
 
-### Internationalisation
-
-The site ships three full locale trees — English (canonical, `en-GB`),
-French (`fr-FR` under `/fr/`) and German (`de-DE` under `/de/`). Each
-HTML page declares its locale on `<html lang>`, carries reciprocal
-`<link rel="alternate" hreflang>` for all four values
-(`en-GB`, `fr-FR`, `de-DE`, `x-default`), and uses `og:locale` +
-`og:locale:alternate` for OpenGraph.
-
-Translated assets live alongside each tree:
-
-- `fr/search-data.json`, `de/search-data.json` — 27 entries each,
-  keyed by `index.fr` / `index.de`.
-- `fr/rss.xml`, `de/rss.xml` — per-locale Atom feeds.
-- `fr/404.html`, `de/404.html` — locale-specific error pages.
-
-`sitemap.xml` lists every locale variant as its own `<url>` with
-`<xhtml:link rel="alternate" hreflang>` entries for the other two
-locales. JSON-LD `inLanguage` matches the page locale. Foreign-language
-inline phrases are still tagged with `lang="yo"` (Yoruba) inside text
-content so screen readers pronounce them correctly. JSON-LD
-`Person.knowsLanguage` enumerates English, French, German, Yoruba,
-Japanese and Dutch (localised in each tree).
+Report pages expose professional share actions generated from the canonical
+article URL and document title.
 
 ---
 
-## Engineering
+## SEO and Discovery
 
-### Performance
+The site includes:
 
-Live wire sizes (gzip) from the production response:
+- Canonical URLs.
+- Open Graph metadata.
+- Twitter card metadata.
+- JSON-LD structured data.
+- Per-locale RSS feeds.
+- Per-locale search indexes.
+- `sitemap.xml` with localized alternates.
+- `robots.txt`.
+- `llms.txt`.
+- `ai.txt`.
+- Public accessibility and privacy notices in English, French, and German.
 
-| Asset | Wire size |
-|---|---|
-| `styles.css` | 5.0 KB |
-| `script.js` | 2.4 KB |
-| `search-data.json` | 1.6 KB |
-| Portrait WebP / AVIF | 8.8 KB / 15.6 KB |
-| Studio AVIF | 40.7 KB |
-| Mermaid bundle (lazy, only when visible) | 893 KB |
+The Commercialising Quantum pages include article-level metadata for:
 
-Headers:
+- Commercialising Quantum Global 2026.
+- Quantum commercialisation.
+- Post-quantum cryptography.
+- Q-Day.
+- Quantum finance.
+- AI and quantum convergence.
+- Enterprise readiness.
+- Standards, regulation, and ecosystem strategy.
 
-- Hero image preloaded as WebP (`<link rel="preload" as="image">`).
-- AVIF + WebP served via `<picture>` with JPG fallback.
-- Google Fonts CSS preloaded with `as="style"`.
-- `font-display: swap` so system fallback paints immediately.
-- All `<script>` tags carry `defer`; Mermaid lazy-loaded on viewport
-  intersection.
-- `Cache-Control: max-age=2678400` on static assets (31 days).
-- gzip + brotli at the edge.
+---
 
-### Accessibility
+## Accessibility
 
-WCAG 2.2 conformance checklist:
+Accessibility targets:
 
-- One `<h1>` per page, no heading-level skips.
-- Every `<img>` has descriptive `alt`; every icon-only button has
-  `aria-label`.
-- Every form input has `<label for>`, `required`, and `aria-required`.
-- Skip-link first in tab order; `<main>`, `<nav aria-label>`,
-  `<footer>` landmarks on every page.
-- Colour contrast: 7.29:1 (muted text) and 11:1 (body text) light; 8.88:1
-  and 9.5:1 dark — AAA for body, AA for accent links.
-- 36 px+ touch targets (WCAG 2.2 AA minimum is 24 px).
-- `prefers-reduced-motion` disables animations, including the thanks
-  page check-mark pop.
-- Foreign-language spans tagged with `lang`.
+- WCAG 2.2 AA for interactive target sizing and usability.
+- AAA-level contrast checks for normal body/link text where enforced by
+  `tools/quality-check.py`.
+- One logical `<h1>` per page.
+- Semantic landmarks: `<header>`, `<main>`, `<nav>`, `<footer>`.
+- Descriptive image `alt` text.
+- Icon-only buttons with `aria-label`.
+- Native `<details>/<summary>` for FAQ accordions.
+- `prefers-reduced-motion` support.
+- Localized language attributes and `hreflang` alternates.
 
-### Security
+Recent validation:
 
-Strict Content Security Policy via `<meta http-equiv>` on every page:
+- Pa11y WCAG2AAA passed on the Day 1 report page during local validation.
+- Lighthouse Day 1 accessibility score: `100`.
 
-```
-default-src 'self';
-script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
-style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
-font-src 'self' https://fonts.gstatic.com data:;
-img-src 'self' data: https:;
-connect-src 'self' https://formspree.io;
-base-uri 'self';
-form-action 'self' https://formspree.io;
-frame-ancestors 'none';
-```
+---
 
-Plus at the HTTP layer (from the deploying CDN):
-`Strict-Transport-Security: max-age=31536000; includeSubDomains; preload`,
-`X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`,
-`Referrer-Policy: strict-origin-when-cross-origin`.
+## Reader and Print
 
-Email obfuscation: no `mailto:` or plain-text address anywhere in
-source. The contact form stores the address as base64 in
-`data-mailto`, decoded only after a user-initiated reveal action.
-JSON-LD uses a `ContactPoint` URL instead of an `email` field.
+Reader-mode and print support are first-class release requirements:
 
-No analytics, no cookies, no trackers, no client-side storage beyond
-`theme=` (only written if the user clicks the toggle).
+- Every non-redirect page exposes a single `<main>` region with the
+  `reader-content` hook.
+- Long-form notes, reports, and governance pages use article semantics via
+  `<article role="article">`.
+- Article pages keep a clear title, description, byline/date metadata, body
+  paragraphs, headings, figures, and captions for Safari Reader Mode and
+  Chrome Reading Mode.
+- The print stylesheet hides navigation, header controls, share controls,
+  search, language controls, CTAs, and footer chrome.
+- Print output uses A4 page sizing, inch/point units, high-contrast serif body
+  text, sans-serif headings, widow/orphan protection, and forced exact colour
+  adjustment where supported.
+- Report images include print-specific `<source media="print">` entries that
+  point to the 2048×1365 master WebP assets.
+- Commercialising Quantum image files carry 300 DPI metadata and remain in
+  sRGB for modern printer and browser compatibility.
 
-### SEO and AI discovery
-
-| File | Purpose |
-|---|---|
-| `sitemap.xml` | 27 URLs (9 pages × 3 locales) with reciprocal `xhtml:link rel="alternate" hreflang`, `lastmod`, `changefreq`, `priority`. |
-| `rss.xml`, `fr/rss.xml`, `de/rss.xml` | Atom-style feed for each locale. |
-| `robots.txt` | Explicit allow for `GPTBot`, `ChatGPT-User`, `PerplexityBot`, `ClaudeBot`, `Google-Extended`, `CCBot`. Lists all three locale feeds. |
-| `llms.txt` | Canonical summary in all three languages, key facts, citation guidance. |
-| `ai.txt` | Supplementary AI-crawler directives; advertises locale-specific entry points. |
-| `<script type="application/ld+json">` | `@graph` of `Person`, `ProfilePage`, `WebSite`, `Event`, `Book`, `Chapter`, `SoftwareSourceCode`, `ContactPoint` — with `inLanguage` matching `<html lang>`. |
-
-### Deployment
-
-GitHub Pages from `main`. The repo must be named
-`bamidelealy.github.io` (or the Pages source set to "Deploy from a
-branch — main"). For a custom apex domain (`bamidelealy.com`):
-
-1. A `CNAME` file containing `bamidelealy.com` already ships at the
-   repo root, so the custom domain is tracked in git.
-2. Configure DNS A records at the apex (or `ALIAS`/`ANAME` if your
-   provider supports them):
-
-   ```
-   185.199.108.153
-   185.199.109.153
-   185.199.110.153
-   185.199.111.153
-   ```
-
-3. Enable **HTTPS** in repo Settings → Pages.
-
-Canonicals, `og:url`, JSON-LD `@id` and `sitemap.xml` already point at
-`https://bamidelealy.com/` so the SEO posture is correct from the
-moment DNS resolves.
-
-### Development
+Chrome PDF print validation:
 
 ```bash
-python3 -m http.server 8000   # default local dev path
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+  --headless \
+  --no-sandbox \
+  --disable-gpu \
+  --print-to-pdf=/tmp/cqg-overview-print.pdf \
+  http://127.0.0.1:8081/notes/commercialising-quantum-global-2026.html
 ```
 
-No formatting tooling. HTML / CSS / JS are hand-authored to be
-diff-friendly. Local audit recipes:
+---
+
+## Performance
+
+The site remains static and low-dependency:
+
+- No client framework.
+- No server rendering.
+- No build pipeline required to edit content.
+- Deferred JavaScript.
+- Lazy loading for non-critical imagery.
+- Responsive image candidates for report photos.
+- Minified CSS/JS committed for static hosting.
+
+Recent Lighthouse Day 1 report:
+
+| Category | Score |
+|---|---:|
+| Performance | 98 |
+| Accessibility | 100 |
+| Best Practices | 100 |
+| SEO | 100 |
+
+The Lighthouse evidence file is kept in `.lighthouseci/`.
+
+---
+
+## Security and Hosting
+
+The repository includes `_headers` for static hosting platforms that support
+Netlify/Cloudflare-style headers.
+
+Header goals:
+
+- Cache static assets aggressively.
+- Keep HTML cache shorter.
+- Prevent MIME sniffing.
+- Reduce unnecessary browser permissions.
+- Use strict referrer behavior.
+
+The pages also include a CSP meta tag tailored for this static site and its
+contact-form integration.
+
+The site does not ship analytics scripts. Privacy documentation is published
+at `privacy.html`, `fr/confidentialite.html`, and `de/datenschutz.html`.
+
+---
+
+## Development
+
+Install the lightweight Node metadata used for scripts:
 
 ```bash
-# Validate every JSON-LD block on every page (all locales)
-python3 -c "
-import re, json, pathlib
-for p in pathlib.Path('.').rglob('*.html'):
-  if '/.git/' in str(p): continue
-  for m in re.finditer(r'<script type=\"application/ld\+json\">(.*?)</script>', p.read_text(), re.S):
-    json.loads(m.group(1))
-print('OK')
-"
-
-# Validate each locale's search index
-python3 -c "
-import json
-for p in ['search-data.json','fr/search-data.json','de/search-data.json']:
-  json.loads(open(p).read())
-print('OK')
-"
-
-# Re-grade and re-encode the hero portrait (requires ImageMagick + libwebp + libavif)
-magick assets/bamidele-aly-studio.jpeg \
-  -modulate 102,116,100 -level 3%,97%,1.05 -unsharp 0x0.6+0.45+0 \
-  -quality 92 assets/bamidele-aly-studio.jpeg
-cwebp  -q 84 assets/bamidele-aly-studio.jpeg -o assets/bamidele-aly-studio.webp
-avifenc --min 26 --max 34 --speed 4 assets/bamidele-aly-studio.jpeg assets/bamidele-aly-studio.avif
+npm install
 ```
+
+The repository does not persist browser-audit dependencies. Pa11y and
+Lighthouse run through pinned `npx` commands so `npm audit` stays clean.
+
+### Serve Locally
+
+```bash
+python3 -m http.server 8000
+```
+
+For Lighthouse, Pa11y, and print validation, use the production-like local
+server with cache/security headers:
+
+```bash
+npm run serve
+```
+
+Open:
+
+```text
+http://localhost:8000/
+http://127.0.0.1:8081/
+```
+
+Useful report URLs:
+
+```text
+http://localhost:8000/notes/commercialising-quantum-global-2026.html
+http://localhost:8000/notes/commercialising-quantum-global-2026-day-1.html
+http://localhost:8000/notes/commercialising-quantum-global-2026-day-2.html
+```
+
+### Edit Content
+
+Edit HTML directly. Keep these synchronized when adding indexable pages:
+
+- Relevant localized HTML pages.
+- `search-data.json`
+- `fr/search-data.json`
+- `de/search-data.json`
+- `rss.xml`
+- `fr/rss.xml`
+- `de/rss.xml`
+- `sitemap.xml`
+
+---
+
+## Publishing Workflow
+
+To add a new long-form conference report:
+
+1. Create the English report page under `notes/`.
+2. Add day/session pages if the event needs chronological reconstruction.
+3. Add French and German localized versions.
+4. Add report navigation near the top of the article.
+5. Add article-specific FAQs.
+6. Add social metadata, canonical URL, Open Graph, Twitter card, and JSON-LD.
+7. Process images into the report asset folder with matching 3:2 responsive
+   variants.
+8. Add entries to notes indexes, search data, RSS feeds, and sitemap.
+9. Update `README.md`, `llms.txt`, and `ai.txt` when site structure changes.
+10. Run the static quality check.
+11. Validate key pages with accessibility and Lighthouse tooling.
+
+---
+
+## Quality Checks
+
+Run the complete fast local gate:
+
+```bash
+npm test
+npm run quality
+```
+
+Generate a machine-readable inventory:
+
+```bash
+npm run inventory
+```
+
+Run browser accessibility checks while `npm run serve` is running:
+
+```bash
+npm run pa11y:report
+npm run pa11y:trust
+```
+
+Run Lighthouse while `npm run serve` is running:
+
+```bash
+npm run lighthouse:report
+```
+
+Export a print PDF while `npm run serve` is running:
+
+```bash
+npm run print:report
+```
+
+GitHub Actions runs the v0.0.3 release gate via
+`.github/workflows/static-quality.yml`.
+
+The quality gate verifies parseable structured files, local references,
+canonical and `hreflang` coverage, image alternatives and dimensions, AAA
+contrast-sensitive design tokens, search targets, trust-page discovery,
+Commercialising Quantum image dimensions, print stylesheet requirements,
+reader-mode hooks, navigation indicators, governance footer links, and
+documentation page counts.
+
+---
+
+## Release Operations
+
+Operational documentation:
+
+- `docs/RELEASE_CHECKLIST.md`
+- `docs/PUBLISHING.md`
+- `docs/ROADMAP_V0_0_3.md`
+- `CONTRIBUTING.md`
+- `CHANGELOG.md`
+
+Release-critical tools:
+
+| Command | Purpose |
+|---|---|
+| `npm test` | Unit tests for quality-check helpers. |
+| `npm run quality` | Static HTML/CSS/JS/content/image gate. |
+| `npm run inventory` | JSON inventory of pages, languages, titles, descriptions, images, and reader hooks. |
+| `npm run serve` | Local server with production-like cache/security headers. |
+| `npm run pa11y:report` | WCAG2AAA browser audit for the main report. |
+| `npm run pa11y:trust` | WCAG2AAA browser audit for the accessibility page. |
+| `npm run lighthouse:report` | Lighthouse JSON audit for the main report. |
+| `npm run print:report` | Headless Chrome PDF export for print verification. |
+
+The v0.0.3 branch is the first operational release branch for scaling from a
+hand-authored static site into a controlled publishing system.
+
+---
+
+## Deployment
+
+The site is intended for GitHub Pages or any static host.
+
+Recommended setup:
+
+- Branch: `main`.
+- Custom domain: `bamidelealy.com`.
+- HTTPS enabled.
+- Static headers from `_headers` if the host supports them.
+
+For GitHub Pages with an apex domain, configure the domain in repository
+settings and DNS with GitHub Pages-compatible A records or an equivalent
+provider-specific `ALIAS`/`ANAME`.
+
+---
+
+## Repository Metadata
+
+Recommended GitHub repository description:
+
+```text
+Bamidele Aly’s multilingual professional site for AI governance, Product Control, finance transformation, economic history, and long-form conference reports.
+```
+
+Recommended topics:
+
+- `accessibility`
+- `ai-governance`
+- `conference-report`
+- `economic-history`
+- `finance-transformation`
+- `multilingual`
+- `post-quantum-cryptography`
+- `product-control`
+- `quantum-computing`
+- `static-site`
 
 ---
 
 ## License
 
-MIT. The SPDX header at the top of this file is the canonical
-declaration; this repository may also ship a `LICENSE` file alongside.
+MIT. The SPDX header at the top of this file is the canonical declaration.
 
 <p align="right"><a href="#contents">Back to Top</a></p>

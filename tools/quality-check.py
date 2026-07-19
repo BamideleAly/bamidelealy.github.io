@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import re
+import struct
 import sys
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
@@ -18,6 +19,17 @@ REDIRECT_STUBS = {
     ROOT / "about.html",
     ROOT / "fr" / "a-propos.html",
     ROOT / "de" / "ueber.html",
+}
+REPORT_ASSETS = ROOT / "assets" / "reports" / "commercialising-quantum-global-2026"
+REPORT_IMAGE_DIMENSIONS = {
+    "master": (2048, 1365),
+    "760": (760, 507),
+    "600": (600, 400),
+}
+TRUST_PAGES = {
+    "en": ["accessibility.html", "privacy.html"],
+    "fr": ["/fr/accessibilite.html", "/fr/confidentialite.html"],
+    "de": ["/de/barrierefreiheit.html", "/de/datenschutz.html"],
 }
 
 
@@ -34,11 +46,31 @@ class PageParser(HTMLParser):
         self.images: list[dict[str, str]] = []
         self.buttons: list[dict[str, str]] = []
         self.summaries = 0
+        self.nav_links: list[dict[str, str]] = []
+        self.footer_links: list[dict[str, str]] = []
+        self.main_count = 0
+        self.reader_content = 0
+        self.article_roles = 0
+        self.language_switchers = 0
+        self._in_footer = False
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         data = {key: value or "" for key, value in attrs}
+        classes = set(data.get("class", "").split())
         if tag == "html":
             self.lang = data.get("lang")
+        if tag == "main":
+            self.main_count += 1
+            if "reader-content" in classes:
+                self.reader_content += 1
+        if tag == "article" and data.get("role") == "article":
+            self.article_roles += 1
+            if "reader-content" in classes:
+                self.reader_content += 1
+        if "lang-switch" in classes and data.get("data-lang-switch") == "":
+            self.language_switchers += 1
+        if tag == "footer" and "site-footer" in classes:
+            self._in_footer = True
         if tag == "meta" and data.get("name") == "description":
             self.meta_description += 1
         if tag == "meta" and data.get("name") == "viewport":
@@ -53,6 +85,10 @@ class PageParser(HTMLParser):
             self.images.append(data)
         if tag == "button":
             self.buttons.append(data)
+        if tag == "a" and "nav-link" in classes:
+            self.nav_links.append(data)
+        if tag == "a" and self._in_footer:
+            self.footer_links.append(data)
         if tag == "summary":
             self.summaries += 1
         for attr in ("href", "src", "action"):
@@ -61,6 +97,10 @@ class PageParser(HTMLParser):
 
     def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         self.handle_starttag(tag, attrs)
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag == "footer":
+            self._in_footer = False
 
 
 def fail(message: str) -> None:
@@ -165,9 +205,30 @@ def check_html_pages() -> None:
             alternates = {lang for lang, _ in parser.alternates}
             if not EXPECTED_HREFLANG <= alternates:
                 fail(f"{page.relative_to(ROOT)} missing hreflang set")
+        if page not in REDIRECT_STUBS and parser.main_count != 1:
+            fail(f"{page.relative_to(ROOT)} has {parser.main_count} main elements")
+        if page not in REDIRECT_STUBS and parser.reader_content < 1:
+            fail(f"{page.relative_to(ROOT)} missing reader-content hook")
         h1_count = len(re.findall(r"<h1\b", text, re.I))
         if page not in REDIRECT_STUBS and h1_count != 1:
             fail(f"{page.relative_to(ROOT)} has {h1_count} h1 elements")
+        if parser.nav_links and 'id="navToggle"' not in text:
+            fail(f"{page.relative_to(ROOT)} navigation toggle missing navToggle id")
+        if parser.nav_links and "404.html" not in str(page) and parser.language_switchers != 1:
+            fail(f"{page.relative_to(ROOT)} has {parser.language_switchers} language switchers")
+        if parser.nav_links and 'class="nav-link active"' not in text and not any(link.get("aria-current") for link in parser.footer_links):
+            fail(f"{page.relative_to(ROOT)} missing static current-page indicator")
+        footer_hrefs = {link.get("href", "") for link in parser.footer_links}
+        if "404.html" not in str(page):
+            rel_parts = page.relative_to(ROOT).parts
+            if rel_parts[0] == "fr":
+                required_footer = {"/fr/accessibilite.html", "/fr/confidentialite.html"}
+            elif rel_parts[0] == "de":
+                required_footer = {"/de/barrierefreiheit.html", "/de/datenschutz.html"}
+            else:
+                required_footer = {"/accessibility.html", "/privacy.html"}
+            if not required_footer <= footer_hrefs:
+                fail(f"{page.relative_to(ROOT)} missing governance footer links")
         for image in parser.images:
             if "alt" not in image:
                 fail(f"{page.relative_to(ROOT)} image missing alt: {image.get('src', '')}")
@@ -182,6 +243,8 @@ def check_html_pages() -> None:
                 fail(f"{page.relative_to(ROOT)} button missing accessible name")
         if "<details" in text and parser.summaries != len(re.findall(r"<details\b", text, re.I)):
             fail(f"{page.relative_to(ROOT)} details element missing summary")
+        if "assets/reports/commercialising-quantum-global-2026" in text and '<source media="print"' not in text:
+            fail(f"{page.relative_to(ROOT)} report images missing print-resolution source")
         for _, _, ref in parser.refs:
             target = local_target(page, ref)
             if target and not target.exists():
@@ -201,11 +264,156 @@ def check_search_targets() -> None:
                 fail(f"{search_file.relative_to(ROOT)} broken search target {entry['u']}")
 
 
+def jpeg_dimensions(path: Path) -> tuple[int, int]:
+    data = path.read_bytes()
+    if not data.startswith(b"\xff\xd8"):
+        fail(f"{path.relative_to(ROOT)} is not a JPEG file")
+    offset = 2
+    while offset < len(data):
+        if data[offset] != 0xFF:
+            offset += 1
+            continue
+        marker = data[offset + 1]
+        offset += 2
+        if marker in {0xD8, 0xD9}:
+            continue
+        length = struct.unpack(">H", data[offset : offset + 2])[0]
+        if marker in {0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF}:
+            height, width = struct.unpack(">HH", data[offset + 3 : offset + 7])
+            return width, height
+        offset += length
+    fail(f"{path.relative_to(ROOT)} missing JPEG size marker")
+
+
+def webp_dimensions(path: Path) -> tuple[int, int]:
+    data = path.read_bytes()
+    if data[:4] != b"RIFF" or data[8:12] != b"WEBP":
+        fail(f"{path.relative_to(ROOT)} is not a WebP file")
+    chunk = data[12:16]
+    if chunk == b"VP8X":
+        width = int.from_bytes(data[24:27], "little") + 1
+        height = int.from_bytes(data[27:30], "little") + 1
+        return width, height
+    if chunk == b"VP8 ":
+        width, height = struct.unpack("<HH", data[26:30])
+        return width & 0x3FFF, height & 0x3FFF
+    if chunk == b"VP8L":
+        bits = int.from_bytes(data[21:25], "little")
+        width = (bits & 0x3FFF) + 1
+        height = ((bits >> 14) & 0x3FFF) + 1
+        return width, height
+    fail(f"{path.relative_to(ROOT)} uses unsupported WebP chunk {chunk!r}")
+
+
+def expected_report_dimensions(path: Path) -> tuple[int, int]:
+    stem = path.stem
+    if stem.endswith("-760"):
+        return REPORT_IMAGE_DIMENSIONS["760"]
+    if stem.endswith("-600"):
+        return REPORT_IMAGE_DIMENSIONS["600"]
+    return REPORT_IMAGE_DIMENSIONS["master"]
+
+
+def check_report_images() -> None:
+    if not REPORT_ASSETS.exists():
+        fail("Commercialising Quantum report asset directory is missing")
+    images = sorted(path for path in REPORT_ASSETS.iterdir() if path.suffix.lower() in {".jpg", ".webp"})
+    if len(images) != 36:
+        fail(f"expected 36 Commercialising Quantum report image variants, found {len(images)}")
+    base_names: dict[str, set[str]] = {}
+    for image in images:
+        size = jpeg_dimensions(image) if image.suffix.lower() == ".jpg" else webp_dimensions(image)
+        expected = expected_report_dimensions(image)
+        if size != expected:
+            fail(f"{image.relative_to(ROOT)} is {size[0]}x{size[1]}, expected {expected[0]}x{expected[1]}")
+        stem = re.sub(r"-(600|760)$", "", image.stem)
+        base_names.setdefault(stem, set()).add(image.suffix.lower())
+    if len(base_names) != 6:
+        fail(f"expected 6 Commercialising Quantum image sets, found {len(base_names)}")
+    for stem, suffixes in base_names.items():
+        if suffixes != {".jpg", ".webp"}:
+            fail(f"Commercialising Quantum image set {stem} missing JPEG/WebP pair")
+
+
+def check_print_styles() -> None:
+    css = (ROOT / "styles.css").read_text()
+    if "@media print" not in css or "@page" not in css:
+        fail("styles.css missing dedicated print stylesheet")
+    for token in [
+        "size: A4",
+        "margin: .7in .65in .75in",
+        "font-size: 11pt",
+        "font-family: Georgia",
+        ".site-header",
+        ".site-footer",
+        "display: none !important",
+        "inline-size: 6.8in",
+        "print-color-adjust: exact",
+    ]:
+        if token not in css:
+            fail(f"styles.css print stylesheet missing {token}")
+    minified_css = (ROOT / "styles.min.css").read_text()
+    for calc_expression in re.findall(r"calc\([^)]*\)", minified_css):
+        if "+" in calc_expression and not re.search(r"\s\+\s", calc_expression):
+            fail(f"styles.min.css contains invalid calc() plus spacing: {calc_expression}")
+    if "calc(var(--article-column) + (var(--pad) * 2))" not in minified_css:
+        fail("styles.min.css missing valid article-column calc() rule")
+
+
+def check_discovery_indexes() -> None:
+    sitemap = ET.parse(ROOT / "sitemap.xml")
+    ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+    urls = {loc.text for loc in sitemap.findall(".//sm:loc", ns) if loc.text}
+    expected_urls = {
+        "https://bamidelealy.com/accessibility.html",
+        "https://bamidelealy.com/privacy.html",
+        "https://bamidelealy.com/fr/accessibilite.html",
+        "https://bamidelealy.com/fr/confidentialite.html",
+        "https://bamidelealy.com/de/barrierefreiheit.html",
+        "https://bamidelealy.com/de/datenschutz.html",
+    }
+    missing = expected_urls - urls
+    if missing:
+        fail(f"sitemap.xml missing trust pages: {', '.join(sorted(missing))}")
+    for search_file, language in [
+        (ROOT / "search-data.json", "en"),
+        (ROOT / "fr/search-data.json", "fr"),
+        (ROOT / "de/search-data.json", "de"),
+    ]:
+        entries = json.loads(search_file.read_text())["index"][language]
+        targets = {entry["u"] for entry in entries}
+        for target in TRUST_PAGES[language]:
+            if target not in targets:
+                fail(f"{search_file.relative_to(ROOT)} missing trust target {target}")
+
+
+def check_documentation() -> None:
+    html_count = len([page for page in ROOT.rglob("*.html") if ".git" not in page.parts and ".lighthouseci" not in page.parts])
+    readme = (ROOT / "README.md").read_text()
+    if f"{html_count} HTML pages" not in readme:
+        fail(f"README.md does not report current HTML page count: {html_count}")
+    for path in ["accessibility.html", "privacy.html", "fr/accessibilite.html", "fr/confidentialite.html", "de/barrierefreiheit.html", "de/datenschutz.html"]:
+        if path not in readme:
+            fail(f"README.md missing {path}")
+    for doc in [ROOT / "llms.txt", ROOT / "ai.txt"]:
+        text = doc.read_text()
+        for url in [
+            "https://bamidelealy.com/accessibility.html",
+            "https://bamidelealy.com/privacy.html",
+        ]:
+            if url not in text:
+                fail(f"{doc.relative_to(ROOT)} missing {url}")
+
+
 def main() -> int:
     check_structured_files()
     check_contrast_tokens()
     check_html_pages()
     check_search_targets()
+    check_report_images()
+    check_print_styles()
+    check_discovery_indexes()
+    check_documentation()
     print("Static quality checks passed.")
     return 0
 

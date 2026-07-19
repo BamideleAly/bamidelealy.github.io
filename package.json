@@ -1,0 +1,16 @@
+{
+  "name": "bamidelealy.github.io",
+  "version": "0.0.3",
+  "private": true,
+  "description": "Multilingual static website for Bamidele Aly with audited SEO, accessibility, reader-mode, print and publishing quality gates.",
+  "scripts": {
+    "quality": "python3 tools/quality-check.py && node --check script.js && node --check script.min.js",
+    "test": "python3 -m unittest discover -s tests -p 'test_*.py'",
+    "inventory": "python3 tools/site-inventory.py",
+    "serve": "python3 tools/serve-with-headers.py --port 8081",
+    "pa11y:report": "npx --yes pa11y@9.1.1 http://127.0.0.1:8081/notes/commercialising-quantum-global-2026.html --standard WCAG2AAA --timeout 30000",
+    "pa11y:trust": "npx --yes pa11y@9.1.1 http://127.0.0.1:8081/accessibility.html --standard WCAG2AAA --timeout 30000",
+    "lighthouse:report": "npx --yes lighthouse@13.4.0 http://127.0.0.1:8081/notes/commercialising-quantum-global-2026.html --quiet --chrome-flags='--headless --no-sandbox' --output=json --output-path=/tmp/cqg-lighthouse.json",
+    "print:report": "python3 tools/export-print-pdf.py http://127.0.0.1:8081/notes/commercialising-quantum-global-2026.html /tmp/cqg-overview-print.pdf"
+  }
+}

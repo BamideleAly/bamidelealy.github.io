@@ -26,6 +26,28 @@
     toLight: 'Switch to light theme'
   };
 
+  // Current-page indicators for primary navigation and footer links.
+  var currentPath = window.location.pathname.replace(/\/index\.html$/, '/');
+  var markCurrentLinks = function () {
+    document.querySelectorAll('.nav-link, .site-footer a').forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (!href || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('#')) return;
+      var linkPath;
+      try {
+        linkPath = new URL(href, window.location.href).pathname.replace(/\/index\.html$/, '/');
+      } catch (e) {
+        return;
+      }
+      var exact = linkPath === currentPath;
+      var section = linkPath !== '/' && currentPath.startsWith(linkPath) && /\/(notes|notizen)\//.test(linkPath);
+      if (exact || section) {
+        link.classList.add('active');
+        link.setAttribute('aria-current', exact ? 'page' : 'location');
+      }
+    });
+  };
+  markCurrentLinks();
+
   // Mobile nav
   var nav = document.querySelector('.site-nav');
   var navToggle = document.getElementById('navToggle');

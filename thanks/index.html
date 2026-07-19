@@ -25,7 +25,9 @@
   <meta property="og:url" content="https://bamidelealy.com/thanks/">
   <meta name="twitter:card" content="summary">
 
-  <link rel="stylesheet" href="../styles.css?v=2026051804">
+    <link rel="preload" href="/assets/fonts/atkinson-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/atkinson-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../styles.css?v=2026051804">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any">
   <link rel="manifest" href="/manifest.json">
@@ -113,7 +115,7 @@
           <li><a class="nav-link" href="../historian.html">Historian</a></li>
           <li><a class="nav-link" href="../studio.html">Studio</a></li>
           <li><a class="nav-link" href="../notes/">Notes</a></li>
-          <li><a class="nav-link" href="../contact.html">Contact</a></li>
+          <li><a class="nav-link active" href="../contact.html" aria-current="location">Contact</a></li>
         </ul>
         <button class="search-trigger" id="searchTrigger" type="button" aria-label="Search">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
@@ -140,7 +142,7 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" class="reader-content">
     <section class="thanks-hero" aria-labelledby="thanks-heading">
       <div class="thanks-inner">
         <div class="thanks-check" aria-hidden="true">
@@ -178,7 +180,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year">2026</span> Bamidele Aly. All rights reserved.</p>
-      <p><a href="../rss.xml">RSS</a> · <a href="../sitemap.xml">Sitemap</a> · <a href="../llms.txt">LLMs.txt</a> · <a href="https://sebastienrousseau.com/" rel="noopener noreferrer">Website by Sébastien Rousseau</a></p>
+      <p><a href="../rss.xml">RSS</a> · <a href="../sitemap.xml">Sitemap</a> · <a href="../llms.txt">LLMs.txt</a> · <a href="/accessibility.html">Accessibility</a> · <a href="/privacy.html">Privacy</a> · <a href="https://sebastienrousseau.com/" rel="noopener noreferrer">Website by Sébastien Rousseau</a></p>
     </div>
   </footer>
   <script src="../script.js?v=2026051804" defer></script>
