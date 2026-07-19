@@ -57,8 +57,8 @@ Use this checklist for every production release and every new long-form report.
 - Confirm A4 pagination, no clipped text, readable type, and preserved figure captions.
 - Confirm report images carry 300 DPI metadata.
 - Confirm exported and static article PDFs contain a structure tree.
-- Validate formal PDF/UA compliance with a dedicated PDF/UA checker before
-  external distribution.
+- Run `npm run pdf:audit`.
+- Run `npm run pdf:ua2-a4f` before describing any PDF as PDF/UA-2 or PDF/A-4f.
 
 ## 7. Internationalisation
 

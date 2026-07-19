@@ -1,0 +1,172 @@
+{
+  "verapdf_available": false,
+  "flavours": [
+    "ua1",
+    "ua2",
+    "4f"
+  ],
+  "pdfs": [
+    {
+      "file": "assets/pdfs/de-notizen-commercialising-quantum-global-2026-tag-1.pdf",
+      "bytes": 2021358,
+      "pdf_header": "%PDF-1.4",
+      "is_pdf_2": false,
+      "has_structure_tree": true,
+      "has_lang": true,
+      "has_title": true
+    },
+    {
+      "file": "assets/pdfs/de-notizen-commercialising-quantum-global-2026-tag-2.pdf",
+      "bytes": 1819102,
+      "pdf_header": "%PDF-1.4",
+      "is_pdf_2": false,
+      "has_structure_tree": true,
+      "has_lang": true,
+      "has_title": true
+    },
+    {
+      "file": "assets/pdfs/de-notizen-commercialising-quantum-global-2026.pdf",
+      "bytes": 3471675,
+      "pdf_header": "%PDF-1.4",
+      "is_pdf_2": false,
+      "has_structure_tree": true,
+      "has_lang": true,
+      "has_title": true
+    },
+    {
+      "file": "assets/pdfs/de-notizen-ile-owo-konzept.pdf",
+      "bytes": 222595,
+      "pdf_header": "%PDF-1.4",
+      "is_pdf_2": false,
+      "has_structure_tree": true,
+      "has_lang": true,
+      "has_title": true
+    },
+    {
+      "file": "assets/pdfs/de-notizen-ki-governance-als-strasse.pdf",
+      "bytes": 226430,
+      "pdf_header": "%PDF-1.4",
+      "is_pdf_2": false,
+      "has_structure_tree": true,
+      "has_lang": true,
+      "has_title": true
+    },
+    {
+      "file": "assets/pdfs/de-notizen-projekt-bank-von-biafra.pdf",
+      "bytes": 204007,
+      "pdf_header": "%PDF-1.4",
+      "is_pdf_2": false,
+      "has_structure_tree": true,
+      "has_lang": true,
+      "has_title": true
+    },
+    {
+      "file": "assets/pdfs/fr-notes-commercialisation-quantique-global-2026-jour-1.pdf",
+      "bytes": 2017266,
+      "pdf_header": "%PDF-1.4",
+      "is_pdf_2": false,
+      "has_structure_tree": true,
+      "has_lang": true,
+      "has_title": true
+    },
+    {
+      "file": "assets/pdfs/fr-notes-commercialisation-quantique-global-2026-jour-2.pdf",
+      "bytes": 1815246,
+      "pdf_header": "%PDF-1.4",
+      "is_pdf_2": false,
+      "has_structure_tree": true,
+      "has_lang": true,
+      "has_title": true
+    },
+    {
+      "file": "assets/pdfs/fr-notes-commercialisation-quantique-global-2026.pdf",
+      "bytes": 3452854,
+      "pdf_header": "%PDF-1.4",
+      "is_pdf_2": false,
+      "has_structure_tree": true,
+      "has_lang": true,
+      "has_title": true
+    },
+    {
+      "file": "assets/pdfs/fr-notes-conception-ile-owo.pdf",
+      "bytes": 215795,
+      "pdf_header": "%PDF-1.4",
+      "is_pdf_2": false,
+      "has_structure_tree": true,
+      "has_lang": true,
+      "has_title": true
+    },
+    {
+      "file": "assets/pdfs/fr-notes-gouvernance-ia-comme-route.pdf",
+      "bytes": 220399,
+      "pdf_header": "%PDF-1.4",
+      "is_pdf_2": false,
+      "has_structure_tree": true,
+      "has_lang": true,
+      "has_title": true
+    },
+    {
+      "file": "assets/pdfs/fr-notes-projet-banque-biafra.pdf",
+      "bytes": 206126,
+      "pdf_header": "%PDF-1.4",
+      "is_pdf_2": false,
+      "has_structure_tree": true,
+      "has_lang": true,
+      "has_title": true
+    },
+    {
+      "file": "assets/pdfs/notes-ai-governance-as-road.pdf",
+      "bytes": 212161,
+      "pdf_header": "%PDF-1.4",
+      "is_pdf_2": false,
+      "has_structure_tree": true,
+      "has_lang": true,
+      "has_title": true
+    },
+    {
+      "file": "assets/pdfs/notes-bank-of-biafra-project.pdf",
+      "bytes": 192511,
+      "pdf_header": "%PDF-1.4",
+      "is_pdf_2": false,
+      "has_structure_tree": true,
+      "has_lang": true,
+      "has_title": true
+    },
+    {
+      "file": "assets/pdfs/notes-commercialising-quantum-global-2026-day-1.pdf",
+      "bytes": 2088093,
+      "pdf_header": "%PDF-1.4",
+      "is_pdf_2": false,
+      "has_structure_tree": true,
+      "has_lang": true,
+      "has_title": true
+    },
+    {
+      "file": "assets/pdfs/notes-commercialising-quantum-global-2026-day-2.pdf",
+      "bytes": 1858441,
+      "pdf_header": "%PDF-1.4",
+      "is_pdf_2": false,
+      "has_structure_tree": true,
+      "has_lang": true,
+      "has_title": true
+    },
+    {
+      "file": "assets/pdfs/notes-commercialising-quantum-global-2026.pdf",
+      "bytes": 3463533,
+      "pdf_header": "%PDF-1.4",
+      "is_pdf_2": false,
+      "has_structure_tree": true,
+      "has_lang": true,
+      "has_title": true
+    },
+    {
+      "file": "assets/pdfs/notes-ile-owo-design.pdf",
+      "bytes": 210574,
+      "pdf_header": "%PDF-1.4",
+      "is_pdf_2": false,
+      "has_structure_tree": true,
+      "has_lang": true,
+      "has_title": true
+    }
+  ]
+}

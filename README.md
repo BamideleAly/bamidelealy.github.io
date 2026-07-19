@@ -445,8 +445,11 @@ Header goals:
 The pages also include a CSP meta tag tailored for this static site and its
 contact-form integration.
 
-The site does not ship analytics scripts. Privacy documentation is published
-at `privacy.html`, `fr/confidentialite.html`, and `de/datenschutz.html`.
+The site does not ship third-party analytics scripts. The runtime emits
+first-party analytics events only, and `workers/analytics-worker.js` provides an
+optional privacy-preserving Cloudflare Worker backend. Privacy documentation is
+published at `privacy.html`, `fr/confidentialite.html`, and
+`de/datenschutz.html`.
 
 ---
 
@@ -566,6 +569,22 @@ Regenerate article PDFs, QR codes, and social-preview QA while
 npm run assets:articles
 ```
 
+Audit committed article PDFs:
+
+```bash
+npm run pdf:audit
+```
+
+Strict PDF/UA-2 + PDF/A-4f validation is available when `verapdf` is installed:
+
+```bash
+npm run pdf:ua2-a4f
+```
+
+Current browser-generated PDFs are tagged and structurally checked, but their
+headers are `%PDF-1.4`; they must not be described as PDF/UA-2 or PDF/A-4f
+compliant until the strict validator passes.
+
 GitHub Actions runs the v0.0.3 release gate via
 `.github/workflows/static-quality.yml`.
 
@@ -602,6 +621,9 @@ Release-critical tools:
 | `npm run lighthouse:report` | Lighthouse JSON audit for the main report. |
 | `npm run print:report` | Headless Chrome PDF export for print verification. |
 | `npm run assets:articles` | Generates per-article tagged PDFs, QR SVGs, and social-preview QA. |
+| `npm run pdf:audit` | Fast structural audit for committed article PDFs. |
+| `npm run pdf:ua2-a4f` | Strict veraPDF target check for PDF/UA-2 and PDF/A-4f. |
+| `npm run content:example` | Renders the structured conference-report example. |
 
 The v0.0.3 branch is the first operational release branch for scaling from a
 hand-authored static site into a controlled publishing system.

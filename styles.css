@@ -1473,6 +1473,12 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
     text-decoration-thickness: .08em;
     text-underline-offset: .18em;
   }
+  .essay-body p a,
+  .essay-body li a {
+    text-decoration-line: underline;
+    text-decoration-thickness: .08em;
+    text-underline-offset: .22em;
+  }
   .essay-chapter p:first-of-type:first-letter {
     color: var(--ink);
     float: left;

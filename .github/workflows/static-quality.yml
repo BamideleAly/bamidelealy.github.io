@@ -21,10 +21,16 @@ jobs:
         run: npm install
       - name: Install image metadata tools
         run: sudo apt-get update && sudo apt-get install -y exiftool
+      - name: Install Python tooling
+        run: python3 -m pip install -r requirements-dev.txt
       - name: Run unit tests
         run: npm test
+      - name: Verify content compiler
+        run: npm run content:example >/tmp/example-conference-report.html
       - name: Run static quality checks
         run: npm run quality
+      - name: Verify generated article PDF and QR assets
+        run: npm run pdf:audit
       - name: Verify report image DPI metadata
         run: |
           exiftool -XResolution -YResolution -ResolutionUnit assets/reports/commercialising-quantum-global-2026/*.{jpg,webp} \
@@ -38,6 +44,10 @@ jobs:
             sleep 1
           done
           exit 1
+      - name: Verify article asset generator is idempotent
+        run: |
+          npm run assets:articles
+          git diff --exit-code -- assets/pdfs assets/qr docs/SOCIAL_PREVIEW_QA.json
       - name: Run Pa11y WCAG2AAA checks
         run: |
           npm run pa11y:report
@@ -49,10 +59,11 @@ jobs:
           node - <<'NODE'
           const report = require('/tmp/cqg-lighthouse.json');
           const required = {
-            performance: 0.90,
+            performance: 0.95,
             accessibility: 1,
             'best-practices': 1,
-            seo: 1
+            seo: 1,
+            'agentic-browsing': 1
           };
           for (const [name, minimum] of Object.entries(required)) {
             const score = report.categories[name].score;

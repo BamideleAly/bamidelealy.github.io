@@ -13,8 +13,11 @@
 - Added generated article PDFs, canonical QR SVGs, and social-preview QA.
 - Added article table-of-contents rail, print source block, page-counter CSS, and QR print footer.
 - Added privacy-preserving analytics event hooks for PDF, print, share, copy, FAQ, TOC, search and scroll-depth interactions.
+- Added optional privacy-preserving Cloudflare Worker analytics backend.
 - Added conference session entries and weighted result badges to site search.
-- Added reusable conference-report template and scaffolding tool.
+- Added reusable conference-report template, scaffolding tool and structured JSON compiler.
+- Added PDF audit tooling for tagged structure, PDF version evidence, PDF/UA-1, PDF/UA-2 and PDF/A-4f veraPDF targets.
+- Added critical article CSS to reduce render-blocking cost on long-form reports.
 - Updated PDF export to request tagged PDF output and fail when no structure tree is present.
 - Added print-specific master image sources for report photography.
 - Updated Commercialising Quantum report images to 300 DPI metadata.

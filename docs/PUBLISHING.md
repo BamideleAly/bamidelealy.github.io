@@ -95,8 +95,14 @@ Required fields:
   `tools/templates/conference-report.html` or
   `tools/scaffold-conference-report.py` so agenda maps, FAQs, social previews,
   reader-mode hooks, print support, and article metadata stay consistent.
+- Structured reports can also be drafted in
+  `content/conference-reports/*.json` and rendered with
+  `tools/build-conference-report.py`.
 - After publishing or changing an article, run `npm run assets:articles` while
   the local server is running to refresh PDF, QR, and social-preview QA assets.
+- Run `npm run pdf:audit` for committed tagged-PDF structure checks. Run
+  `npm run pdf:ua2-a4f` only when a PDF 2.0 remediation toolchain has produced
+  candidate PDF/UA-2 + PDF/A-4f files.
 
 ## Generation Roadmap
 

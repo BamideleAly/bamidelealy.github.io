@@ -371,9 +371,14 @@ def check_print_styles() -> None:
 
 def check_article_assets() -> None:
     qa_path = ROOT / "docs" / "SOCIAL_PREVIEW_QA.json"
+    pdf_audit_path = ROOT / "docs" / "PDF_UA_AUDIT.json"
     if not qa_path.exists():
         fail("docs/SOCIAL_PREVIEW_QA.json is missing")
+    if not pdf_audit_path.exists():
+        fail("docs/PDF_UA_AUDIT.json is missing")
     qa = json.loads(qa_path.read_text())
+    pdf_audit = json.loads(pdf_audit_path.read_text())
+    pdf_audit_entries = {entry["file"]: entry for entry in pdf_audit.get("pdfs", [])}
     articles = qa.get("articles", [])
     html_articles = []
     for folder in [ROOT / "notes", ROOT / "fr" / "notes", ROOT / "de" / "notizen"]:
@@ -390,6 +395,11 @@ def check_article_assets() -> None:
             fail(f"missing or suspicious static PDF {entry['pdf']}")
         if b"/StructTreeRoot" not in pdf.read_bytes():
             fail(f"static PDF lacks structure tree {entry['pdf']}")
+        audit_entry = pdf_audit_entries.get(entry["pdf"])
+        if not audit_entry:
+            fail(f"PDF audit missing {entry['pdf']}")
+        if audit_entry.get("has_structure_tree") is not True:
+            fail(f"PDF audit reports missing structure tree {entry['pdf']}")
         if not qr.exists() or "<svg" not in qr.read_text(errors="replace"):
             fail(f"missing QR SVG {entry['qr']}")
         if not entry.get("social_preview_ok"):

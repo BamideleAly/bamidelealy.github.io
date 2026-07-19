@@ -1,0 +1,24 @@
+{
+  "slug": "example-conference-report",
+  "lang": "en-GB",
+  "title": "Example Conference Report",
+  "description": "Structured starter content for a future conference field report.",
+  "canonical_path": "notes/example-conference-report.html",
+  "dek": "Replace this with the editorial thesis of the conference report.",
+  "date": "2026-07-19",
+  "reading_time": "10 min read",
+  "eyebrow": "Field Report",
+  "agenda_intro": "List the talks, panels, interviews and moderator context before analysis.",
+  "sessions": [
+    {"title": "Panel. Example session", "speakers": "Speaker One, Speaker Two; moderated by Moderator."}
+  ],
+  "chapters": [
+    {"id": "thesis", "heading": "The thesis", "paragraphs": ["Write the central editorial argument here."]},
+    {"id": "operating-model", "heading": "Operating model implications", "paragraphs": ["Write the practical operating implications here."]}
+  ],
+  "faqs": [
+    {"question": "What is the central thesis?", "answer": "Replace this with a specific answer."},
+    {"question": "Who should read this report?", "answer": "Replace this with a specific answer."},
+    {"question": "What should readers do next?", "answer": "Replace this with a specific answer."}
+  ]
+}

@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import argparse
+import gzip
+import io
 import os
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -26,10 +28,42 @@ STATIC_EXTENSIONS = {
     ".woff2",
     ".xml",
 }
+COMPRESS_EXTENSIONS = {".css", ".html", ".js", ".json", ".svg", ".txt", ".xml"}
 
 
 class HeaderHandler(SimpleHTTPRequestHandler):
     """Simple static handler with the same header intent as `_headers`."""
+
+    def send_head(self):  # type: ignore[override]
+        path = Path(self.translate_path(self.path))
+        if path.is_dir():
+            for index in ("index.html", "index.htm"):
+                index_path = path / index
+                if index_path.exists():
+                    path = index_path
+                    break
+            else:
+                return super().send_head()
+        if not path.exists() or not path.is_file():
+            self.send_error(404, "File not found")
+            return None
+        content_type = self.guess_type(str(path))
+        data = path.read_bytes()
+        accepts_gzip = "gzip" in self.headers.get("Accept-Encoding", "")
+        if accepts_gzip and path.suffix.lower() in COMPRESS_EXTENSIONS:
+            data = gzip.compress(data, compresslevel=9)
+            self.send_response(200)
+            self.send_header("Content-Type", content_type)
+            self.send_header("Content-Encoding", "gzip")
+            self.send_header("Vary", "Accept-Encoding")
+            self.send_header("Content-Length", str(len(data)))
+            self.end_headers()
+            return io.BytesIO(data)
+        self.send_response(200)
+        self.send_header("Content-Type", content_type)
+        self.send_header("Content-Length", str(len(data)))
+        self.end_headers()
+        return io.BytesIO(data)
 
     def end_headers(self) -> None:
         path = self.path.split("?", 1)[0]
