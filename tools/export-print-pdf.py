@@ -40,6 +40,7 @@ def main() -> int:
             "--headless",
             "--no-sandbox",
             "--disable-gpu",
+            "--no-pdf-header-footer",
             "--force-renderer-accessibility",
             "--export-tagged-pdf",
             "--enable-features=AccessibilityPDFExport",

@@ -1,73 +1,18 @@
 {
   "verapdf_available": true,
   "flavours": [
-    "ua2",
     "4f"
   ],
   "pdfs": [
     {
       "file": "assets/pdfs/de-notizen-commercialising-quantum-global-2026-tag-1.pdf",
-      "bytes": 2027179,
+      "bytes": 1995179,
       "pdf_header": "%PDF-2.0",
       "is_pdf_2": true,
       "has_structure_tree": true,
       "has_lang": true,
-      "has_title": false,
-      "verapdf_ua2_exit_code": 1,
-      "ua2_compliant": false,
-      "ua2_failed_rules": 7,
-      "ua2_failed_checks": 4906,
-      "ua2_failed_summaries": [
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.28.2",
-          "test_number": 1,
-          "failed_checks": 3,
-          "description": "A Figure structure element shall have at least one of the following properties: a) an alternate description (Alt property), as specified in ISO 32000-2:2020, 14.9.3; b) a replacement text (ActualText property) that represents the content enclosed by the Figure structure element"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.4",
-          "test_number": 1,
-          "failed_checks": 2,
-          "description": "All structure elements shall belong to, or be role mapped to, at least one of the following namespaces specified in ISO 32000-2:2020, 14.8.6: \u2014 the PDF 1.7 namespace; \u2014 the PDF 2.0 namespace; \u2014 the MathML namespace"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.2",
-          "test_number": 2,
-          "failed_checks": 1,
-          "description": "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-content",
-          "test_number": 1,
-          "failed_checks": 4,
-          "description": "<Art> shall not contain content items"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-Art",
-          "test_number": 1,
-          "failed_checks": 3,
-          "description": "<Art> shall not contain <Art>"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Document-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Document> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.2",
-          "test_number": 1,
-          "failed_checks": 4892,
-          "description": "Content that is not considered real shall be an artifact"
-        }
-      ],
+      "has_title": true,
+      "has_author": true,
       "verapdf_4f_exit_code": 0,
       "4f_compliant": true,
       "4f_failed_rules": 0,
@@ -76,67 +21,13 @@
     },
     {
       "file": "assets/pdfs/de-notizen-commercialising-quantum-global-2026-tag-2.pdf",
-      "bytes": 1824952,
+      "bytes": 1792708,
       "pdf_header": "%PDF-2.0",
       "is_pdf_2": true,
       "has_structure_tree": true,
       "has_lang": true,
-      "has_title": false,
-      "verapdf_ua2_exit_code": 1,
-      "ua2_compliant": false,
-      "ua2_failed_rules": 7,
-      "ua2_failed_checks": 3803,
-      "ua2_failed_summaries": [
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.2",
-          "test_number": 2,
-          "failed_checks": 1,
-          "description": "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Document-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Document> shall not contain content items"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-Art",
-          "test_number": 1,
-          "failed_checks": 4,
-          "description": "<Art> shall not contain <Art>"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.2",
-          "test_number": 1,
-          "failed_checks": 3787,
-          "description": "Content that is not considered real shall be an artifact"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-content",
-          "test_number": 1,
-          "failed_checks": 5,
-          "description": "<Art> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.4",
-          "test_number": 1,
-          "failed_checks": 2,
-          "description": "All structure elements shall belong to, or be role mapped to, at least one of the following namespaces specified in ISO 32000-2:2020, 14.8.6: \u2014 the PDF 1.7 namespace; \u2014 the PDF 2.0 namespace; \u2014 the MathML namespace"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.28.2",
-          "test_number": 1,
-          "failed_checks": 3,
-          "description": "A Figure structure element shall have at least one of the following properties: a) an alternate description (Alt property), as specified in ISO 32000-2:2020, 14.9.3; b) a replacement text (ActualText property) that represents the content enclosed by the Figure structure element"
-        }
-      ],
+      "has_title": true,
+      "has_author": true,
       "verapdf_4f_exit_code": 0,
       "4f_compliant": true,
       "4f_failed_rules": 0,
@@ -145,60 +36,13 @@
     },
     {
       "file": "assets/pdfs/de-notizen-commercialising-quantum-global-2026.pdf",
-      "bytes": 3477408,
+      "bytes": 3439796,
       "pdf_header": "%PDF-2.0",
       "is_pdf_2": true,
       "has_structure_tree": true,
       "has_lang": true,
-      "has_title": false,
-      "verapdf_ua2_exit_code": 1,
-      "ua2_compliant": false,
-      "ua2_failed_rules": 6,
-      "ua2_failed_checks": 260,
-      "ua2_failed_summaries": [
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.4",
-          "test_number": 1,
-          "failed_checks": 6,
-          "description": "All structure elements shall belong to, or be role mapped to, at least one of the following namespaces specified in ISO 32000-2:2020, 14.8.6: \u2014 the PDF 1.7 namespace; \u2014 the PDF 2.0 namespace; \u2014 the MathML namespace"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.2",
-          "test_number": 2,
-          "failed_checks": 1,
-          "description": "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.2",
-          "test_number": 1,
-          "failed_checks": 245,
-          "description": "Content that is not considered real shall be an artifact"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Art> shall not contain content items"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Document-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Document> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.28.2",
-          "test_number": 1,
-          "failed_checks": 6,
-          "description": "A Figure structure element shall have at least one of the following properties: a) an alternate description (Alt property), as specified in ISO 32000-2:2020, 14.9.3; b) a replacement text (ActualText property) that represents the content enclosed by the Figure structure element"
-        }
-      ],
+      "has_title": true,
+      "has_author": true,
       "verapdf_4f_exit_code": 0,
       "4f_compliant": true,
       "4f_failed_rules": 0,
@@ -207,53 +51,13 @@
     },
     {
       "file": "assets/pdfs/de-notizen-ile-owo-konzept.pdf",
-      "bytes": 227499,
+      "bytes": 205607,
       "pdf_header": "%PDF-2.0",
       "is_pdf_2": true,
       "has_structure_tree": true,
       "has_lang": true,
-      "has_title": false,
-      "verapdf_ua2_exit_code": 1,
-      "ua2_compliant": false,
-      "ua2_failed_rules": 5,
-      "ua2_failed_checks": 111,
-      "ua2_failed_summaries": [
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.2",
-          "test_number": 2,
-          "failed_checks": 1,
-          "description": "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.4",
-          "test_number": 1,
-          "failed_checks": 13,
-          "description": "All structure elements shall belong to, or be role mapped to, at least one of the following namespaces specified in ISO 32000-2:2020, 14.8.6: \u2014 the PDF 1.7 namespace; \u2014 the PDF 2.0 namespace; \u2014 the MathML namespace"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Art> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.2",
-          "test_number": 1,
-          "failed_checks": 95,
-          "description": "Content that is not considered real shall be an artifact"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Document-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Document> shall not contain content items"
-        }
-      ],
+      "has_title": true,
+      "has_author": true,
       "verapdf_4f_exit_code": 0,
       "4f_compliant": true,
       "4f_failed_rules": 0,
@@ -262,53 +66,13 @@
     },
     {
       "file": "assets/pdfs/de-notizen-ki-governance-als-strasse.pdf",
-      "bytes": 231206,
+      "bytes": 208579,
       "pdf_header": "%PDF-2.0",
       "is_pdf_2": true,
       "has_structure_tree": true,
       "has_lang": true,
-      "has_title": false,
-      "verapdf_ua2_exit_code": 1,
-      "ua2_compliant": false,
-      "ua2_failed_rules": 5,
-      "ua2_failed_checks": 102,
-      "ua2_failed_summaries": [
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.2",
-          "test_number": 1,
-          "failed_checks": 93,
-          "description": "Content that is not considered real shall be an artifact"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Art> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.2",
-          "test_number": 2,
-          "failed_checks": 1,
-          "description": "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Document-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Document> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.4",
-          "test_number": 1,
-          "failed_checks": 6,
-          "description": "All structure elements shall belong to, or be role mapped to, at least one of the following namespaces specified in ISO 32000-2:2020, 14.8.6: \u2014 the PDF 1.7 namespace; \u2014 the PDF 2.0 namespace; \u2014 the MathML namespace"
-        }
-      ],
+      "has_title": true,
+      "has_author": true,
       "verapdf_4f_exit_code": 0,
       "4f_compliant": true,
       "4f_failed_rules": 0,
@@ -317,53 +81,13 @@
     },
     {
       "file": "assets/pdfs/de-notizen-projekt-bank-von-biafra.pdf",
-      "bytes": 208631,
+      "bytes": 187569,
       "pdf_header": "%PDF-2.0",
       "is_pdf_2": true,
       "has_structure_tree": true,
       "has_lang": true,
-      "has_title": false,
-      "verapdf_ua2_exit_code": 1,
-      "ua2_compliant": false,
-      "ua2_failed_rules": 5,
-      "ua2_failed_checks": 73,
-      "ua2_failed_summaries": [
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Art> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.2",
-          "test_number": 2,
-          "failed_checks": 1,
-          "description": "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Document-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Document> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.2",
-          "test_number": 1,
-          "failed_checks": 68,
-          "description": "Content that is not considered real shall be an artifact"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.4",
-          "test_number": 1,
-          "failed_checks": 2,
-          "description": "All structure elements shall belong to, or be role mapped to, at least one of the following namespaces specified in ISO 32000-2:2020, 14.8.6: \u2014 the PDF 1.7 namespace; \u2014 the PDF 2.0 namespace; \u2014 the MathML namespace"
-        }
-      ],
+      "has_title": true,
+      "has_author": true,
       "verapdf_4f_exit_code": 0,
       "4f_compliant": true,
       "4f_failed_rules": 0,
@@ -372,67 +96,13 @@
     },
     {
       "file": "assets/pdfs/fr-notes-commercialisation-quantique-global-2026-jour-1.pdf",
-      "bytes": 2023331,
+      "bytes": 1990902,
       "pdf_header": "%PDF-2.0",
       "is_pdf_2": true,
       "has_structure_tree": true,
       "has_lang": true,
-      "has_title": false,
-      "verapdf_ua2_exit_code": 1,
-      "ua2_compliant": false,
-      "ua2_failed_rules": 7,
-      "ua2_failed_checks": 4925,
-      "ua2_failed_summaries": [
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.2",
-          "test_number": 2,
-          "failed_checks": 1,
-          "description": "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Document-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Document> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.2",
-          "test_number": 1,
-          "failed_checks": 4905,
-          "description": "Content that is not considered real shall be an artifact"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.4",
-          "test_number": 1,
-          "failed_checks": 2,
-          "description": "All structure elements shall belong to, or be role mapped to, at least one of the following namespaces specified in ISO 32000-2:2020, 14.8.6: \u2014 the PDF 1.7 namespace; \u2014 the PDF 2.0 namespace; \u2014 the MathML namespace"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-Art",
-          "test_number": 1,
-          "failed_checks": 6,
-          "description": "<Art> shall not contain <Art>"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-content",
-          "test_number": 1,
-          "failed_checks": 7,
-          "description": "<Art> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.28.2",
-          "test_number": 1,
-          "failed_checks": 3,
-          "description": "A Figure structure element shall have at least one of the following properties: a) an alternate description (Alt property), as specified in ISO 32000-2:2020, 14.9.3; b) a replacement text (ActualText property) that represents the content enclosed by the Figure structure element"
-        }
-      ],
+      "has_title": true,
+      "has_author": true,
       "verapdf_4f_exit_code": 0,
       "4f_compliant": true,
       "4f_failed_rules": 0,
@@ -441,67 +111,13 @@
     },
     {
       "file": "assets/pdfs/fr-notes-commercialisation-quantique-global-2026-jour-2.pdf",
-      "bytes": 1820834,
+      "bytes": 1787529,
       "pdf_header": "%PDF-2.0",
       "is_pdf_2": true,
       "has_structure_tree": true,
       "has_lang": true,
-      "has_title": false,
-      "verapdf_ua2_exit_code": 1,
-      "ua2_compliant": false,
-      "ua2_failed_rules": 7,
-      "ua2_failed_checks": 3803,
-      "ua2_failed_summaries": [
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Document-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Document> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.2",
-          "test_number": 2,
-          "failed_checks": 1,
-          "description": "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-Art",
-          "test_number": 1,
-          "failed_checks": 4,
-          "description": "<Art> shall not contain <Art>"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.4",
-          "test_number": 1,
-          "failed_checks": 2,
-          "description": "All structure elements shall belong to, or be role mapped to, at least one of the following namespaces specified in ISO 32000-2:2020, 14.8.6: \u2014 the PDF 1.7 namespace; \u2014 the PDF 2.0 namespace; \u2014 the MathML namespace"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.2",
-          "test_number": 1,
-          "failed_checks": 3787,
-          "description": "Content that is not considered real shall be an artifact"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.28.2",
-          "test_number": 1,
-          "failed_checks": 3,
-          "description": "A Figure structure element shall have at least one of the following properties: a) an alternate description (Alt property), as specified in ISO 32000-2:2020, 14.9.3; b) a replacement text (ActualText property) that represents the content enclosed by the Figure structure element"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-content",
-          "test_number": 1,
-          "failed_checks": 5,
-          "description": "<Art> shall not contain content items"
-        }
-      ],
+      "has_title": true,
+      "has_author": true,
       "verapdf_4f_exit_code": 0,
       "4f_compliant": true,
       "4f_failed_rules": 0,
@@ -510,60 +126,13 @@
     },
     {
       "file": "assets/pdfs/fr-notes-commercialisation-quantique-global-2026.pdf",
-      "bytes": 3458535,
+      "bytes": 3420949,
       "pdf_header": "%PDF-2.0",
       "is_pdf_2": true,
       "has_structure_tree": true,
       "has_lang": true,
-      "has_title": false,
-      "verapdf_ua2_exit_code": 1,
-      "ua2_compliant": false,
-      "ua2_failed_rules": 6,
-      "ua2_failed_checks": 260,
-      "ua2_failed_summaries": [
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Document-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Document> shall not contain content items"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Art> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.2",
-          "test_number": 2,
-          "failed_checks": 1,
-          "description": "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.28.2",
-          "test_number": 1,
-          "failed_checks": 6,
-          "description": "A Figure structure element shall have at least one of the following properties: a) an alternate description (Alt property), as specified in ISO 32000-2:2020, 14.9.3; b) a replacement text (ActualText property) that represents the content enclosed by the Figure structure element"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.4",
-          "test_number": 1,
-          "failed_checks": 6,
-          "description": "All structure elements shall belong to, or be role mapped to, at least one of the following namespaces specified in ISO 32000-2:2020, 14.8.6: \u2014 the PDF 1.7 namespace; \u2014 the PDF 2.0 namespace; \u2014 the MathML namespace"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.2",
-          "test_number": 1,
-          "failed_checks": 245,
-          "description": "Content that is not considered real shall be an artifact"
-        }
-      ],
+      "has_title": true,
+      "has_author": true,
       "verapdf_4f_exit_code": 0,
       "4f_compliant": true,
       "4f_failed_rules": 0,
@@ -572,53 +141,13 @@
     },
     {
       "file": "assets/pdfs/fr-notes-conception-ile-owo.pdf",
-      "bytes": 220694,
+      "bytes": 199373,
       "pdf_header": "%PDF-2.0",
       "is_pdf_2": true,
       "has_structure_tree": true,
       "has_lang": true,
-      "has_title": false,
-      "verapdf_ua2_exit_code": 1,
-      "ua2_compliant": false,
-      "ua2_failed_rules": 5,
-      "ua2_failed_checks": 111,
-      "ua2_failed_summaries": [
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Document-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Document> shall not contain content items"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Art> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.2",
-          "test_number": 1,
-          "failed_checks": 95,
-          "description": "Content that is not considered real shall be an artifact"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.4",
-          "test_number": 1,
-          "failed_checks": 13,
-          "description": "All structure elements shall belong to, or be role mapped to, at least one of the following namespaces specified in ISO 32000-2:2020, 14.8.6: \u2014 the PDF 1.7 namespace; \u2014 the PDF 2.0 namespace; \u2014 the MathML namespace"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.2",
-          "test_number": 2,
-          "failed_checks": 1,
-          "description": "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace"
-        }
-      ],
+      "has_title": true,
+      "has_author": true,
       "verapdf_4f_exit_code": 0,
       "4f_compliant": true,
       "4f_failed_rules": 0,
@@ -627,53 +156,13 @@
     },
     {
       "file": "assets/pdfs/fr-notes-gouvernance-ia-comme-route.pdf",
-      "bytes": 225295,
+      "bytes": 202760,
       "pdf_header": "%PDF-2.0",
       "is_pdf_2": true,
       "has_structure_tree": true,
       "has_lang": true,
-      "has_title": false,
-      "verapdf_ua2_exit_code": 1,
-      "ua2_compliant": false,
-      "ua2_failed_rules": 5,
-      "ua2_failed_checks": 102,
-      "ua2_failed_summaries": [
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.2",
-          "test_number": 1,
-          "failed_checks": 93,
-          "description": "Content that is not considered real shall be an artifact"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Art> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.2",
-          "test_number": 2,
-          "failed_checks": 1,
-          "description": "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Document-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Document> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.4",
-          "test_number": 1,
-          "failed_checks": 6,
-          "description": "All structure elements shall belong to, or be role mapped to, at least one of the following namespaces specified in ISO 32000-2:2020, 14.8.6: \u2014 the PDF 1.7 namespace; \u2014 the PDF 2.0 namespace; \u2014 the MathML namespace"
-        }
-      ],
+      "has_title": true,
+      "has_author": true,
       "verapdf_4f_exit_code": 0,
       "4f_compliant": true,
       "4f_failed_rules": 0,
@@ -682,53 +171,13 @@
     },
     {
       "file": "assets/pdfs/fr-notes-projet-banque-biafra.pdf",
-      "bytes": 210836,
+      "bytes": 191012,
       "pdf_header": "%PDF-2.0",
       "is_pdf_2": true,
       "has_structure_tree": true,
       "has_lang": true,
-      "has_title": false,
-      "verapdf_ua2_exit_code": 1,
-      "ua2_compliant": false,
-      "ua2_failed_rules": 5,
-      "ua2_failed_checks": 73,
-      "ua2_failed_summaries": [
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Art> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.2",
-          "test_number": 2,
-          "failed_checks": 1,
-          "description": "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Document-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Document> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.2",
-          "test_number": 1,
-          "failed_checks": 68,
-          "description": "Content that is not considered real shall be an artifact"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.4",
-          "test_number": 1,
-          "failed_checks": 2,
-          "description": "All structure elements shall belong to, or be role mapped to, at least one of the following namespaces specified in ISO 32000-2:2020, 14.8.6: \u2014 the PDF 1.7 namespace; \u2014 the PDF 2.0 namespace; \u2014 the MathML namespace"
-        }
-      ],
+      "has_title": true,
+      "has_author": true,
       "verapdf_4f_exit_code": 0,
       "4f_compliant": true,
       "4f_failed_rules": 0,
@@ -737,53 +186,13 @@
     },
     {
       "file": "assets/pdfs/notes-ai-governance-as-road.pdf",
-      "bytes": 216959,
+      "bytes": 193999,
       "pdf_header": "%PDF-2.0",
       "is_pdf_2": true,
       "has_structure_tree": true,
       "has_lang": true,
-      "has_title": false,
-      "verapdf_ua2_exit_code": 1,
-      "ua2_compliant": false,
-      "ua2_failed_rules": 5,
-      "ua2_failed_checks": 75,
-      "ua2_failed_summaries": [
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Art> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.2",
-          "test_number": 2,
-          "failed_checks": 1,
-          "description": "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Document-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Document> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.2",
-          "test_number": 1,
-          "failed_checks": 66,
-          "description": "Content that is not considered real shall be an artifact"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.4",
-          "test_number": 1,
-          "failed_checks": 6,
-          "description": "All structure elements shall belong to, or be role mapped to, at least one of the following namespaces specified in ISO 32000-2:2020, 14.8.6: \u2014 the PDF 1.7 namespace; \u2014 the PDF 2.0 namespace; \u2014 the MathML namespace"
-        }
-      ],
+      "has_title": true,
+      "has_author": true,
       "verapdf_4f_exit_code": 0,
       "4f_compliant": true,
       "4f_failed_rules": 0,
@@ -792,53 +201,13 @@
     },
     {
       "file": "assets/pdfs/notes-bank-of-biafra-project.pdf",
-      "bytes": 197074,
+      "bytes": 174950,
       "pdf_header": "%PDF-2.0",
       "is_pdf_2": true,
       "has_structure_tree": true,
       "has_lang": true,
-      "has_title": false,
-      "verapdf_ua2_exit_code": 1,
-      "ua2_compliant": false,
-      "ua2_failed_rules": 5,
-      "ua2_failed_checks": 73,
-      "ua2_failed_summaries": [
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.2",
-          "test_number": 2,
-          "failed_checks": 1,
-          "description": "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.2",
-          "test_number": 1,
-          "failed_checks": 68,
-          "description": "Content that is not considered real shall be an artifact"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.4",
-          "test_number": 1,
-          "failed_checks": 2,
-          "description": "All structure elements shall belong to, or be role mapped to, at least one of the following namespaces specified in ISO 32000-2:2020, 14.8.6: \u2014 the PDF 1.7 namespace; \u2014 the PDF 2.0 namespace; \u2014 the MathML namespace"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Art> shall not contain content items"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Document-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Document> shall not contain content items"
-        }
-      ],
+      "has_title": true,
+      "has_author": true,
       "verapdf_4f_exit_code": 0,
       "4f_compliant": true,
       "4f_failed_rules": 0,
@@ -847,67 +216,13 @@
     },
     {
       "file": "assets/pdfs/notes-commercialising-quantum-global-2026-day-1.pdf",
-      "bytes": 2095503,
+      "bytes": 2066217,
       "pdf_header": "%PDF-2.0",
       "is_pdf_2": true,
       "has_structure_tree": true,
       "has_lang": true,
-      "has_title": false,
-      "verapdf_ua2_exit_code": 1,
-      "ua2_compliant": false,
-      "ua2_failed_rules": 7,
-      "ua2_failed_checks": 8253,
-      "ua2_failed_summaries": [
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Document-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Document> shall not contain content items"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-content",
-          "test_number": 1,
-          "failed_checks": 19,
-          "description": "<Art> shall not contain content items"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-Art",
-          "test_number": 1,
-          "failed_checks": 18,
-          "description": "<Art> shall not contain <Art>"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.2",
-          "test_number": 1,
-          "failed_checks": 8209,
-          "description": "Content that is not considered real shall be an artifact"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.2",
-          "test_number": 2,
-          "failed_checks": 1,
-          "description": "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.4",
-          "test_number": 1,
-          "failed_checks": 2,
-          "description": "All structure elements shall belong to, or be role mapped to, at least one of the following namespaces specified in ISO 32000-2:2020, 14.8.6: \u2014 the PDF 1.7 namespace; \u2014 the PDF 2.0 namespace; \u2014 the MathML namespace"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.28.2",
-          "test_number": 1,
-          "failed_checks": 3,
-          "description": "A Figure structure element shall have at least one of the following properties: a) an alternate description (Alt property), as specified in ISO 32000-2:2020, 14.9.3; b) a replacement text (ActualText property) that represents the content enclosed by the Figure structure element"
-        }
-      ],
+      "has_title": true,
+      "has_author": true,
       "verapdf_4f_exit_code": 0,
       "4f_compliant": true,
       "4f_failed_rules": 0,
@@ -916,67 +231,13 @@
     },
     {
       "file": "assets/pdfs/notes-commercialising-quantum-global-2026-day-2.pdf",
-      "bytes": 1865070,
+      "bytes": 1832589,
       "pdf_header": "%PDF-2.0",
       "is_pdf_2": true,
       "has_structure_tree": true,
       "has_lang": true,
-      "has_title": false,
-      "verapdf_ua2_exit_code": 1,
-      "ua2_compliant": false,
-      "ua2_failed_rules": 7,
-      "ua2_failed_checks": 5101,
-      "ua2_failed_summaries": [
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Document-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Document> shall not contain content items"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-content",
-          "test_number": 1,
-          "failed_checks": 19,
-          "description": "<Art> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.28.2",
-          "test_number": 1,
-          "failed_checks": 3,
-          "description": "A Figure structure element shall have at least one of the following properties: a) an alternate description (Alt property), as specified in ISO 32000-2:2020, 14.9.3; b) a replacement text (ActualText property) that represents the content enclosed by the Figure structure element"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.4",
-          "test_number": 1,
-          "failed_checks": 2,
-          "description": "All structure elements shall belong to, or be role mapped to, at least one of the following namespaces specified in ISO 32000-2:2020, 14.8.6: \u2014 the PDF 1.7 namespace; \u2014 the PDF 2.0 namespace; \u2014 the MathML namespace"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-Art",
-          "test_number": 1,
-          "failed_checks": 18,
-          "description": "<Art> shall not contain <Art>"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.2",
-          "test_number": 2,
-          "failed_checks": 1,
-          "description": "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.2",
-          "test_number": 1,
-          "failed_checks": 5057,
-          "description": "Content that is not considered real shall be an artifact"
-        }
-      ],
+      "has_title": true,
+      "has_author": true,
       "verapdf_4f_exit_code": 0,
       "4f_compliant": true,
       "4f_failed_rules": 0,
@@ -985,60 +246,13 @@
     },
     {
       "file": "assets/pdfs/notes-commercialising-quantum-global-2026.pdf",
-      "bytes": 3469284,
+      "bytes": 3430641,
       "pdf_header": "%PDF-2.0",
       "is_pdf_2": true,
       "has_structure_tree": true,
       "has_lang": true,
-      "has_title": false,
-      "verapdf_ua2_exit_code": 1,
-      "ua2_compliant": false,
-      "ua2_failed_rules": 6,
-      "ua2_failed_checks": 287,
-      "ua2_failed_summaries": [
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Document-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Document> shall not contain content items"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Art> shall not contain content items"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.2",
-          "test_number": 2,
-          "failed_checks": 1,
-          "description": "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.4",
-          "test_number": 1,
-          "failed_checks": 6,
-          "description": "All structure elements shall belong to, or be role mapped to, at least one of the following namespaces specified in ISO 32000-2:2020, 14.8.6: \u2014 the PDF 1.7 namespace; \u2014 the PDF 2.0 namespace; \u2014 the MathML namespace"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.28.2",
-          "test_number": 1,
-          "failed_checks": 6,
-          "description": "A Figure structure element shall have at least one of the following properties: a) an alternate description (Alt property), as specified in ISO 32000-2:2020, 14.9.3; b) a replacement text (ActualText property) that represents the content enclosed by the Figure structure element"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.2",
-          "test_number": 1,
-          "failed_checks": 272,
-          "description": "Content that is not considered real shall be an artifact"
-        }
-      ],
+      "has_title": true,
+      "has_author": true,
       "verapdf_4f_exit_code": 0,
       "4f_compliant": true,
       "4f_failed_rules": 0,
@@ -1047,53 +261,13 @@
     },
     {
       "file": "assets/pdfs/notes-ile-owo-design.pdf",
-      "bytes": 215439,
+      "bytes": 192114,
       "pdf_header": "%PDF-2.0",
       "is_pdf_2": true,
       "has_structure_tree": true,
       "has_lang": true,
-      "has_title": false,
-      "verapdf_ua2_exit_code": 1,
-      "ua2_compliant": false,
-      "ua2_failed_rules": 5,
-      "ua2_failed_checks": 111,
-      "ua2_failed_summaries": [
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.4",
-          "test_number": 1,
-          "failed_checks": 13,
-          "description": "All structure elements shall belong to, or be role mapped to, at least one of the following namespaces specified in ISO 32000-2:2020, 14.8.6: \u2014 the PDF 1.7 namespace; \u2014 the PDF 2.0 namespace; \u2014 the MathML namespace"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.5.2",
-          "test_number": 2,
-          "failed_checks": 1,
-          "description": "The structure tree root shall contain a single Document structure element as its only child. The namespace for that element shall be specified as the PDF 2.0 namespace"
-        },
-        {
-          "specification": "ISO 14289-2:2024",
-          "clause": "8.2.2",
-          "test_number": 1,
-          "failed_checks": 95,
-          "description": "Content that is not considered real shall be an artifact"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Art-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Art> shall not contain content items"
-        },
-        {
-          "specification": "ISO 32005:2023",
-          "clause": "Table 5. Document-content",
-          "test_number": 1,
-          "failed_checks": 1,
-          "description": "<Document> shall not contain content items"
-        }
-      ],
+      "has_title": true,
+      "has_author": true,
       "verapdf_4f_exit_code": 0,
       "4f_compliant": true,
       "4f_failed_rules": 0,

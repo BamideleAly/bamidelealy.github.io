@@ -150,8 +150,13 @@
     aside.className = 'print-source';
     aside.setAttribute('aria-label', hLang === 'fr' ? 'Informations d’impression' : hLang === 'de' ? 'Druckinformationen' : 'Print information');
     var title = titleEl ? titleEl.textContent.trim() : document.title;
-    var label = hLang === 'fr' ? 'Source' : hLang === 'de' ? 'Quelle' : 'Source';
-    aside.innerHTML = '<p><strong>' + escapeHtml(title) + '</strong></p><p>' + label + ': <a href="' + escapeHtml(url) + '">' + escapeHtml(url) + '</a></p><img src="/assets/qr/' + stem + '.svg" width="120" height="120" alt="QR code for ' + escapeHtml(url) + '">';
+    var author = 'Bamidele Aly';
+    var dateEl = article.querySelector('.essay-meta time, time[datetime]');
+    var dateText = dateEl ? dateEl.textContent.trim() : '';
+    var label = hLang === 'fr' ? 'Version numérique accessible' : hLang === 'de' ? 'Barrierefreie digitale Version' : 'Accessible digital version';
+    var scan = hLang === 'fr' ? 'Scannez le code QR pour ouvrir l’article canonique avec les liens, les mises à jour et les options de partage.' : hLang === 'de' ? 'Scannen Sie den QR-Code, um den kanonischen Artikel mit Links, Aktualisierungen und Teilen-Optionen zu öffnen.' : 'Scan the QR code to open the canonical article with links, updates and sharing options.';
+    var byline = hLang === 'fr' ? 'Auteur' : hLang === 'de' ? 'Autor' : 'Author';
+    aside.innerHTML = '<div><p><strong>' + escapeHtml(title) + '</strong></p><p>' + byline + ': ' + escapeHtml(author) + (dateText ? ' · ' + escapeHtml(dateText) : '') + '</p><p>' + label + ': <a href="' + escapeHtml(url) + '">' + escapeHtml(url) + '</a></p><p>' + scan + '</p></div><img src="/assets/qr/' + stem + '.svg" width="180" height="180" alt="QR code for ' + escapeHtml(url) + '">';
     article.appendChild(aside);
   };
 

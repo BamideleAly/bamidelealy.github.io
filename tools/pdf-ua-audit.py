@@ -17,6 +17,8 @@ REPORT = ROOT / "docs" / "PDF_UA_AUDIT.json"
 def structural_status(path: Path) -> dict[str, object]:
     data = path.read_bytes()
     first_line = data.splitlines()[0].decode("ascii", errors="replace") if data else ""
+    has_xmp_title = b"<dc:title>" in data and b"</dc:title>" in data
+    has_xmp_creator = b"<dc:creator>" in data and b"Bamidele Aly" in data
     return {
         "file": path.relative_to(ROOT).as_posix(),
         "bytes": len(data),
@@ -24,7 +26,8 @@ def structural_status(path: Path) -> dict[str, object]:
         "is_pdf_2": first_line.startswith("%PDF-2."),
         "has_structure_tree": b"/StructTreeRoot" in data,
         "has_lang": b"/Lang" in data,
-        "has_title": b"/Title" in data,
+        "has_title": b"/Title" in data or has_xmp_title,
+        "has_author": b"/Author" in data or has_xmp_creator,
     }
 
 

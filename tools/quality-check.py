@@ -343,20 +343,22 @@ def check_print_styles() -> None:
         fail("styles.css missing dedicated print stylesheet")
     for token in [
         "size: A4",
-        "margin: .7in .65in .75in",
+        "margin: .72in .68in .78in",
         "font-size: 11pt",
         "font-family: Georgia",
         ".site-header",
         ".site-footer",
         "display: none !important",
-        "inline-size: 6.8in",
+        "inline-size: 5.4in",
         "print-color-adjust: exact",
-        "counter(page)",
         ".print-source",
         "string-set: article-title",
     ]:
         if token not in css:
             fail(f"styles.css print stylesheet missing {token}")
+    for token in ["Accessible digital version", "Scan the QR code", "Author"]:
+        if token not in script:
+            fail(f"script.js print source block missing {token}")
     minified_css = (ROOT / "styles.min.css").read_text()
     for calc_expression in re.findall(r"calc\([^)]*\)", minified_css):
         if "+" in calc_expression and not re.search(r"\s\+\s", calc_expression):

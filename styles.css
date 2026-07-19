@@ -1315,9 +1315,9 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
     max-inline-size: var(--article-column);
     margin: 0 0 1rem;
     color: var(--ink);
-    font-size: clamp(2.65rem, 5.25vw, 4.15rem);
-    line-height: .96;
-    letter-spacing: -.055em;
+    font-size: clamp(2.25rem, 4.4vw, 3.35rem);
+    line-height: 1.02;
+    letter-spacing: -.045em;
   }
   .essay-dek {
     max-inline-size: var(--article-column);
@@ -1891,25 +1891,7 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
   @media print {
     @page {
       size: A4;
-      margin: .7in .65in .75in;
-      @top-center {
-        content: string(article-title);
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 8pt;
-        color: #333;
-      }
-      @bottom-left {
-        content: "bamidelealy.com";
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 8pt;
-        color: #333;
-      }
-      @bottom-right {
-        content: "Page " counter(page) " / " counter(pages);
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 8pt;
-        color: #333;
-      }
+      margin: .72in .68in .78in;
     }
     *,
     *::before,
@@ -1932,6 +1914,9 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
       print-color-adjust: exact;
       -webkit-print-color-adjust: exact;
     }
+    body {
+      overflow: visible !important;
+    }
     .site-header,
     .site-footer,
     .skip-link,
@@ -1950,7 +1935,6 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
       display: none !important;
     }
     main,
-    article,
     section,
     .container,
     .narrow,
@@ -1961,6 +1945,14 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
       margin: 0 !important;
       padding: 0 !important;
       background: transparent !important;
+      border: 0 !important;
+    }
+    article {
+      inline-size: auto !important;
+      max-inline-size: none !important;
+      margin: 0 !important;
+      padding: .1in .16in .14in !important;
+      background: #fff !important;
       border: 0 !important;
     }
     .hero,
@@ -1991,9 +1983,9 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
       break-after: avoid-page;
     }
     h1 {
-      font-size: 24pt !important;
+      font-size: 22pt !important;
       line-height: 1.08 !important;
-      margin: 0 0 12pt !important;
+      margin: 0 0 10pt !important;
       string-set: article-title content(text);
     }
     h2 {
@@ -2042,17 +2034,21 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
     }
     .report-figure,
     .article-lead-media {
-      inline-size: 6.8in !important;
+      inline-size: 5.4in !important;
       max-inline-size: 100% !important;
-      margin: 14pt auto !important;
+      margin: 16pt auto !important;
       page-break-inside: avoid;
       break-inside: avoid-page;
     }
     .report-figure img,
     .article-lead-media img {
-      inline-size: 6.8in !important;
+      inline-size: 5.4in !important;
       max-inline-size: 100% !important;
       block-size: auto !important;
+    }
+    .report-figure figcaption::after {
+      display: none !important;
+      content: "" !important;
     }
     figcaption,
     .essay-eyebrow,
@@ -2109,25 +2105,26 @@ th, thead, time, tr, ul, var, video { word-break: break-word; }
     }
     .print-source {
       display: grid !important;
-      grid-template-columns: 1fr .9in;
-      gap: .18in;
-      align-items: end;
-      margin-block-start: .35in;
-      padding-block-start: .18in;
-      border-block-start: 1pt solid #999;
+      grid-template-columns: 1fr 1.25in;
+      gap: .2in;
+      align-items: center;
+      margin-block-start: .32in;
+      padding: .18in;
+      border: 1pt solid #999;
+      border-radius: 0;
       page-break-inside: avoid;
       break-inside: avoid-page;
       font-family: Arial, Helvetica, sans-serif !important;
     }
     .print-source p {
-      margin: 0 0 5pt !important;
+      margin: 0 0 6pt !important;
       font-family: Arial, Helvetica, sans-serif !important;
-      font-size: 8.5pt !important;
-      line-height: 1.25 !important;
+      font-size: 9pt !important;
+      line-height: 1.35 !important;
     }
     .print-source img {
-      inline-size: .9in !important;
-      block-size: .9in !important;
+      inline-size: 1.25in !important;
+      block-size: 1.25in !important;
       justify-self: end;
     }
     .print-source a[href^="http"]::after {
